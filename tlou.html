@@ -10,33 +10,22 @@
         margin: 0px;
         padding: 0px;
     }
-    div{
-        background-image: url(imagens/personagens/sarah_capa.jpg);
-        height: 100vh;
-        width: 100vw;
-        background-position: center center;
-        background-repeat: no-repeat;
-        background-size: cover;
-        
-        display: flex;
-        justify-content: center;
-        align-items: center;
-    }
+    
+    .texto-img {
+    font-size: 100px;
+    font-weight: bold;
 
-    div#perfil{
-        background-image: url(imagens/personagens/sarah_perfil.jpg);
-        border-radius: 50%;
-        height: 300px;
-        width: 300px;
-    }
+    background-image: url(imagens/personagens/ellie_capa.jpg); /* tua imagem */
+    background-size: cover;
+    background-position: center;
+
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
     
 </style>
 <body>
-    <div>
-        <div id="perfil">
-
-        </div>
-    </div>
+    <h1 class="texto-img">THE LAST OF US</h1>
 
 </body>
 </html>
