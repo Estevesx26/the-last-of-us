@@ -1,0 +1,68 @@
+@charset "UTF-8";
+
+:root{
+    /* Fundo do site */
+    --cor-fundo-principal: #121411;
+    --cor-fundo-secundario: #00010D;
+
+    /* Card */
+    --cor-card: #1A1D18;
+    --cor-card-destaque: #6B4B34;
+
+    /* Texto */
+    --cor-texto-principal: #D8D4C8;
+    --cor-texto-secundario: #6E6E68;
+    --cor-link:#2C4001;
+    --cor-link-destaque: #00DF04;
+
+    /* Cor principal da identidade */
+    --cor-principal: #4E5B3C;
+    /* Cor cinematográfica / destaque */
+    --cor-secundaria: #C2A96A;
+    /* Hover */
+    --cor-hover: #8F7A4F;
+
+    /* Bordas */
+    --cor-borda: #2B2F29;
+    /* Sombras */
+    --cor-sombra: rgba(0, 0, 0, 0.45);
+    /* Verde claro natureza */
+    --cor-verde-claro: #7A8B5D;
+}
+
+@font-face {
+    font-family: 'tloufonts';
+    src: url('fontes/brixton.otf');
+}
+
+*{
+    margin: 0px;
+    padding: 0px;
+}
+
+body{
+    overflow-x: hidden;
+}
+
+section#tlou{
+    background-image: url(imagens/tlouvibes/janela_tlou.jpg);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 100vh;
+    width: 100vw;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+section#tlou h1{
+    font-family: 'tloufonts';
+    font-family: 'tloufonts';
+    font-size: 150px;
+    letter-spacing: 5px;
+    text-align: center;
+    color: var(--cor-texto-principal);
+}
+
