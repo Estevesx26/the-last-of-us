@@ -44,6 +44,10 @@ body{
     overflow-x: hidden;
 }
 
+header{
+    color: white;
+}
+
 section#tlou{
     background-image: url(imagens/tlouvibes/janela_tlou.jpg);
     background-position: center;
@@ -51,10 +55,6 @@ section#tlou{
     background-size: cover;
     height: 100vh;
     width: 100vw;
-
-    display: flex;
-    justify-content: center;
-    align-items: center;
 }
 
 section#tlou h1{
@@ -64,5 +64,13 @@ section#tlou h1{
     letter-spacing: 5px;
     text-align: center;
     color: var(--cor-texto-principal);
+}
+
+div#title{
+    height: 100%;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
