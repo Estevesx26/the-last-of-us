@@ -30,98 +30,220 @@
     --cor-verde-claro: #7A8B5D;
 }
 
+/*Fonte h1 TLOU*/
 @font-face {
     font-family: 'tloufonts';
     src: url('fontes/brixton.otf');
 }
 
+/*Fonte padrão TLOU*/
 @import url('https://fonts.googleapis.com/css2?family=Oswald:wght@200..700&display=swap');
 
 *{
     margin: 0px;
     padding: 0px;
+
+    font-family: Arial, Helvetica, sans-serif;
 }
 
 body{
     overflow-x: hidden;
 }
 
+main#layout{
+    height: 100vh;
+    width: 100vw;
+}
+
 header{
-    background-color: green;
+    background-color: var(--cor-fundo-principal);
+
     height: 60px;
     width: 100%;
-    position: fixed;
     
+    position: fixed;
+
     display: flex;
     justify-content: space-between;
-    align-items: center;
 }
 
-header div#logo{
-    height: 50px;
-    width: 15%;
-    display: flex;
-    justify-content: center;
-    align-items: center;
+div#icon img{
+    height: 80%;
 }
 
-header div#logo img#logo{
-    height: 100%;
-}
 
-header div#title{
-    width: 50%;
-    height: 50px;
+div#title a{
+    color: var(--cor-texto-principal);
 
-    display: flex;
-    justify-content: center;
-    align-items: center;
-}
-
-header div#title a{
-    color: white;
-    text-decoration: none;
-    text-align: left;
-    font-size: 1.4em;
-    font-family: "Oswald", sans-serif;
+    font-family: 'Oswald', sans-serif;
     font-weight: 800;
+    font-size: 1.6em;
+
+    text-decoration: none;
 }
 
-header div#menu{
-    height: 50px;
-    width: 15%;
-    color: white;
-    
+div#menu{
+    color: var(--cor-texto-principal);
 
+    height: 100%;
+    width: 50px;
+
+    font-size: 1.6em;
+}
+
+#icon, #menu, #title{
     display: flex;
-    justify-content: center;
     align-items: center;
+    justify-content: center;
 }
 
-header div#menu span i{
-    font-size: 1.4em;
-}
+section#tlou-img{
+    height: 100%;
+    width: 100%;
 
-div#imgprincipal{
     background-image: url(imagens/tlouvibes/janela_tlou.jpg);
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
-    height: 100vh;
-    width: 100vw;
 
     display: flex;
     justify-content: center;
     align-items: center;
 }
 
-div#conteudo-principal{
+section#tlou-img h1{
+    color: var(--cor-texto-principal);
+
+    width: 90%;
+
+    font-family: 'tloufonts';
+    font-size: 150px;
+    text-align: center;
+}
+
+main#historia{
+    background-color: var(--cor-fundo-principal);
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+section#linha{
     width: 90%;
 }
 
-div#imgprincipal h1{
-    color: white;
-    font-family: 'tloufonts';
-    font-size: 180px;
+article#texto{
+    background-color: var(--cor-fundo-secundario);
+    color: var(--cor-texto-principal);
+
+    padding: 10px;
+}
+
+article#texto h2{
     text-align: center;
+}
+
+article#texto p{
+    text-align: justify;
+    padding: 10px;
+}
+
+input{
+    display: none;
+}
+
+#timeline-nav{
+    position: relative;
+    
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    max-width: 800px;
+    margin: 50px auto;
+}
+
+#timeline-nav::before{
+    content: "";
+
+    position: absolute;
+    top: 25px;
+    left: 0px;
+
+    width: 100%;
+    height: 2px;
+
+    background-color: var(--cor-secundaria);
+
+    z-index: 1;
+}
+
+.item{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    cursor: pointer;
+}
+
+.icon{
+    width: 50px;
+    height: 50px;
+
+    border-radius: 50%;
+    background: white;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    font-size: 22px;
+
+    transition: 0.3s;
+    z-index: 2;
+}
+
+.item span{
+    margin-top: 10px;
+    font-size: 14px;
+}
+
+span{
+    color: var(--cor-texto-principal);
+}
+
+#contents{
+    max-width: 700px;
+    margin: 40px auto;
+    position: relative;
+}
+
+.content{
+    display: none;
+
+    padding: 30px;
+    border-radius: 20px;
+
+    background: white;
+}
+
+#t1:checked ~ #contents .c1{
+    display: block;
+}
+
+#t2:checked ~ #contents .c2{
+    display: block;
+}
+
+#t3:checked ~ #contents .c3{
+    display: block;
+}
+
+#t1:checked ~ #timeline-nav label[for="t1"] .icon,
+#t2:checked ~ #timeline-nav label[for="t2"] .icon,
+#t3:checked ~ #timeline-nav label[for="t3"] .icon{
+    color: #000;
+    background: red;
+
+    transform: scale(1.1)
 }
