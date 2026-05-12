@@ -66,6 +66,8 @@ header{
 
     display: flex;
     justify-content: space-between;
+
+    z-index: 1000;
 }
 
 div#icon img{
@@ -131,7 +133,7 @@ main#historia{
 }
 
 section#linha{
-    width: 90%;
+    width: 100%;
 }
 
 article#texto{
@@ -161,15 +163,18 @@ div#timeline1{
     color: var(--cor-texto-principal);
 }
 
+.timeline{
+    position: relative;
+}
 
 .line{
-    position: fixed;
+    position: absolute;
 
     top: 0;
-    left: 30px;
+    left: 31px;
 
     width: 3px;
-    height: 100vh;
+    height: 100%;
 
     background:
     linear-gradient(
@@ -195,12 +200,12 @@ div#timeline1{
     display: flex;
     align-items: center;
 
-    padding: 30px;
-
     overflow: hidden;
 
     background-size: cover;
     background-position: center;
+    background-repeat: no-repeat;
+
 
     animation: zoom 15s ease-in-out infinite alternate;
 }
@@ -241,7 +246,7 @@ div#timeline1{
 
     background-color: black;
 
-    z-index: 10;
+    z-index: 100;
 }
 
 .dot.active{
@@ -295,35 +300,43 @@ div#timeline1{
 /* IMAGENS */
 
 .item1{
-    background-image: url(imagens/personagens/abby_perfil.jpg);
+    background-image: url(imagens/linha/virus.jpg);
 }
 
 .item2{
-    background-image: url(imagens/personagens/sarah_perfil.jpg);
+    background-image: url(imagens/linha/joel_sarah.jpg);
 }
 
 .item3{
-    background-image: url(imagens/personagens/ellie_perfil.jpg);
+    background-image: url(imagens/linha/cidades.jpg);
 }
 
 .item4{
-    background-image: url(imagens/ellie.jpg);
+    background-image: url(imagens/linha/ellie_joel.jpg);
 }
 
 .item5{
-    background-image: url(imagens/jornada.jpg);
+    background-image: url(imagens/linha/jornada.jpg);
 }
 
 .item6{
-    background-image: url(imagens/inverno.jpg);
+    background-image: url(imagens/linha/inverno.jpg);
 }
 
 .item7{
-    background-image: url(imagens/vagalumes.jpg);
+    background-image: url(imagens/linha/vagalumes.jpg);
 }
 
 .item8{
-    background-image: url(imagens/hospital.jpg);
+    background-image: url(imagens/linha/jackson.jpg);
+}
+
+.item9{
+    background-image: url(imagens/personagens/lev_perfil.jpg);
+}
+
+.item10{
+    background-image: url(imagens/personagens/sarah_perfil.jpg);
 }
 
 /* EFEITO CINEMATOGRÁFICO */
