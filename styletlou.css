@@ -43,6 +43,7 @@
     margin: 0px;
     padding: 0px;
 
+
     font-family: Arial, Helvetica, sans-serif;
 }
 
@@ -117,7 +118,7 @@ section#tlou-img h1{
     width: 90%;
 
     font-family: 'tloufonts';
-    font-size: 150px;
+    font-size: 100px;
     text-align: center;
 }
 
@@ -134,10 +135,13 @@ section#linha{
 }
 
 article#texto{
-    background-color: var(--cor-fundo-secundario);
+    background-color: var(--cor-card);
     color: var(--cor-texto-principal);
 
     padding: 10px;
+    margin-top: 20px;
+
+    border-radius: 20px;
 }
 
 article#texto h2{
@@ -149,13 +153,202 @@ article#texto p{
     padding: 10px;
 }
 
-input{
+div#timeline{
+    display:none ;
+}
+
+div#timeline1{
+    color: var(--cor-texto-principal);
+}
+
+
+.line{
+    position: fixed;
+
+    top: 0;
+    left: 30px;
+
+    width: 3px;
+    height: 100vh;
+
+    background:
+    linear-gradient(
+        to bottom,
+        rgba(255,255,255,0.1),
+        #ff2a2a,
+        rgba(255,255,255,0.1)
+    );
+
+    z-index: 100;
+}
+
+/* ITEM */
+
+.item{
+    position: relative;
+
+    width: 100%;
+    height: 100vh;
+
+    scroll-snap-align: start;
+
+    display: flex;
+    align-items: center;
+
+    padding: 30px;
+
+    overflow: hidden;
+
+    background-size: cover;
+    background-position: center;
+
+    animation: zoom 15s ease-in-out infinite alternate;
+}
+
+/* OVERLAY */
+
+.overlay{
+    position: absolute;
+    inset: 0;
+
+    background:
+    linear-gradient(
+        to top,
+        rgba(0,0,0,0.95),
+        rgba(0,0,0,0.3),
+        rgba(0,0,0,0.9)
+    );
+
+    z-index: 1;
+}
+
+/* BOLINHA */
+
+.dot{
+    position: absolute;
+
+    left: 21px;
+    top: 50%;
+
+    transform: translateY(-50%);
+
+    width: 20px;
+    height: 20px;
+
+    border-radius: 50%;
+
+    border: 3px solid white;
+
+    background-color: black;
+
+    z-index: 10;
+}
+
+.dot.active{
+    background: #ff2a2a;
+
+    box-shadow:
+    0 0 10px #ff2a2a,
+    0 0 30px #ff2a2a;
+}
+
+/* CONTEÚDO */
+
+.content{
+    position: relative;
+
+    z-index: 5;
+
+    margin-left: 50px;
+
+    max-width: 300px;
+}
+
+.content h2{
+    color: rgba(255,255,255,0.15);
+
+    font-size: 5rem;
+
+    line-height: 1;
+
+    font-family: 'Bebas Neue', sans-serif;
+}
+
+.content h3{
+    color: #ff2a2a;
+
+    font-size: 1.8rem;
+
+    letter-spacing: 2px;
+
+    margin-bottom: 20px;
+}
+
+.content p{
+    color: #d1d1d1;
+
+    line-height: 1.7;
+
+    font-size: 1rem;
+}
+
+/* IMAGENS */
+
+.item1{
+    background-image: url(imagens/personagens/abby_perfil.jpg);
+}
+
+.item2{
+    background-image: url(imagens/personagens/sarah_perfil.jpg);
+}
+
+.item3{
+    background-image: url(imagens/personagens/ellie_perfil.jpg);
+}
+
+.item4{
+    background-image: url(imagens/ellie.jpg);
+}
+
+.item5{
+    background-image: url(imagens/jornada.jpg);
+}
+
+.item6{
+    background-image: url(imagens/inverno.jpg);
+}
+
+.item7{
+    background-image: url(imagens/vagalumes.jpg);
+}
+
+.item8{
+    background-image: url(imagens/hospital.jpg);
+}
+
+/* EFEITO CINEMATOGRÁFICO */
+
+@keyframes zoom{
+
+    from{
+        background-size: 100%;
+    }
+
+    to{
+        background-size: 110%;
+    }
+
+}
+
+
+
+/*input{
     display: none;
 }
 
 #timeline-nav{
     position: relative;
-    
+
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -246,4 +439,4 @@ span{
     background: red;
 
     transform: scale(1.1)
-}
+}*/
