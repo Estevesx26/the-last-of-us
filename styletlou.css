@@ -206,7 +206,6 @@ div#timeline1{
     background-position: center;
     background-repeat: no-repeat;
 
-
     animation: zoom 15s ease-in-out infinite alternate;
 }
 
@@ -304,7 +303,7 @@ div#timeline1{
 }
 
 .item2{
-    background-image: url(imagens/linha/joel_sarah.jpg);
+    background-image: url(imagens/linha/fuga.jpg);
 }
 
 .item3{
@@ -332,11 +331,11 @@ div#timeline1{
 }
 
 .item9{
-    background-image: url(imagens/personagens/lev_perfil.jpg);
+    background-image: url(imagens/linha/conflitos.jpg);
 }
 
 .item10{
-    background-image: url(imagens/personagens/sarah_perfil.jpg);
+    background-image: url(imagens/linha/seattle.jpg);
 }
 
 /* EFEITO CINEMATOGRÁFICO */
