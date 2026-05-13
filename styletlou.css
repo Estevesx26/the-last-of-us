@@ -206,6 +206,7 @@ div#timeline1{
     background-position: center;
     background-repeat: no-repeat;
 
+
     animation: zoom 15s ease-in-out infinite alternate;
 }
 
@@ -343,11 +344,11 @@ div#timeline1{
 @keyframes zoom{
 
     from{
-        background-size: 100%;
+        background-size: 150%;
     }
 
     to{
-        background-size: 110%;
+        background-size: 140%;
     }
 
 }
