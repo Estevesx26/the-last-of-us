@@ -99,6 +99,90 @@ div#menu{
     font-size: 1.6em;
 }
 
+/* ESCONDE CHECKBOX */
+#menu-toggle{
+    display: none;
+}
+
+/* BOTÃO */
+.menu-btn{
+    position: fixed;
+
+    right: 20px;
+
+    cursor: pointer;
+
+    z-index: 1001;
+}
+
+.menu-btn i{
+    font-style: normal;
+}
+
+/* ÍCONE */
+.menu-btn i::before{
+    content: "\f0c9"; /* BARS */
+
+    font-family: "Font Awesome 6 Free";
+    font-weight: 600;
+
+    color: white;
+
+    transition: .3s;
+}
+
+/* TROCA PRA X */
+#menu-toggle:checked + .menu-btn i::before{
+    content: "\f00d";
+}
+
+/* MENU LATERAL */
+.sidebar{
+    position: fixed;
+
+    top: 0;
+    right: -250px;
+
+    width: 250px;
+    height: 100vh;
+
+    background: rgba(0, 0, 0, 0.5);
+    backdrop-filter: blur(1px);
+
+    display: flex;
+    flex-direction: column;
+
+    padding-top: 100px;
+
+    transition: .5s;
+
+    z-index: 1000;
+}
+
+/* LINKS */
+.sidebar a{
+    color: white;
+
+    text-decoration: none;
+
+    padding: 20px 30px;
+
+    font-size: 1.2rem;
+
+    transition: .3s;
+}
+
+.sidebar a:hover{
+    color: var(--cor-link-destaque);
+
+    transform: translateX(10px);
+}
+
+/* ABRIR MENU */
+#menu-toggle:checked ~ .sidebar{
+    right: 0;
+}
+
 #icon, #menu, #title{
     display: flex;
     align-items: center;
@@ -131,16 +215,41 @@ section#tlou-img h1{
     text-align: center;
 }
 
-section#tlou-img div{
-    background-color: var(--cor-card-destaque);
-    border: 2px solid var(--cor-borda);
-    padding: 5px;
+.divider{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    gap: 15px;
+
+    width: 100%;
+
+    margin-top: 30px;
 }
 
-section#tlou-img div a{
-    color: var(--cor-link);
-    font-size: 1.2em;
+.divider span{
+    width: 60px;
+    height: 1px;
+
+    background: rgba(255,255,255,0.3);
+}
+
+.divider a{
+    color: var(--cor-texto-principal);
+
     text-decoration: none;
+
+    font-size: 0.9rem;
+    font-weight: 800;
+
+    letter-spacing: 3px;
+    text-transform: uppercase;
+
+    transition: 0.3s;
+}
+
+.divider a:hover{
+    color: var(--cor-link-destaque);
 }
 
 main#historia{
@@ -588,7 +697,7 @@ div#timeline1{
     background-repeat: no-repeat;
     background-size: cover;
 
-    backdrop-filter: blur(10px);
+    backdrop-filter: blur(2px);
 
     border: 3px solid rgba(255,255,255,0.08);
 
@@ -654,7 +763,7 @@ div#timeline1{
 /* TEXTO CARD */
 
 .card-content p{
-    color: #cfcfcf;
+    color: var(--cor-texto-principal);
 
     height: 20%;
     width: 90%;
@@ -673,10 +782,6 @@ div#timeline1{
 
     box-shadow:
     0 0 30px rgba(0,223,4,0.2);
-}
-
-.cards:hover .card:not(:hover){
-    filter: blur(3px);
 }
 
 /* FRASE FINAL */
