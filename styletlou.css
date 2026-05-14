@@ -155,23 +155,126 @@ section#linha{
     width: 100%;
 }
 
-article#texto{
-    background-color: var(--cor-card);
-    color: var(--cor-texto-principal);
+.intro{
+    position: relative;
 
-    padding: 10px;
+    min-height: 60vh;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    padding: 40px;
+
+    overflow: hidden;
+
+    background-image: url(imagens/tlouvibes/fundotlou1.jpg);
+    background-position: top left;
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
+/* OVERLAY */
+
+.intro-overlay{
+    position: absolute;
+    inset: 0;
+
+    background:
+    linear-gradient(
+        to bottom,
+        rgba(0,0,0,0.9),
+        rgba(0,0,0,0.5),
+        rgba(0,0,0,0.95)
+    );
+}
+
+/* CONTENT */
+
+.intro-content{
+    position: relative;
+
+    z-index: 2;
+
+    max-width: 700px;
+}
+
+/* MINI TITLE */
+
+.intro-mini{
+    color: #00DF04;
+
+    letter-spacing: 4px;
+
+    font-size: 0.9rem;
+}
+
+/* TITULO */
+
+.intro-content h2{
+    color: white;
+
+    font-size: clamp(3rem, 10vw, 7rem);
+
+    line-height: 1;
+
+    margin-top: 15px;
+}
+
+.intro-content h2::after{
+    content: "";
+
+    display: block;
+
+    width: 120px;
+    height: 3px;
+
     margin-top: 20px;
 
-    border-radius: 20px;
+    background: #00DF04;
+
+    box-shadow:
+    0 0 10px #00DF04;
 }
 
-article#texto h2{
-    text-align: center;
+/* TEXTO */
+
+.intro-content p{
+    color: #d1d1d1;
+
+    line-height: 1.8;
+
+    margin-top: 30px;
+
+    font-size: 1rem;
 }
 
-article#texto p{
-    text-align: justify;
-    padding: 10px;
+/* BOTÃO */
+
+.intro-btn{
+    color: #121411;
+    background: #00DF04;
+
+    display: inline-block;
+
+    margin-top: 40px;
+
+    padding: 14px 30px;
+
+    border-radius: 40px;
+
+    text-decoration: none;
+
+    font-weight: bold;
+
+    transition: 0.4s;
+}
+
+.intro-btn:hover{
+    transform: translateY(-5px);
+
+    box-shadow:
+    0 0 20px rgba(0,223,4,0.5);
 }
 
 div#timeline{
@@ -182,7 +285,7 @@ div#timeline1{
     color: var(--cor-texto-principal);
 }
 
-.timeline{
+#timeline{
     position: relative;
 }
 
@@ -375,7 +478,7 @@ div#timeline1{
     padding: 100px 20px;
 
     background-image: url(imagens/tlouvibes/fundotlou1.jpg);
-    background-position: left;
+    background-position: bottom left;
     background-size: cover;
     background-repeat: no-repeat;
 
@@ -407,7 +510,7 @@ div#timeline1{
 /* MINI TITLE */
 
 .mini-title{
-    color: #00DF04;
+    color: var(--cor-link-destaque);
 
     letter-spacing: 4px;
 
@@ -487,7 +590,7 @@ div#timeline1{
 
     backdrop-filter: blur(10px);
 
-    border: 1px solid rgba(255,255,255,0.08);
+    border: 3px solid rgba(255,255,255,0.08);
 
     transition: 0.5s ease;
 }
@@ -531,21 +634,10 @@ div#timeline1{
 
     height: 100%;
 
-    padding: 25px;
-
     display: flex;
     flex-direction: column;
     justify-content: flex-end;
-}
-
-/* NUMERO */
-
-.card-content span{
-    color: rgba(255,255,255,0.2);
-
-    font-size: 4rem;
-
-    font-weight: bold;
+    align-items: center;
 }
 
 /* TITULO CARD */
@@ -553,7 +645,8 @@ div#timeline1{
 .card-content h3{
     color: white;
 
-    margin-top: 10px;
+    width: 90%;
+    margin-bottom: 5px;
 
     font-size: 2rem;
 }
@@ -563,7 +656,10 @@ div#timeline1{
 .card-content p{
     color: #cfcfcf;
 
-    margin-top: 15px;
+    height: 20%;
+    width: 90%;
+
+    margin-bottom: 20px;
 
     line-height: 1.6;
 }
@@ -573,10 +669,14 @@ div#timeline1{
 .card:hover{
     transform: translateY(-12px);
 
-    border-color: #00DF04;
+    border-color: #00df044a;
 
     box-shadow:
     0 0 30px rgba(0,223,4,0.2);
+}
+
+.cards:hover .card:not(:hover){
+    filter: blur(3px);
 }
 
 /* FRASE FINAL */
