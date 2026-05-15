@@ -1,35 +1,30 @@
 @charset "UTF-8";
 
 :root{
-    /* Fundo do site */
     --cor-fundo-principal: #121411;
     --cor-fundo-secundario: #00010D;
 
-    /* Card */
     --cor-card: #1A1D18;
     --cor-card-destaque: #6B4B34;
 
-    /* Texto */
     --cor-texto-principal: #D8D4C8;
     --cor-texto-secundario: #6E6E68;
     --cor-texto-padrão: #000000;
     --cor-link:#2C4001;
     --cor-link-destaque: #00DF04;
 
-    /* Cor principal da identidade */
     --cor-principal: #4E5B3C;
-    /* Cor cinematográfica / destaque */
+
     --cor-secundaria: #C2A96A;
-    /* Hover */
+
     --cor-hover: #8F7A4F;
 
-    /* Bordas */
     --cor-borda: #2B2F29;
-    /* Sombras */
+
     --cor-sombra: rgba(0, 0, 0, 0.45);
-    /* Verde claro natureza */
+
     --cor-verde-claro: #7A8B5D;
-    /*Cor Extra*/
+
     --cor-branco: #ffffff;
     --cor-extra: #ff2a2a;
     --cor-extra2: red;
@@ -99,12 +94,10 @@ div#menu{
     font-size: 1.6em;
 }
 
-/* ESCONDE CHECKBOX */
 #menu-toggle{
     display: none;
 }
 
-/* BOTÃO */
 .menu-btn{
     position: fixed;
 
@@ -119,9 +112,8 @@ div#menu{
     font-style: normal;
 }
 
-/* ÍCONE */
 .menu-btn i::before{
-    content: "\f0c9"; /* BARS */
+    content: "\f0c9";
 
     font-family: "Font Awesome 6 Free";
     font-weight: 600;
@@ -136,7 +128,6 @@ div#menu{
     content: "\f00d";
 }
 
-/* MENU LATERAL */
 .sidebar{
     position: fixed;
 
@@ -159,7 +150,6 @@ div#menu{
     z-index: 1000;
 }
 
-/* LINKS */
 .sidebar a{
     color: white;
 
@@ -178,7 +168,6 @@ div#menu{
     transform: translateX(10px);
 }
 
-/* ABRIR MENU */
 #menu-toggle:checked ~ .sidebar{
     right: 0;
 }
@@ -283,8 +272,6 @@ section#linha{
     background-repeat: no-repeat;
 }
 
-/* OVERLAY */
-
 .intro-overlay{
     position: absolute;
     inset: 0;
@@ -298,8 +285,6 @@ section#linha{
     );
 }
 
-/* CONTENT */
-
 .intro-content{
     position: relative;
 
@@ -308,17 +293,13 @@ section#linha{
     max-width: 700px;
 }
 
-/* MINI TITLE */
-
 .intro-mini{
-    color: #00DF04;
+    color: var(--cor-link-destaque);
 
     letter-spacing: 4px;
 
     font-size: 0.9rem;
 }
-
-/* TITULO */
 
 .intro-content h2{
     color: white;
@@ -340,16 +321,16 @@ section#linha{
 
     margin-top: 20px;
 
-    background: #00DF04;
+    background: var(--cor-link-destaque);
 
     box-shadow:
-    0 0 10px #00DF04;
+    0 0 10px var(--cor-link-destaque);
 }
 
 /* TEXTO */
 
 .intro-content p{
-    color: #d1d1d1;
+    color: var(--cor-texto-principal);
 
     line-height: 1.8;
 
@@ -361,8 +342,8 @@ section#linha{
 /* BOTÃO */
 
 .intro-btn{
-    color: #121411;
-    background: #00DF04;
+    color: var(--cor-texto-padrão);
+    background: var(--cor-link-destaque);
 
     display: inline-block;
 
@@ -469,7 +450,7 @@ div#timeline1{
 
     border: 3px solid var(--cor-branco);
 
-    background-color: black;
+    background-color: var(--cor-fundo-secundario);
 
     z-index: 100;
 }
@@ -523,8 +504,6 @@ div#timeline1{
     font-size: 1rem;
 }
 
-/* IMAGENS */
-
 .item1{
     background-image: url(imagens/linha/virus.jpg);
 }
@@ -565,8 +544,6 @@ div#timeline1{
     background-image: url(imagens/linha/seattle.jpg);
 }
 
-/* EFEITO CINEMATOGRÁFICO */
-
 @keyframes zoom{
 
     from{
@@ -578,8 +555,6 @@ div#timeline1{
     }
 
 }
-
-/* SECTION */
 
 .universo{
     position: relative;
@@ -594,8 +569,6 @@ div#timeline1{
     overflow: hidden;
 }
 
-/* OVERLAY */
-
 .universo .overlay{
     position: absolute;
     inset: 0;
@@ -609,14 +582,10 @@ div#timeline1{
     );
 }
 
-/* CONTAINER */
-
 .universo .container{
     position: relative;
     z-index: 2;
 }
-
-/* MINI TITLE */
 
 .mini-title{
     color: var(--cor-link-destaque);
@@ -626,10 +595,8 @@ div#timeline1{
     font-size: 0.9rem;
 }
 
-/* TITULO */
-
 .universo h2{
-    color: white;
+    color: var(--cor-branco);
 
     font-size: clamp(3rem, 8vw, 7rem);
 
@@ -648,16 +615,14 @@ div#timeline1{
 
     margin-top: 20px;
 
-    background: #00DF04;
+    background: var(--cor-link-destaque);
 
     box-shadow:
-    0 0 10px #00DF04;
+    0 0 10px var(--cor-link-destaque);
 }
 
-/* DESCRIÇÃO */
-
 .descricao{
-    color: #d1d1d1;
+    color: var(--cor-texto-principal);
 
     max-width: 700px;
 
@@ -665,8 +630,6 @@ div#timeline1{
 
     line-height: 1.8;
 }
-
-/* CARDS */
 
 .cards{
     display: grid;
@@ -677,8 +640,6 @@ div#timeline1{
 
     margin-top: 60px;
 }
-
-/* CARD */
 
 .card{
     position: relative;
@@ -720,8 +681,6 @@ div#timeline1{
     background-image: url(imagens/tlouvibes/curiosidades.jpg);
 }
 
-/* OVERLAY CARD */
-
 .card-overlay{
     position: absolute;
     inset: 0;
@@ -733,8 +692,6 @@ div#timeline1{
         rgba(0,0,0,0.2)
     );
 }
-
-/* CARD CONTENT */
 
 .card-content{
     position: relative;
@@ -749,18 +706,14 @@ div#timeline1{
     align-items: center;
 }
 
-/* TITULO CARD */
-
 .card-content h3{
-    color: white;
+    color: var(--cor-branco);
 
     width: 90%;
     margin-bottom: 5px;
 
     font-size: 2rem;
 }
-
-/* TEXTO CARD */
 
 .card-content p{
     color: var(--cor-texto-principal);
@@ -773,18 +726,14 @@ div#timeline1{
     line-height: 1.6;
 }
 
-/* HOVER */
-
 .card:hover{
     transform: translateY(-12px);
 
-    border-color: #00df044a;
+    border-color: var(--cor-borda);
 
     box-shadow:
-    0 0 30px rgba(0,223,4,0.2);
+    0 0 30px rgba(58, 96, 0, 0.2);
 }
-
-/* FRASE FINAL */
 
 .frase-final{
     color: rgba(255,255,255,0.7);
