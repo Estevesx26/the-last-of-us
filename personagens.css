@@ -1,0 +1,57 @@
+@charset "UTF-8";
+
+:root{
+    --cor-fundo-principal: #121411;
+    --cor-fundo-secundario: #00010D;
+
+    --cor-card: #1A1D18;
+    --cor-card-destaque: #6B4B34;
+
+    --cor-texto-principal: #D8D4C8;
+    --cor-texto-secundario: #ffffffb3;
+    --cor-texto-padrão: #000000;
+    --cor-link:#2C4001;
+    --cor-link-destaque: #00DF04;
+
+    --cor-principal: #4E5B3C;
+
+    --cor-secundaria: #C2A96A;
+
+    --cor-hover: #8F7A4F;
+
+    --cor-borda: #2B2F29;
+
+    --cor-sombra: rgba(0, 0, 0, 0.45);
+
+    --cor-verde-claro: #7A8B5D;
+
+    --cor-branco: #ffffff;
+    --cor-extra: #ff2a2a;
+    --cor-extra2: red;
+}
+
+/*Fonte h1 TLOU*/
+@font-face {
+    font-family: 'tloufonts';
+    src: url('fontes/brixton.otf');
+}
+
+/*Fonte padrão TLOU*/
+@import url('https://fonts.googleapis.com/css2?family=Oswald:wght@200..700&display=swap');
+
+*{
+    margin: 0px;
+    padding: 0px;
+
+
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+body{
+    overflow-x: hidden;
+}
+
+html{
+    scroll-behavior: smooth;
+}
+
