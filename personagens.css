@@ -254,109 +254,84 @@ section#tlou-img h1{
 }
 
 /* =========================
-   CONTAINER
+   ELEMENTO PAI
 ========================= */
 
-.container{
-    width: 100%;
-    height: 100vh;
-
-    position: relative;
-}
-
-/* =========================
-   BACKGROUND EFFECT
-========================= */
-
-.container::before{
-    content: '';
-
-    position: absolute;
-
-    width: 500px;
-    height: 500px;
-
-    border-radius: 50%;
-
-    background:
-    radial-gradient(
-        rgba(122,139,93,0.18),
-        transparent 70%
-    );
-
-    top: -120px;
-    left: -180px;
-
-    filter: blur(80px);
-
-    z-index: 0;
-}
-
-/* =========================
-   CAROUSEL
-========================= */
-
-.orbit-carousel{
-    position: relative;
-
+.characters-area{
     width: 100%;
     height: 100vh;
 
     overflow: hidden;
 
-    z-index: 2;
-}
+    position: relative;
 
-/* =========================
-   FADE TOP
-========================= */
+    display: flex;
+    align-items: center;
 
-.orbit-carousel::before{
-    content: '';
-
-    position: absolute;
-
-    top: 0;
-    left: 0;
-
-    width: 100%;
-    height: 120px;
-
-    z-index: 100;
-
-    pointer-events: none;
-
-    background: linear-gradient(
-        to bottom,
-        #0d0d12,
-        transparent
+    background:
+    radial-gradient(
+        circle at top left,
+        #232b1d,
+        #0d0d12 60%
     );
 }
 
 /* =========================
-   FADE BOTTOM
+   EFEITO DE FUNDO
 ========================= */
 
-.orbit-carousel::after{
+.characters-area::before{
     content: '';
 
     position: absolute;
 
-    bottom: 0;
-    left: 0;
+    width: 300px;
+    height: 300px;
 
-    width: 100%;
-    height: 120px;
+    border-radius: 50%;
 
-    z-index: 100;
+    background:
+    rgba(122,139,93,0.15);
 
-    pointer-events: none;
+    filter: blur(90px);
 
-    background: linear-gradient(
-        to top,
-        #0d0d12,
-        transparent
-    );
+    top: -100px;
+    left: -100px;
+
+    z-index: 0;
+}
+
+/* =========================
+   TRACK
+========================= */
+
+.carousel-track{
+    display: flex;
+
+    gap: 18px;
+
+    width: max-content;
+
+    animation:
+    infiniteScroll 35s linear infinite;
+}
+
+/* =========================
+   PAUSA QUANDO CLICAR
+========================= */
+
+/* PARA TUDO */
+
+.characters-area:active .carousel-track{
+    animation-play-state: paused;
+}
+
+/* ESCURECE OS OUTROS */
+
+.characters-area:active .card{
+    opacity: .35;
+
+    transform: scale(.92);
 }
 
 /* =========================
@@ -364,32 +339,24 @@ section#tlou-img h1{
 ========================= */
 
 .card{
-    position: absolute;
+    width: 240px;
+    height: 420px;
 
-    top: 50%;
-    left: -140px;
-
-    width: 220px;
-    height: 130px;
-
-    border-radius: 20px;
+    border-radius: 26px;
 
     overflow: hidden;
+
+    position: relative;
+
+    flex-shrink: 0;
+
+    background: #111;
 
     border:
     1px solid rgba(255,255,255,0.08);
 
-    background: #111;
-
     box-shadow:
-    0 10px 30px rgba(0,0,0,0.35);
-
-    cursor: pointer;
-
-    will-change: transform;
-
-    animation:
-    orbit 40s linear infinite;
+    0 10px 25px rgba(0,0,0,.25);
 
     transition:
     transform .4s,
@@ -397,11 +364,11 @@ section#tlou-img h1{
     box-shadow .4s,
     border .4s;
 
-    opacity: 1;
+    opacity: .75;
 }
 
 /* =========================
-   IMAGE
+   IMG
 ========================= */
 
 .card img{
@@ -429,145 +396,91 @@ section#tlou-img h1{
 
     z-index: 2;
 
+    pointer-events: none;
+
     background:
     linear-gradient(
         to top,
-        rgba(0,0,0,0.55),
-        transparent
+        rgba(0,0,0,.55),
+        transparent 45%
     );
 }
 
 /* =========================
-   CLICK EFFECT
+   DESTAQUE AO CLICAR
 ========================= */
-
-/* ESCURECE TODOS */
-
-.orbit-carousel:active .card{
-    animation-play-state: paused;
-
-    opacity: .25;
-
-    transform: scale(.92);
-}
-
-/* CARD ESCOLHIDO */
 
 .card:active{
-    opacity: 1 !important;
 
     transform:
-    scale(1.08) !important;
+    scale(1.08);
 
-    z-index: 999;
+    opacity: 1 !important;
+
+    z-index: 50;
 
     border:
-    1px solid rgba(255,255,255,0.2);
+    1px solid rgba(122,139,93,.45);
 
     box-shadow:
-    0 0 30px rgba(122,139,93,0.35),
-    0 0 60px rgba(122,139,93,0.15);
+    0 0 30px rgba(122,139,93,.25),
+    0 0 60px rgba(122,139,93,.12);
 
     animation-play-state: paused;
 }
 
-/* IMG */
+/* =========================
+   IMG CLICK
+========================= */
 
 .card:active img{
-    transform: scale(1.12);
 
-    filter: brightness(1.08);
+    transform:
+    scale(1.1);
+
+    filter:
+    brightness(1.1);
 }
 
 /* =========================
-   DELAYS
+   FADE LATERAL
 ========================= */
 
-.card:nth-child(1){ animation-delay: 0s; }
-.card:nth-child(2){ animation-delay: -4s; }
-.card:nth-child(3){ animation-delay: -8s; }
-.card:nth-child(4){ animation-delay: -12s; }
-.card:nth-child(5){ animation-delay: -16s; }
-.card:nth-child(6){ animation-delay: -20s; }
-.card:nth-child(7){ animation-delay: -24s; }
-.card:nth-child(8){ animation-delay: -28s; }
-.card:nth-child(9){ animation-delay: -32s; }
-.card:nth-child(10){ animation-delay: -36s; }
+.characters-area::after{
+    content: '';
+
+    position: absolute;
+
+    inset: 0;
+
+    pointer-events: none;
+
+    background:
+    linear-gradient(
+        to right,
+        #0d0d12 0%,
+        transparent 10%,
+        transparent 90%,
+        #0d0d12 100%
+    );
+
+    z-index: 10;
+}
 
 /* =========================
-   ORBIT
+   ANIMAÇÃO
 ========================= */
 
-@keyframes orbit{
+@keyframes infiniteScroll{
 
-    /* TOPO */
-
-    0%{
+    from{
         transform:
-        translate3d(
-            -120px,
-            -850px,
-            0
-        )
-        scale(0.55);
-
-        opacity: 0.2;
+        translateX(0);
     }
 
-    /* CURVA SUPERIOR */
-
-    25%{
+    to{
         transform:
-        translate3d(
-            20px,
-            -280px,
-            0
-        )
-        scale(0.8);
-
-        opacity: 0.7;
-    }
-
-    /* CENTRO */
-
-    50%{
-        transform:
-        translate3d(
-            180px,
-            0px,
-            0
-        )
-        scale(1);
-
-        opacity: 1;
-    }
-
-    /* CURVA INFERIOR */
-
-    75%{
-        transform:
-        translate3d(
-            20px,
-            280px,
-            0
-        )
-        scale(0.8);
-
-        opacity: 0.7;
-    }
-
-    /* BAIXO */
-
-    100%{
-        transform:
-        translate3d(
-            -120px,
-            850px,
-            0
-        )
-        scale(0.55);
-
-        opacity: 0.2;
+        translateX(-50%);
     }
 
 }
