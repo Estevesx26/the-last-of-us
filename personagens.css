@@ -290,7 +290,7 @@ section#tlou-img h1{
     left: 0;
 
     width: 100%;
-    height: 180px;
+    height: 120px;
 
     z-index: 100;
 
@@ -316,7 +316,7 @@ section#tlou-img h1{
     left: 0;
 
     width: 100%;
-    height: 180px;
+    height: 120px;
 
     z-index: 100;
 
@@ -337,12 +337,12 @@ section#tlou-img h1{
     position: absolute;
 
     top: 50%;
-    left: -260px;
+    left: -140px;
 
-    width: 420px;
-    height: 240px;
+    width: 220px;
+    height: 130px;
 
-    border-radius: 28px;
+    border-radius: 20px;
 
     overflow: hidden;
 
@@ -356,12 +356,11 @@ section#tlou-img h1{
     translate3d(0,0,0);
 
     animation:
-    orbit 60s linear infinite;
+    orbit 40s linear infinite;
 
     transition:
     transform 0.4s,
-    opacity 0.4s,
-    filter 0.4s;
+    opacity 0.4s;
 
     opacity: 1;
 }
@@ -377,9 +376,6 @@ section#tlou-img h1{
     object-fit: cover;
 
     display: block;
-
-    transition:
-    transform 0.5s;
 }
 
 /* =========================
@@ -392,48 +388,11 @@ section#tlou-img h1{
     position: absolute;
     inset: 0;
 
-    z-index: 2;
-
-    pointer-events: none;
-
     background: linear-gradient(
         to top,
-        rgba(0,0,0,0.6),
+        rgba(0,0,0,0.45),
         transparent
     );
-}
-
-/* =========================
-   HOVER
-========================= */
-
-/* TODOS PARAM */
-
-.orbit-carousel:hover .card{
-    animation-play-state: paused;
-
-    opacity: 0.25;
-
-    filter: blur(2px);
-}
-
-/* ESCOLHIDO */
-
-.card:hover{
-    opacity: 1 !important;
-
-    filter: blur(0px) !important;
-
-    z-index: 50;
-
-    transform:
-    scale(1.08);
-}
-
-/* ZOOM IMG */
-
-.card:hover img{
-    transform: scale(1.08);
 }
 
 /* =========================
@@ -445,39 +404,39 @@ section#tlou-img h1{
 }
 
 .card:nth-child(2){
-    animation-delay: -6s;
+    animation-delay: -4s;
 }
 
 .card:nth-child(3){
-    animation-delay: -12s;
+    animation-delay: -8s;
 }
 
 .card:nth-child(4){
-    animation-delay: -18s;
+    animation-delay: -12s;
 }
 
 .card:nth-child(5){
-    animation-delay: -24s;
+    animation-delay: -16s;
 }
 
 .card:nth-child(6){
-    animation-delay: -30s;
+    animation-delay: -20s;
 }
 
 .card:nth-child(7){
-    animation-delay: -36s;
+    animation-delay: -24s;
 }
 
 .card:nth-child(8){
-    animation-delay: -42s;
+    animation-delay: -28s;
 }
 
 .card:nth-child(9){
-    animation-delay: -48s;
+    animation-delay: -32s;
 }
 
 .card:nth-child(10){
-    animation-delay: -54s;
+    animation-delay: -36s;
 }
 
 /* =========================
@@ -491,12 +450,12 @@ section#tlou-img h1{
     0%{
         transform:
         translate3d(
-            -260px,
-            -1200px,
+            -120px,
+            -850px,
             0
         )
-        scale(0.45)
-        rotate(-22deg);
+        scale(0.55)
+        rotate(-14deg);
 
         opacity: 0.25;
     }
@@ -506,12 +465,12 @@ section#tlou-img h1{
     25%{
         transform:
         translate3d(
-            120px,
-            -450px,
+            20px,
+            -280px,
             0
         )
-        scale(0.75)
-        rotate(-14deg);
+        scale(0.8)
+        rotate(-8deg);
 
         opacity: 0.7;
     }
@@ -521,11 +480,11 @@ section#tlou-img h1{
     50%{
         transform:
         translate3d(
-            720px,
+            180px,
             0px,
             0
         )
-        scale(1.2)
+        scale(1)
         rotate(0deg);
 
         opacity: 1;
@@ -536,12 +495,12 @@ section#tlou-img h1{
     75%{
         transform:
         translate3d(
-            120px,
-            450px,
+            20px,
+            280px,
             0
         )
-        scale(0.75)
-        rotate(14deg);
+        scale(0.8)
+        rotate(8deg);
 
         opacity: 0.7;
     }
@@ -551,98 +510,14 @@ section#tlou-img h1{
     100%{
         transform:
         translate3d(
-            -260px,
-            1200px,
+            -120px,
+            850px,
             0
         )
-        scale(0.45)
-        rotate(22deg);
+        scale(0.55)
+        rotate(14deg);
 
         opacity: 0.25;
-    }
-
-}
-
-/* =========================
-   RESPONSIVO
-========================= */
-
-@media (max-width: 768px){
-
-    .card{
-        width: 260px;
-        height: 160px;
-
-        left: -180px;
-    }
-
-    @keyframes orbit{
-
-        0%{
-            transform:
-            translate3d(
-                -180px,
-                -900px,
-                0
-            )
-            scale(0.45)
-            rotate(-18deg);
-
-            opacity: 0.2;
-        }
-
-        25%{
-            transform:
-            translate3d(
-                40px,
-                -320px,
-                0
-            )
-            scale(0.72)
-            rotate(-10deg);
-
-            opacity: 0.7;
-        }
-
-        50%{
-            transform:
-            translate3d(
-                180px,
-                0px,
-                0
-            )
-            scale(1.05)
-            rotate(0deg);
-
-            opacity: 1;
-        }
-
-        75%{
-            transform:
-            translate3d(
-                40px,
-                320px,
-                0
-            )
-            scale(0.72)
-            rotate(10deg);
-
-            opacity: 0.7;
-        }
-
-        100%{
-            transform:
-            translate3d(
-                -180px,
-                900px,
-                0
-            )
-            scale(0.45)
-            rotate(18deg);
-
-            opacity: 0.2;
-        }
-
     }
 
 }
