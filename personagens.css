@@ -277,7 +277,7 @@ section#tlou-img h1{
 }
 
 /* =========================
-   EFEITO DE FUNDO
+   BG EFFECT
 ========================= */
 
 .characters-area::before{
@@ -297,8 +297,14 @@ section#tlou-img h1{
 
     top: -100px;
     left: -100px;
+}
 
-    z-index: 0;
+/* =========================
+   ESCONDE CHECKBOX
+========================= */
+
+input[type="checkbox"]{
+    display: none;
 }
 
 /* =========================
@@ -314,24 +320,6 @@ section#tlou-img h1{
 
     animation:
     infiniteScroll 35s linear infinite;
-}
-
-/* =========================
-   PAUSA QUANDO CLICAR
-========================= */
-
-/* PARA TUDO */
-
-.characters-area:active .carousel-track{
-    animation-play-state: paused;
-}
-
-/* ESCURECE OS OUTROS */
-
-.characters-area:active .card{
-    opacity: .35;
-
-    transform: scale(.92);
 }
 
 /* =========================
@@ -359,12 +347,11 @@ section#tlou-img h1{
     0 10px 25px rgba(0,0,0,.25);
 
     transition:
-    transform .4s,
-    opacity .4s,
-    box-shadow .4s,
-    border .4s;
+    .4s;
 
     opacity: .75;
+
+    cursor: pointer;
 }
 
 /* =========================
@@ -377,11 +364,8 @@ section#tlou-img h1{
 
     object-fit: cover;
 
-    display: block;
-
     transition:
-    transform .5s,
-    filter .5s;
+    .5s;
 }
 
 /* =========================
@@ -396,8 +380,6 @@ section#tlou-img h1{
 
     z-index: 2;
 
-    pointer-events: none;
-
     background:
     linear-gradient(
         to top,
@@ -407,15 +389,49 @@ section#tlou-img h1{
 }
 
 /* =========================
-   DESTAQUE AO CLICAR
+   PAUSA
 ========================= */
 
-.card:active{
+#c1:checked ~ .carousel-track,
+#c2:checked ~ .carousel-track,
+#c3:checked ~ .carousel-track,
+#c4:checked ~ .carousel-track,
+#c5:checked ~ .carousel-track,
+#c6:checked ~ .carousel-track{
+    animation-play-state: paused;
+}
+
+/* =========================
+   ESCURECE
+========================= */
+
+#c1:checked ~ .carousel-track .card,
+#c2:checked ~ .carousel-track .card,
+#c3:checked ~ .carousel-track .card,
+#c4:checked ~ .carousel-track .card,
+#c5:checked ~ .carousel-track .card,
+#c6:checked ~ .carousel-track .card{
+    opacity: .25;
+
+    transform:
+    scale(.92);
+}
+
+/* =========================
+   CARD SELECIONADO
+========================= */
+
+#c1:checked ~ .carousel-track label[for="c1"],
+#c2:checked ~ .carousel-track label[for="c2"],
+#c3:checked ~ .carousel-track label[for="c3"],
+#c4:checked ~ .carousel-track label[for="c4"],
+#c5:checked ~ .carousel-track label[for="c5"],
+#c6:checked ~ .carousel-track label[for="c6"]{
+
+    opacity: 1;
 
     transform:
     scale(1.08);
-
-    opacity: 1 !important;
 
     z-index: 50;
 
@@ -425,46 +441,24 @@ section#tlou-img h1{
     box-shadow:
     0 0 30px rgba(122,139,93,.25),
     0 0 60px rgba(122,139,93,.12);
-
-    animation-play-state: paused;
 }
 
 /* =========================
-   IMG CLICK
+   IMG DO SELECIONADO
 ========================= */
 
-.card:active img{
+#c1:checked ~ .carousel-track label[for="c1"] img,
+#c2:checked ~ .carousel-track label[for="c2"] img,
+#c3:checked ~ .carousel-track label[for="c3"] img,
+#c4:checked ~ .carousel-track label[for="c4"] img,
+#c5:checked ~ .carousel-track label[for="c5"] img,
+#c6:checked ~ .carousel-track label[for="c6"] img{
 
     transform:
     scale(1.1);
 
     filter:
     brightness(1.1);
-}
-
-/* =========================
-   FADE LATERAL
-========================= */
-
-.characters-area::after{
-    content: '';
-
-    position: absolute;
-
-    inset: 0;
-
-    pointer-events: none;
-
-    background:
-    linear-gradient(
-        to right,
-        #0d0d12 0%,
-        transparent 10%,
-        transparent 90%,
-        #0d0d12 100%
-    );
-
-    z-index: 10;
 }
 
 /* =========================
