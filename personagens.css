@@ -265,6 +265,34 @@ section#tlou-img h1{
 }
 
 /* =========================
+   BACKGROUND EFFECT
+========================= */
+
+.container::before{
+    content: '';
+
+    position: absolute;
+
+    width: 500px;
+    height: 500px;
+
+    border-radius: 50%;
+
+    background:
+    radial-gradient(
+        rgba(122,139,93,0.18),
+        transparent 70%
+    );
+
+    top: -120px;
+    left: -180px;
+
+    filter: blur(80px);
+
+    z-index: 0;
+}
+
+/* =========================
    CAROUSEL
 ========================= */
 
@@ -275,6 +303,8 @@ section#tlou-img h1{
     height: 100vh;
 
     overflow: hidden;
+
+    z-index: 2;
 }
 
 /* =========================
@@ -346,21 +376,26 @@ section#tlou-img h1{
 
     overflow: hidden;
 
-    border: 1px solid rgba(255,255,255,0.08);
+    border:
+    1px solid rgba(255,255,255,0.08);
+
+    background: #111;
+
+    box-shadow:
+    0 10px 30px rgba(0,0,0,0.35);
 
     cursor: pointer;
 
     will-change: transform;
 
-    transform:
-    translate3d(0,0,0);
-
     animation:
     orbit 40s linear infinite;
 
     transition:
-    transform 0.4s,
-    opacity 0.4s;
+    transform .4s,
+    opacity .4s,
+    box-shadow .4s,
+    border .4s;
 
     opacity: 1;
 }
@@ -376,6 +411,10 @@ section#tlou-img h1{
     object-fit: cover;
 
     display: block;
+
+    transition:
+    transform .5s,
+    filter .5s;
 }
 
 /* =========================
@@ -388,56 +427,72 @@ section#tlou-img h1{
     position: absolute;
     inset: 0;
 
-    background: linear-gradient(
+    z-index: 2;
+
+    background:
+    linear-gradient(
         to top,
-        rgba(0,0,0,0.45),
+        rgba(0,0,0,0.55),
         transparent
     );
+}
+
+/* =========================
+   CLICK EFFECT
+========================= */
+
+/* ESCURECE TODOS */
+
+.orbit-carousel:active .card{
+    animation-play-state: paused;
+
+    opacity: .25;
+
+    transform: scale(.92);
+}
+
+/* CARD ESCOLHIDO */
+
+.card:active{
+    opacity: 1 !important;
+
+    transform:
+    scale(1.08) !important;
+
+    z-index: 999;
+
+    border:
+    1px solid rgba(255,255,255,0.2);
+
+    box-shadow:
+    0 0 30px rgba(122,139,93,0.35),
+    0 0 60px rgba(122,139,93,0.15);
+
+    animation-play-state: paused;
+}
+
+/* IMG */
+
+.card:active img{
+    transform: scale(1.12);
+
+    filter: brightness(1.08);
 }
 
 /* =========================
    DELAYS
 ========================= */
 
-.card:nth-child(1){
-    animation-delay: 0s;
-}
-
-.card:nth-child(2){
-    animation-delay: -4s;
-}
-
-.card:nth-child(3){
-    animation-delay: -8s;
-}
-
-.card:nth-child(4){
-    animation-delay: -12s;
-}
-
-.card:nth-child(5){
-    animation-delay: -16s;
-}
-
-.card:nth-child(6){
-    animation-delay: -20s;
-}
-
-.card:nth-child(7){
-    animation-delay: -24s;
-}
-
-.card:nth-child(8){
-    animation-delay: -28s;
-}
-
-.card:nth-child(9){
-    animation-delay: -32s;
-}
-
-.card:nth-child(10){
-    animation-delay: -36s;
-}
+.card:nth-child(1){ animation-delay: 0s; }
+.card:nth-child(2){ animation-delay: -4s; }
+.card:nth-child(3){ animation-delay: -8s; }
+.card:nth-child(4){ animation-delay: -12s; }
+.card:nth-child(5){ animation-delay: -16s; }
+.card:nth-child(6){ animation-delay: -20s; }
+.card:nth-child(7){ animation-delay: -24s; }
+.card:nth-child(8){ animation-delay: -28s; }
+.card:nth-child(9){ animation-delay: -32s; }
+.card:nth-child(10){ animation-delay: -36s; }
 
 /* =========================
    ORBIT
@@ -454,10 +509,9 @@ section#tlou-img h1{
             -850px,
             0
         )
-        scale(0.55)
-        rotate(-14deg);
+        scale(0.55);
 
-        opacity: 0.25;
+        opacity: 0.2;
     }
 
     /* CURVA SUPERIOR */
@@ -469,8 +523,7 @@ section#tlou-img h1{
             -280px,
             0
         )
-        scale(0.8)
-        rotate(-8deg);
+        scale(0.8);
 
         opacity: 0.7;
     }
@@ -484,8 +537,7 @@ section#tlou-img h1{
             0px,
             0
         )
-        scale(1)
-        rotate(0deg);
+        scale(1);
 
         opacity: 1;
     }
@@ -499,8 +551,7 @@ section#tlou-img h1{
             280px,
             0
         )
-        scale(0.8)
-        rotate(8deg);
+        scale(0.8);
 
         opacity: 0.7;
     }
@@ -514,10 +565,9 @@ section#tlou-img h1{
             850px,
             0
         )
-        scale(0.55)
-        rotate(14deg);
+        scale(0.55);
 
-        opacity: 0.25;
+        opacity: 0.2;
     }
 
 }
