@@ -272,6 +272,7 @@ section#tlou-img h1{
     );
 
     overflow: hidden;
+    user-select: none;
 }
 
 /* =========================================
