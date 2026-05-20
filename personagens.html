@@ -48,128 +48,116 @@
         </section>
     </main>
 
-    <section class="characters-area">
+    <section class="characters-section">
 
-    <!-- CHECKBOX -->
+    <!-- BOTÃO TOGGLE -->
+    <input type="checkbox" id="toggle-view">
 
-    <input type="checkbox" id="c1">
-    <input type="checkbox" id="c2">
-    <input type="checkbox" id="c3">
-    <input type="checkbox" id="c4">
-    <input type="checkbox" id="c5">
-    <input type="checkbox" id="c6">
-    <input type="checkbox" id="c7">
-    <input type="checkbox" id="c8">
-    <input type="checkbox" id="c9">
-    <input type="checkbox" id="c10">
-    <input type="checkbox" id="c11">
-    <input type="checkbox" id="c12">
-    <input type="checkbox" id="c13">
-    <input type="checkbox" id="c14">
-    <input type="checkbox" id="c15">
-    <input type="checkbox" id="c16">
-    <input type="checkbox" id="c17">
-    <input type="checkbox" id="c18">
-    <input type="checkbox" id="c19">
-    <input type="checkbox" id="c20">
-    <input type="checkbox" id="c21">
-    <input type="checkbox" id="c22">
+    <div class="top-bar">
 
-    <!-- CAROUSEL -->
+        <h1>Personagens</h1>
 
-    <div class="carousel-track">
-
-        <!-- DUPLICAÇÃO -->
-
-        <label for="c1" class="card">
-            <img src="imagens/personagens/ellie_perfil.jpg" alt="">
+        <label for="toggle-view" class="toggle-btn">
+            Ver todos
         </label>
 
-        <label for="c2" class="card">
-            <img src="imagens/personagens/joel_perfil.jpg" alt="">
-        </label>
+    </div>
 
-        <label for="c3" class="card">
-            <img src="imagens/personagens/abby_perfil.jpg" alt="">
-        </label>
+    <!-- CONTAINER -->
+    <div class="characters-container">
 
-        <label for="c4" class="card">
-            <img src="imagens/personagens/dina_perfil.jpg" alt="">
-        </label>
+        <!-- ELLIE -->
+        <article class="character-card">
+            <img src="imagens/personagens/ellie_perfil.jpg" alt="Ellie">
 
-        <label for="c5" class="card">
-            <img src="imagens/personagens/tommy_perfil.jpg" alt="">
-        </label>
+            <div class="overlay">
+                <h2>Ellie Williams</h2>
 
-        <label for="c6" class="card">
-            <img src="imagens/personagens/lev_perfil.jpg" alt="">
-        </label>
+                <p>
+                    Uma sobrevivente imune ao Cordyceps marcada por perdas e vingança.
+                </p>
 
-        <!-- TEM QUE ARRUMAR NO CSS-->
-        <label for="c7" class="card">
-            <img src="imagens/personagens/yara_perfil.jpg" alt="">
-        </label>
+                <a href="#">Explorar</a>
+            </div>
+        </article>
 
-        <label for="c8" class="card">
-            <img src="imagens/personagens/jesse_perfil.jpg" alt="">
-        </label>
+        <!-- JOEL -->
+        <article class="character-card">
+            <img src="imagens/personagens/joel_perfil.jpg" alt="Joel">
 
-        <label for="c9" class="card">
-            <img src="imagens/personagens/tess_perfil.jpg" alt="">
-        </label>
+            <div class="overlay">
+                <h2>Joel Miller</h2>
 
-        <label for="c10" class="card">
-            <img src="imagens/personagens/marlene_perfil.jpg" alt="">
-        </label>
+                <p>
+                    Um sobrevivente endurecido que encontrou na Ellie uma nova razão para viver.
+                </p>
 
-        <label for="c11" class="card">
-            <img src="imagens/personagens/riley_perfil.jpg" alt="">
-        </label>
+                <a href="#">Explorar</a>
+            </div>
+        </article>
 
-        <label for="c12" class="card">
-            <img src="imagens/personagens/bill_perfil.jpg" alt="">
-        </label>
+        <!-- ABBY -->
+        <article class="character-card">
+            <img src="imagens/personagens/abby_perfil.jpg" alt="Abby">
 
-        <label for="c13" class="card">
-            <img src="imagens/personagens/henrry_perfil.jpg" alt="">
-        </label>
+            <div class="overlay">
+                <h2>Abby Anderson</h2>
 
-        <label for="c14" class="card">
-            <img src="imagens/personagens/sam_perfil.jpg" alt="">
-        </label>
+                <p>
+                    Soldado da WLF movida por vingança.
+                </p>
 
-        <label for="c15" class="card">
-            <img src="imagens/personagens/maria_perfil.jpg" alt="">
-        </label>
+                <a href="#">Explorar</a>
+            </div>
+        </article>
 
-        <label for="c16" class="card">
-            <img src="imagens/personagens/sarah_perfil.jpg" alt="">
-        </label>
+        <!-- DINA -->
+        <article class="character-card">
+            <img src="imagens/personagens/dina_perfil.jpg" alt="Dina">
 
-        <label for="c17" class="card">
-            <img src="imagens/personagens/jerry_perfil.jpg" alt="">
-        </label>
+            <div class="overlay">
+                <h2>Dina</h2>
 
-        <label for="c18" class="card">
-            <img src="imagens/personagens/owen_perfil.jpg" alt="">
-        </label>
+                <p>
+                    Inteligente, forte e uma das pessoas mais importantes para Ellie.
+                </p>
 
-        <label for="c19" class="card">
-            <img src="imagens/personagens/mel_perfil.jpg" alt="">
-        </label>
+                <a href="#">Explorar</a>
+            </div>
+        </article>
 
-        <label for="c20" class="card">
-            <img src="imagens/personagens/manny_perfil.jpg" alt="">
-        </label>
+        <!-- TOMMY -->
+        <article class="character-card">
+            <img src="imagens/personagens/tommy_perfil.jpg" alt="Tommy">
 
-        <label for="c21" class="card">
-            <img src="imagens/personagens/nora_perfil.jpg" alt="">
-        </label>
+            <div class="overlay">
+                <h2>Tommy Miller</h2>
 
-        <label for="c22" class="card">
-            <img src="imagens/personagens/isaac_perfil.jpg" alt="">
-        </label>
+                <p>
+                    Irmão de Joel e fundador de Jackson.
+                </p>
 
+                <a href="#">Explorar</a>
+            </div>
+        </article>
+
+        <!-- LEV -->
+        <article class="character-card">
+            <img src="imagens/personagens/lev_perfil.jpg" alt="Lev">
+
+            <div class="overlay">
+                <h2>Lev</h2>
+
+                <p>
+                    Jovem Serafita aliado de Abby.
+                </p>
+
+                <a href="#">Explorar</a>
+            </div>
+        </article>
+
+        <!-- CONTINUA ATÉ OS 22 -->
+        
     </div>
 
 </section>

@@ -253,20 +253,10 @@ section#tlou-img h1{
     0 0 20px rgba(0,223,4,0.5);
 }
 
-/* =========================
-   ELEMENTO PAI
-========================= */
-
-.characters-area{
+.characters-section{
     width: 100%;
-    height: 100vh;
 
-    overflow: hidden;
-
-    position: relative;
-
-    display: flex;
-    align-items: center;
+    padding: 40px 0;
 
     background:
     radial-gradient(
@@ -274,271 +264,200 @@ section#tlou-img h1{
         #232b1d,
         #0d0d12 60%
     );
+
+    overflow: hidden;
 }
 
-/* =========================
-   BG EFFECT
-========================= */
+/* TOPO */
 
-.characters-area::before{
-    content: '';
+.top-bar{
+    width: 90%;
 
-    position: absolute;
+    margin: auto auto 30px auto;
 
-    width: 300px;
-    height: 300px;
-
-    border-radius: 50%;
-
-    background:
-    rgba(122,139,93,0.15);
-
-    filter: blur(90px);
-
-    top: -100px;
-    left: -100px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
 }
 
-/* =========================
-   ESCONDE CHECKBOX
-========================= */
+.top-bar h1{
+    color: white;
 
-input[type="checkbox"]{
+    font-size: 2rem;
+}
+
+.toggle-btn{
+    padding: 10px 18px;
+
+    border-radius: 8px;
+
+    background: #7A8B5D;
+
+    color: white;
+
+    font-size: .9rem;
+    font-weight: bold;
+
+    cursor: pointer;
+}
+
+/* ESCONDE CHECKBOX */
+
+#toggle-view{
     display: none;
 }
 
 /* =========================
-   TRACK
+   MODO HORIZONTAL
 ========================= */
 
-.carousel-track{
+.characters-container{
     display: flex;
 
-    gap: 18px;
+    gap: 20px;
 
-    width: max-content;
+    overflow-x: auto;
 
-    animation:
-    infiniteScroll 35s linear infinite;
+    scroll-snap-type: x mandatory;
+
+    padding: 20px;
+
+    scroll-behavior: smooth;
+}
+
+/* ESCONDE SCROLLBAR */
+
+.characters-container::-webkit-scrollbar{
+    display: none;
 }
 
 /* =========================
    CARD
 ========================= */
 
-.card{
-    width: 240px;
+.character-card{
+    min-width: 280px;
     height: 420px;
-
-    border-radius: 26px;
-
-    overflow: hidden;
 
     position: relative;
 
+    overflow: hidden;
+
+    border-radius: 24px;
+
     flex-shrink: 0;
+
+    scroll-snap-align: center;
 
     background: #111;
 
     border:
     1px solid rgba(255,255,255,0.08);
 
+    transition: .4s;
+
     box-shadow:
-    0 10px 25px rgba(0,0,0,.25);
-
-    transition:
-    .4s;
-
-    opacity: .75;
-
-    cursor: pointer;
+    0 10px 25px rgba(0,0,0,.35);
 }
 
-/* =========================
-   IMG
-========================= */
+/* IMAGEM */
 
-.card img{
+.character-card img{
     width: 100%;
     height: 100%;
 
     object-fit: cover;
 
-    transition:
-    .5s;
+    transition: .5s;
 }
 
-/* =========================
-   OVERLAY
-========================= */
+/* OVERLAY */
 
-.card::before{
-    content: '';
-
+.overlay{
     position: absolute;
-    inset: 0;
 
-    z-index: 2;
+    left: 0;
+    bottom: 0;
+
+    width: 100%;
+
+    padding: 25px;
 
     background:
     linear-gradient(
         to top,
-        rgba(0,0,0,.55),
-        transparent 45%
+        rgba(0,0,0,.95),
+        transparent
     );
-}
-
-/* =========================
-   PAUSA
-========================= */
-
-#c1:checked ~ .carousel-track,
-#c2:checked ~ .carousel-track,
-#c3:checked ~ .carousel-track,
-#c4:checked ~ .carousel-track,
-#c5:checked ~ .carousel-track,
-#c6:checked ~ .carousel-track,
-#c7:checked ~ .carousel-track,
-#c8:checked ~ .carousel-track,
-#c9:checked ~ .carousel-track,
-#c10:checked ~ .carousel-track,
-#c11:checked ~ .carousel-track,
-#c12:checked ~ .carousel-track,
-#c13:checked ~ .carousel-track,
-#c14:checked ~ .carousel-track,
-#c15:checked ~ .carousel-track,
-#c16:checked ~ .carousel-track,
-#c17:checked ~ .carousel-track,
-#c18:checked ~ .carousel-track,
-#c19:checked ~ .carousel-track,
-#c20:checked ~ .carousel-track,
-#c21:checked ~ .carousel-track,
-#c22:checked ~ .carousel-track{
-    animation-play-state: paused;
-}
-
-/* =========================
-   ESCURECE
-========================= */
-
-#c1:checked ~ .carousel-track .card,
-#c2:checked ~ .carousel-track .card,
-#c3:checked ~ .carousel-track .card,
-#c4:checked ~ .carousel-track .card,
-#c5:checked ~ .carousel-track .card,
-#c6:checked ~ .carousel-track .card,
-#c7:checked ~ .carousel-track .card,
-#c8:checked ~ .carousel-track .card,
-#c9:checked ~ .carousel-track .card,
-#c10:checked ~ .carousel-track .card,
-#c11:checked ~ .carousel-track .card,
-#c12:checked ~ .carousel-track .card,
-#c13:checked ~ .carousel-track .card,
-#c14:checked ~ .carousel-track .card,
-#c15:checked ~ .carousel-track .card,
-#c16:checked ~ .carousel-track .card,
-#c17:checked ~ .carousel-track .card,
-#c18:checked ~ .carousel-track .card,
-#c19:checked ~ .carousel-track .card,
-#c20:checked ~ .carousel-track .card,
-#c21:checked ~ .carousel-track .card,
-#c22:checked ~ .carousel-track .card{
-    opacity: .25;
 
     transform:
-    scale(.92);
+    translateY(120px);
+
+    transition: .5s;
 }
 
-/* =========================
-   CARD SELECIONADO
-========================= */
+/* HOVER */
 
-#c1:checked ~ .carousel-track label[for="c1"],
-#c2:checked ~ .carousel-track label[for="c2"],
-#c3:checked ~ .carousel-track label[for="c3"],
-#c4:checked ~ .carousel-track label[for="c4"],
-#c5:checked ~ .carousel-track label[for="c5"],
-#c6:checked ~ .carousel-track label[for="c6"],
-#c7:checked ~ .carousel-track label[for="c7"],
-#c8:checked ~ .carousel-track label[for="c8"],
-#c9:checked ~ .carousel-track label[for="c9"],
-#c10:checked ~ .carousel-track label[for="c10"],
-#c11:checked ~ .carousel-track label[for="c11"],
-#c12:checked ~ .carousel-track label[for="c12"],
-#c13:checked ~ .carousel-track label[for="c13"],
-#c14:checked ~ .carousel-track label[for="c14"],
-#c15:checked ~ .carousel-track label[for="c15"],
-#c16:checked ~ .carousel-track label[for="c16"],
-#c17:checked ~ .carousel-track label[for="c17"],
-#c18:checked ~ .carousel-track label[for="c18"],
-#c19:checked ~ .carousel-track label[for="c19"],
-#c20:checked ~ .carousel-track label[for="c20"],
-#c21:checked ~ .carousel-track label[for="c21"],
-#c22:checked ~ .carousel-track label[for="c22"]{
+.character-card:hover{
+    transform:
+    scale(1.03);
+}
 
-    opacity: 1;
-
+.character-card:hover img{
     transform:
     scale(1.08);
-
-    z-index: 50;
-
-    border:
-    1px solid rgba(122,139,93,.45);
-
-    box-shadow:
-    0 0 30px rgba(122,139,93,.25),
-    0 0 60px rgba(122,139,93,.12);
 }
 
-/* =========================
-   IMG DO SELECIONADO
-========================= */
-
-#c1:checked ~ .carousel-track label[for="c1"] img,
-#c2:checked ~ .carousel-track label[for="c2"] img,
-#c3:checked ~ .carousel-track label[for="c3"] img,
-#c4:checked ~ .carousel-track label[for="c4"] img,
-#c5:checked ~ .carousel-track label[for="c5"] img,
-#c6:checked ~ .carousel-track label[for="c6"] img,
-#c7:checked ~ .carousel-track label[for="c7"] img,
-#c8:checked ~ .carousel-track label[for="c8"] img,
-#c9:checked ~ .carousel-track label[for="c9"] img,
-#c10:checked ~ .carousel-track label[for="c10"] img,
-#c11:checked ~ .carousel-track label[for="c11"] img,
-#c12:checked ~ .carousel-track label[for="c12"] img,
-#c13:checked ~ .carousel-track label[for="c13"] img,
-#c14:checked ~ .carousel-track label[for="c14"] img,
-#c15:checked ~ .carousel-track label[for="c15"] img,
-#c16:checked ~ .carousel-track label[for="c16"] img,
-#c17:checked ~ .carousel-track label[for="c17"] img,
-#c18:checked ~ .carousel-track label[for="c18"] img,
-#c19:checked ~ .carousel-track label[for="c19"] img,
-#c20:checked ~ .carousel-track label[for="c20"] img,
-#c21:checked ~ .carousel-track label[for="c21"] img,
-#c22:checked ~ .carousel-track label[for="c22"] img{
-
+.character-card:hover .overlay{
     transform:
-    scale(1.1);
+    translateY(0);
+}
 
-    filter:
-    brightness(1.1);
+/* TEXTOS */
+
+.overlay h2{
+    color: white;
+
+    margin-bottom: 10px;
+
+    font-size: 1.5rem;
+}
+
+.overlay p{
+    color: rgba(255,255,255,.75);
+
+    font-size: .95rem;
+
+    line-height: 1.5;
+
+    margin-bottom: 20px;
+}
+
+.overlay a{
+    display: inline-block;
+
+    padding: 10px 18px;
+
+    border-radius: 8px;
+
+    text-decoration: none;
+
+    background: #7A8B5D;
+
+    color: white;
+
+    font-weight: bold;
 }
 
 /* =========================
-   ANIMAÇÃO
+   MODO GRID
 ========================= */
 
-@keyframes infiniteScroll{
+#toggle-view:checked ~ .characters-container{
 
-    from{
-        transform:
-        translateX(0);
-    }
+    display: grid;
 
-    to{
-        transform:
-        translateX(-50%);
-    }
+    grid-template-columns: 1fr;
 
+    padding: 20px;
 }
