@@ -370,6 +370,12 @@ section#tlou-img h1{
     display: none;
 }
 
+#toggle-view:not(:checked) ~ .characters-container .character-card{
+    width: 280px;
+    min-width: 280px;
+    max-width: 280px;
+}
+
 /* =========================================
    CONTAINER HORIZONTAL
 ========================================= */
@@ -573,31 +579,39 @@ section#tlou-img h1{
 }
 
 /* =========================================
-   GRID MODE
+   GRID MODE - VER TODOS
 ========================================= */
 
 #toggle-view:checked ~ .characters-container{
-
     display: grid;
 
-    grid-template-columns: 1fr;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
 
-    gap: 25px;
+    gap: 18px;
+
+    overflow-x: hidden;
+
+    padding: 20px;
 }
 
-/* =========================================
-   MOBILE
-========================================= */
+/* CARD NO GRID */
 
-@media (max-width: 768px){
+#toggle-view:checked ~ .characters-container .character-card{
+    width: 100%;
 
-    .character-card{
-        min-width: 260px;
-        height: 390px;
-    }
+    min-width: 0;
 
-    .overlay{
-        transform:
-        translateY(100px);
-    }
+    height: 420px;
+
+    border-radius: 18px;
+}
+
+/* IMAGEM NO GRID */
+
+#toggle-view:checked ~ .characters-container .character-card img{
+    width: 100%;
+    height: 100%;
+
+    object-fit: cover;
+    object-position: center top;
 }
