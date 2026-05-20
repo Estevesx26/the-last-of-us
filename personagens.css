@@ -253,10 +253,16 @@ section#tlou-img h1{
     0 0 20px rgba(0,223,4,0.5);
 }
 
+/* =========================================
+   SECTION
+========================================= */
+
 .characters-section{
     width: 100%;
 
     padding: 40px 0;
+
+    position: relative;
 
     background:
     radial-gradient(
@@ -268,7 +274,55 @@ section#tlou-img h1{
     overflow: hidden;
 }
 
-/* TOPO */
+/* =========================================
+   FADE LATERAL
+========================================= */
+
+.characters-section::before,
+.characters-section::after{
+    content: '';
+
+    position: absolute;
+
+    top: 0;
+
+    width: 60px;
+    height: 100%;
+
+    z-index: 10;
+
+    pointer-events: none;
+}
+
+/* ESQUERDA */
+
+.characters-section::before{
+    left: 0;
+
+    background:
+    linear-gradient(
+        to right,
+        #0d0d12,
+        transparent
+    );
+}
+
+/* DIREITA */
+
+.characters-section::after{
+    right: 0;
+
+    background:
+    linear-gradient(
+        to left,
+        #0d0d12,
+        transparent
+    );
+}
+
+/* =========================================
+   TOPO
+========================================= */
 
 .top-bar{
     width: 90%;
@@ -299,17 +353,25 @@ section#tlou-img h1{
     font-weight: bold;
 
     cursor: pointer;
+
+    transition: .3s;
 }
 
-/* ESCONDE CHECKBOX */
+.toggle-btn:hover{
+    background: #91a36f;
+}
+
+/* =========================================
+   CHECKBOX
+========================================= */
 
 #toggle-view{
     display: none;
 }
 
-/* =========================
-   MODO HORIZONTAL
-========================= */
+/* =========================================
+   CONTAINER HORIZONTAL
+========================================= */
 
 .characters-container{
     display: flex;
@@ -320,20 +382,42 @@ section#tlou-img h1{
 
     scroll-snap-type: x mandatory;
 
+    scroll-behavior: smooth;
+
     padding: 20px;
 
-    scroll-behavior: smooth;
+    position: relative;
+
+    z-index: 5;
 }
 
-/* ESCONDE SCROLLBAR */
+/* =========================================
+   SCROLLBAR PERSONALIZADA
+========================================= */
 
 .characters-container::-webkit-scrollbar{
-    display: none;
+    height: 5px;
 }
 
-/* =========================
+.characters-container::-webkit-scrollbar-track{
+    background:
+    rgba(255,255,255,0.05);
+
+    border-radius: 20px;
+
+    margin: 0 20px;
+}
+
+.characters-container::-webkit-scrollbar-thumb{
+    background:
+    #7A8B5D;
+
+    border-radius: 20px;
+}
+
+/* =========================================
    CARD
-========================= */
+========================================= */
 
 .character-card{
     min-width: 280px;
@@ -354,13 +438,17 @@ section#tlou-img h1{
     border:
     1px solid rgba(255,255,255,0.08);
 
-    transition: .4s;
+    transition:
+    transform .4s,
+    filter .4s;
 
     box-shadow:
     0 10px 25px rgba(0,0,0,.35);
 }
 
-/* IMAGEM */
+/* =========================================
+   IMAGEM
+========================================= */
 
 .character-card img{
     width: 100%;
@@ -371,7 +459,9 @@ section#tlou-img h1{
     transition: .5s;
 }
 
-/* OVERLAY */
+/* =========================================
+   OVERLAY
+========================================= */
 
 .overlay{
     position: absolute;
@@ -386,7 +476,8 @@ section#tlou-img h1{
     background:
     linear-gradient(
         to top,
-        rgba(0,0,0,.95),
+        rgba(0,0,0,.96),
+        rgba(0,0,0,.55),
         transparent
     );
 
@@ -396,11 +487,28 @@ section#tlou-img h1{
     transition: .5s;
 }
 
-/* HOVER */
+/* =========================================
+   HOVER
+========================================= */
 
-.character-card:hover{
+.characters-container:hover .character-card{
+    filter:
+    brightness(.55)
+    blur(1px);
+}
+
+.characters-container .character-card:hover{
     transform:
-    scale(1.03);
+    scale(1.04);
+
+    filter:
+    brightness(1);
+
+    z-index: 20;
+
+    box-shadow:
+    0 0 25px rgba(122,139,93,.25),
+    0 0 50px rgba(122,139,93,.10);
 }
 
 .character-card:hover img{
@@ -413,7 +521,9 @@ section#tlou-img h1{
     translateY(0);
 }
 
-/* TEXTOS */
+/* =========================================
+   TEXTOS
+========================================= */
 
 .overlay h2{
     color: white;
@@ -424,7 +534,8 @@ section#tlou-img h1{
 }
 
 .overlay p{
-    color: rgba(255,255,255,.75);
+    color:
+    rgba(255,255,255,.75);
 
     font-size: .95rem;
 
@@ -442,16 +553,27 @@ section#tlou-img h1{
 
     text-decoration: none;
 
-    background: #7A8B5D;
+    background:
+    #7A8B5D;
 
     color: white;
 
     font-weight: bold;
+
+    transition: .3s;
 }
 
-/* =========================
-   MODO GRID
-========================= */
+.overlay a:hover{
+    background:
+    #92a96d;
+
+    transform:
+    translateY(-2px);
+}
+
+/* =========================================
+   GRID MODE
+========================================= */
 
 #toggle-view:checked ~ .characters-container{
 
@@ -459,5 +581,22 @@ section#tlou-img h1{
 
     grid-template-columns: 1fr;
 
-    padding: 20px;
+    gap: 25px;
+}
+
+/* =========================================
+   MOBILE
+========================================= */
+
+@media (max-width: 768px){
+
+    .character-card{
+        min-width: 260px;
+        height: 390px;
+    }
+
+    .overlay{
+        transform:
+        translateY(100px);
+    }
 }
