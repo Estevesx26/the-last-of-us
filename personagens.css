@@ -321,48 +321,6 @@ section#tlou-img h1{
    TOPO
 ========================================= */
 
-.intro-content{
-    position: relative;
-
-    z-index: 2;
-
-    max-width: 700px;
-}
-
-.intro-mini{
-    color: var(--cor-link-destaque);
-
-    letter-spacing: 4px;
-
-    font-size: 0.9rem;
-}
-
-.intro-content h2{
-    color: white;
-
-    font-size: clamp(3rem, 10vw, 7rem);
-
-    line-height: 1;
-
-    margin-top: 15px;
-}
-
-.intro-content h2::after{
-    content: "";
-
-    display: block;
-
-    width: 120px;
-    height: 3px;
-
-    margin-top: 20px;
-
-    background: var(--cor-link-destaque);
-
-    box-shadow:
-    0 0 10px var(--cor-link-destaque);
-}
-
 /* TEXTO */
 
 .intro-mini{
