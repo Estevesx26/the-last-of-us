@@ -271,6 +271,26 @@ section#tlou-img h1{
     background-position: left center;
     background-repeat: no-repeat;
     background-size: cover;
+
+    position: relative;
+}
+
+.txt-overlay{
+    position: absolute;
+    inset: 0;
+
+    background:
+    linear-gradient(
+        to bottom,
+        rgba(0,0,0,0.9),
+        rgba(0,0,0,0.5),
+        rgba(0,0,0,0.95)
+    );
+}
+
+.intro-txt{
+    position: relative;
+    z-index: 5;
 }
 
 /*SECTION PERSONAGENS*/
@@ -322,4 +342,353 @@ section#tlou-img h1{
     margin-top: 30px;
 
     font-size: 1rem;
+}
+
+/* =========================================
+   SECTION
+========================================= */
+
+.characters-section{
+    width: 100%;
+
+    padding: 40px 0;
+
+    position: relative;
+
+    overflow: hidden;
+    user-select: none;
+}
+
+/* =========================================
+   FADE LATERAL
+========================================= */
+
+.characters-section::before,
+.characters-section::after{
+    content: '';
+
+    position: absolute;
+
+    top: 0;
+
+    width: 60px;
+    height: 100%;
+
+    z-index: 10;
+
+    pointer-events: none;
+}
+
+/* ESQUERDA */
+
+.characters-section::before{
+    left: 0;
+
+    background:
+    linear-gradient(
+        to right,
+        #0d0d12,
+        transparent
+    );
+}
+
+/* DIREITA */
+
+.characters-section::after{
+    right: 0;
+
+    background:
+    linear-gradient(
+        to left,
+        #0d0d12,
+        transparent
+    );
+}
+
+/* =========================================
+   TOPO
+========================================= */
+
+.top-bar{
+    width: 90%;
+
+    margin: auto;
+
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.title-txt{
+    width: auto;
+    padding: 10px;
+
+    border-radius: 8px;
+
+    color: var(--cor-hover);
+
+    font-size: .9rem;
+    font-weight: bold;
+    text-align: center;
+
+    cursor: pointer;
+
+    transition: .3s;
+}
+
+.label-direction{
+    display: flex;
+    justify-content: center;
+}
+
+.toggle-btn{
+    width: auto;
+    padding: 10px;
+
+    border-radius: 8px;
+
+    background: var(--cor-fundo-secundario);
+
+    color: var(--cor-link-destaque);
+
+    font-size: .9rem;
+    font-weight: bold;
+    text-align: center;
+
+    cursor: pointer;
+
+    transition: .3s;
+}
+
+.toggle-btn:hover{
+    background-color: var(--cor-link-destaque);
+    color: var(--cor-fundo-secundario);
+
+    
+    transition: .6s;
+}
+
+/* =========================================
+   CHECKBOX
+========================================= */
+
+#toggle-view{
+    display: none;
+}
+
+#toggle-view:not(:checked) ~ .characters-container .character-card{
+    width: 280px;
+    min-width: 280px;
+    max-width: 280px;
+}
+
+/* =========================================
+   CONTAINER HORIZONTAL
+========================================= */
+
+.characters-container{
+    display: flex;
+
+    gap: 20px;
+
+    overflow-x: auto;
+
+    scroll-snap-type: x mandatory;
+
+    scroll-behavior: smooth;
+
+    padding: 20px;
+
+    position: relative;
+
+    z-index: 5;
+}
+
+/* =========================================
+   SCROLLBAR PERSONALIZADA
+========================================= */
+
+.characters-container::-webkit-scrollbar{
+    height: 5px;
+}
+
+.characters-container::-webkit-scrollbar-track{
+    background:rgba(255,255,255,0.05);
+
+    border-radius: 20px;
+
+    margin: 0 20px;
+}
+
+.characters-container::-webkit-scrollbar-thumb{
+    background: var(--cor-link-destaque);
+
+    border-radius: 20px;
+}
+
+/* =========================================
+   CARD
+========================================= */
+
+.character-card{
+    min-width: 280px;
+    height: 420px;
+
+    position: relative;
+
+    overflow: hidden;
+
+    border-radius: 24px;
+
+    flex-shrink: 0;
+
+    scroll-snap-align: center;
+
+    background: #111;
+
+    border: 1px solid rgba(255,255,255,0.08);
+
+    transition:transform .4s,filter .4s;
+
+    box-shadow: 0 10px 25px rgba(0,0,0,.35);
+}
+
+/* =========================================
+   IMAGEM
+========================================= */
+
+.character-card img{
+    width: 100%;
+    height: 100%;
+
+    object-fit: cover;
+
+    transition: .5s;
+}
+
+/* =========================================
+   OVERLAY
+========================================= */
+
+.overlay{
+    position: absolute;
+
+    left: 0;
+    bottom: 0;
+
+    width: auto;
+    padding: 10px;
+
+    background:linear-gradient(to top,rgba(0,0,0,.96), rgba(0,0,0,.55),transparent);
+
+    transform:
+    translateY(200px);
+
+    transition: .6s;
+}
+
+/* =========================================
+   HOVER
+========================================= */
+
+.characters-container:hover .character-card{
+    filter: brightness(.55) blur(1px);
+}
+
+.characters-container .character-card:hover{
+    transform:
+    scale(1.04);
+
+    filter: brightness(1);
+
+    z-index: 20;
+
+    box-shadow:0 0 25px rgba(122,139,93,.25),0 0 50px rgba(122,139,93,.10);
+}
+
+.character-card:hover img{
+    transform: scale(1.08);
+}
+
+.character-card:hover .overlay{
+    transform:translateY(0);
+}
+
+/* =========================================
+   TEXTOS
+========================================= */
+
+.overlay h2{
+    color: white;
+
+    margin: 5px;
+    font-size: 1.5rem;
+}
+
+.overlay p{
+    color:rgba(255,255,255,.75);
+
+    font-size: .95rem;
+    line-height: 1.5;
+
+    margin: 5px;
+}
+
+.overlay a{
+    display: inline-block;
+
+    padding: 10px 18px;
+    border-radius: 8px;
+
+    background:#7A8B5D;
+    color: white;
+
+    text-decoration: none;
+    font-weight: bold;
+
+    transition: .3s;
+}
+
+.overlay a:hover{
+    background:#92a96d;
+
+    transform:
+    translateY(-2px);
+}
+
+/* =========================================
+   GRID MODE - VER TODOS
+========================================= */
+
+#toggle-view:checked ~ .characters-container{
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+
+    gap: 18px;
+
+    overflow-x: hidden;
+
+    padding: 40px;
+}
+
+/* CARD NO GRID */
+
+#toggle-view:checked ~ .characters-container .character-card{
+    width: 100%;
+
+    min-width: 0;
+
+    height: 600px;
+
+    border-radius: 18px;
+}
+
+/* IMAGEM NO GRID */
+
+#toggle-view:checked ~ .characters-container .character-card img{
+    width: 100%;
+    height: 100%;
+
+    object-fit: cover;
+    object-position: center top;
 }
