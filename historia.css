@@ -1,0 +1,255 @@
+@charset "UTF-8";
+
+:root{
+    --cor-fundo-principal: #121411;
+    --cor-fundo-secundario: #00010D;
+
+    --cor-card: #1A1D18;
+    --cor-card-destaque: #6B4B34;
+
+    --cor-texto-principal: #D8D4C8;
+    --cor-texto-secundario: #ffffffb3;
+    --cor-texto-padrão: #000000;
+    --cor-link:#2C4001;
+    --cor-link-destaque: #00DF04;
+
+    --cor-principal: #4E5B3C;
+
+    --cor-secundaria: #C2A96A;
+
+    --cor-hover: #8F7A4F;
+
+    --cor-borda: #2B2F29;
+
+    --cor-sombra: rgba(0, 0, 0, 0.45);
+
+    --cor-verde-claro: #7A8B5D;
+
+    --cor-branco: #ffffff;
+    --cor-extra: #ff2a2a;
+    --cor-extra2: red;
+}
+
+*{
+    margin: 0px;
+    padding: 0px;
+
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+header{
+    background-color: var(--cor-fundo-principal);
+
+    height: 60px;
+    width: 100%;
+    
+    position: fixed;
+
+    display: flex;
+    justify-content: space-between;
+
+    box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+
+    z-index: 1000;
+}
+
+div#icon img{
+    height: 80%;
+}
+
+
+div#title a{
+    color: var(--cor-texto-principal);
+
+    font-family: 'Oswald', sans-serif;
+    font-weight: 800;
+    font-size: 1.6em;
+
+    text-decoration: none;
+}
+
+div#menu{
+    color: var(--cor-texto-principal);
+
+    height: 100%;
+    width: 50px;
+
+    font-size: 1.6em;
+}
+
+#menu-toggle{
+    display: none;
+}
+
+.menu-btn{
+    position: fixed;
+
+    right: 20px;
+
+    cursor: pointer;
+
+    z-index: 1001;
+}
+
+.menu-btn i{
+    font-style: normal;
+}
+
+.menu-btn i::before{
+    content: "\f0c9";
+
+    font-family: "Font Awesome 6 Free";
+    font-weight: 600;
+
+    color: white;
+
+    transition: .3s;
+}
+
+/* TROCA PRA X */
+#menu-toggle:checked + .menu-btn i::before{
+    content: "\f00d";
+}
+
+.sidebar{
+    position: fixed;
+
+    top: 0;
+    right: -250px;
+
+    width: 250px;
+    height: 100vh;
+
+    background: rgba(0, 0, 0, 0.5);
+    backdrop-filter: blur(1px);
+
+    display: flex;
+    flex-direction: column;
+
+    padding-top: 100px;
+
+    transition: .5s;
+
+    z-index: 1000;
+}
+
+.sidebar a{
+    color: white;
+
+    text-decoration: none;
+
+    padding: 20px 30px;
+
+    font-size: 1.2rem;
+
+    transition: .3s;
+}
+
+.sidebar a:hover{
+    color: var(--cor-link-destaque);
+
+    transform: translateX(10px);
+}
+
+#menu-toggle:checked ~ .sidebar{
+    right: 0;
+}
+
+#icon, #menu, #title{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.intro{
+    background-image: url(imagens/personagens/ellie_capa.jpg);
+    background-position: 30% center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 100vh;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+.intro-line-mini{
+    width: 95%;
+
+    display: flex;
+    align-items: center;
+}
+
+.intro-line{
+    background-color: var(--cor-principal);
+
+    height: 1px;
+    width: 80px;
+
+    margin-right: 10px;
+
+    box-shadow: 0px 0px 5px 2px var(--cor-principal);
+}
+
+.intro-mini{
+    color: var(--cor-texto-secundario);
+}
+
+.intro-mini p{
+    letter-spacing: 4px;
+    font-size: 0.7rem;
+}
+
+.title{
+    color: var(--cor-texto-principal);
+    
+    width: 95%;
+
+    margin-top: 10px;
+
+    font-size: clamp(2em, 8vw, 4em);
+}
+
+.title::after{
+    content: "";
+
+    display: block;
+
+    width: 150px;
+    height: 2px;
+
+    margin-top: 10px;
+
+    background: var(--cor-principal);
+
+    box-shadow: 0px 0px 5px 2px var(--cor-principal);
+}
+
+.sobrenome{
+    color: rgba(166, 166, 166, 0.533);
+}
+
+.txt{
+    color: var(--cor-texto-secundario);
+
+    width: 95%;
+    margin-top: 20px;
+
+    font-size: 0.9rem;
+}
+
+strong{
+    color: var(--cor-link);
+}
+
+.explorar{
+    width: 95%;
+    margin-top: 20px;
+    padding: 10px;
+}
+
+.explorar button{
+    padding: 10px;
+    border: 0px;
+}
