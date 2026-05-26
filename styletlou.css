@@ -1,6 +1,6 @@
 @charset "UTF-8";
 
-:root{
+:root {
     --cor-fundo-principal: #121411;
     --cor-fundo-secundario: #00010D;
 
@@ -10,7 +10,7 @@
     --cor-texto-principal: #D8D4C8;
     --cor-texto-secundario: #ffffffb3;
     --cor-texto-padrão: #000000;
-    --cor-link:#2C4001;
+    --cor-link: #2C4001;
     --cor-link-destaque: #00DF04;
 
     --cor-principal: #4E5B3C;
@@ -39,7 +39,7 @@
 /*Fonte padrão TLOU*/
 @import url('https://fonts.googleapis.com/css2?family=Oswald:wght@200..700&display=swap');
 
-*{
+* {
     margin: 0px;
     padding: 0px;
 
@@ -47,45 +47,45 @@
     font-family: Arial, Helvetica, sans-serif;
 }
 
-body{
+body {
     overflow-x: hidden;
 }
 
-html{
+html {
     scroll-behavior: smooth;
 }
 
-.logo{
+.logo {
     border-radius: 50%;
 }
 
-main#layout{
+main#layout {
     height: 100vh;
     width: 100vw;
 }
 
-header{
+header {
     background-color: var(--cor-fundo-principal);
 
     height: 60px;
     width: 100%;
-    
+
     position: fixed;
 
     display: flex;
     justify-content: space-between;
 
-    box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
 
     z-index: 1000;
 }
 
-div#icon img{
+div#icon img {
     height: 80%;
 }
 
 
-div#title a{
+div#title a {
     color: var(--cor-texto-principal);
 
     font-family: 'Oswald', sans-serif;
@@ -95,7 +95,7 @@ div#title a{
     text-decoration: none;
 }
 
-div#menu{
+div#menu {
     color: var(--cor-texto-principal);
 
     height: 100%;
@@ -104,11 +104,11 @@ div#menu{
     font-size: 1.6em;
 }
 
-#menu-toggle{
+#menu-toggle {
     display: none;
 }
 
-.menu-btn{
+.menu-btn {
     position: fixed;
 
     right: 20px;
@@ -118,11 +118,11 @@ div#menu{
     z-index: 1001;
 }
 
-.menu-btn i{
+.menu-btn i {
     font-style: normal;
 }
 
-.menu-btn i::before{
+.menu-btn i::before {
     content: "\f0c9";
 
     font-family: "Font Awesome 6 Free";
@@ -134,11 +134,11 @@ div#menu{
 }
 
 /* TROCA PRA X */
-#menu-toggle:checked + .menu-btn i::before{
+#menu-toggle:checked+.menu-btn i::before {
     content: "\f00d";
 }
 
-.sidebar{
+.sidebar {
     position: fixed;
 
     top: 0;
@@ -160,7 +160,7 @@ div#menu{
     z-index: 1000;
 }
 
-.sidebar a{
+.sidebar a {
     color: white;
 
     text-decoration: none;
@@ -172,23 +172,25 @@ div#menu{
     transition: .3s;
 }
 
-.sidebar a:hover{
+.sidebar a:hover {
     color: var(--cor-link-destaque);
 
     transform: translateX(10px);
 }
 
-#menu-toggle:checked ~ .sidebar{
+#menu-toggle:checked~.sidebar {
     right: 0;
 }
 
-#icon, #menu, #title{
+#icon,
+#menu,
+#title {
     display: flex;
     align-items: center;
     justify-content: center;
 }
 
-section#tlou-img{
+section#tlou-img {
     height: 100%;
     width: 100%;
 
@@ -203,7 +205,7 @@ section#tlou-img{
     flex-direction: column;
 }
 
-section#tlou-img h1{
+section#tlou-img h1 {
     color: var(--cor-texto-principal);
 
     margin-bottom: 20px;
@@ -214,7 +216,7 @@ section#tlou-img h1{
     text-align: center;
 }
 
-.divider{
+.divider {
     display: flex;
     align-items: center;
     justify-content: center;
@@ -226,14 +228,14 @@ section#tlou-img h1{
     margin-top: 30px;
 }
 
-.divider span{
+.divider span {
     width: 60px;
     height: 1px;
 
-    background: rgba(255,255,255,0.3);
+    background: rgba(255, 255, 255, 0.3);
 }
 
-.divider a{
+.divider a {
     color: var(--cor-texto-principal);
 
     text-decoration: none;
@@ -247,21 +249,21 @@ section#tlou-img h1{
     transition: 0.3s;
 }
 
-.divider a:hover{
+.divider a:hover {
     color: var(--cor-link-destaque);
     transform: translateY(-5px);
 
     text-shadow:
-    0 0 20px rgba(0,223,4,0.5);
+        0 0 20px rgba(0, 223, 4, 0.5);
 }
 
 #historia,
 #timeline,
-#timeline-desktop{
+#timeline-desktop {
     scroll-margin-top: 60px;
 }
 
-main#historia{
+main#historia {
     background-color: var(--cor-fundo-principal);
 
     display: flex;
@@ -269,11 +271,11 @@ main#historia{
     align-items: center;
 }
 
-section#linha{
+section#linha {
     width: 100%;
 }
 
-.intro{
+.intro {
     position: relative;
 
     min-height: 60vh;
@@ -292,20 +294,18 @@ section#linha{
     background-repeat: no-repeat;
 }
 
-.intro-overlay{
+.intro-overlay {
     position: absolute;
     inset: 0;
 
     background:
-    linear-gradient(
-        to bottom,
-        rgba(0,0,0,0.9),
-        rgba(0,0,0,0.5),
-        rgba(0,0,0,0.95)
-    );
+        linear-gradient(to bottom,
+            rgba(0, 0, 0, 0.9),
+            rgba(0, 0, 0, 0.5),
+            rgba(0, 0, 0, 0.95));
 }
 
-.intro-content{
+.intro-content {
     position: relative;
 
     z-index: 2;
@@ -313,7 +313,7 @@ section#linha{
     max-width: 700px;
 }
 
-.intro-mini{
+.intro-mini {
     color: var(--cor-link-destaque);
 
     letter-spacing: 4px;
@@ -321,7 +321,7 @@ section#linha{
     font-size: 0.9rem;
 }
 
-.intro-content h2{
+.intro-content h2 {
     color: white;
 
     font-size: clamp(3rem, 10vw, 7rem);
@@ -331,7 +331,7 @@ section#linha{
     margin-top: 15px;
 }
 
-.intro-content h2::after{
+.intro-content h2::after {
     content: "";
 
     display: block;
@@ -344,12 +344,12 @@ section#linha{
     background: var(--cor-link-destaque);
 
     box-shadow:
-    0 0 10px var(--cor-link-destaque);
+        0 0 10px var(--cor-link-destaque);
 }
 
 /* TEXTO */
 
-.intro-content p{
+.intro-content p {
     color: var(--cor-texto-principal);
 
     line-height: 1.8;
@@ -361,7 +361,7 @@ section#linha{
 
 /* BOTÃO */
 
-.intro-btn{
+.intro-btn {
     color: var(--cor-texto-padrão);
     background: var(--cor-link-destaque);
 
@@ -378,26 +378,26 @@ section#linha{
     transition: 0.4s;
 }
 
-.intro-btn:hover{
+.intro-btn:hover {
     transform: translateY(-5px);
 
     box-shadow:
-    0 0 20px rgba(0,223,4,0.5);
+        0 0 20px rgba(0, 223, 4, 0.5);
 }
 
-div#timeline-desktop{
-    display:none ;
+div#timeline-desktop {
+    display: none;
 }
 
-div#timeline1{
+div#timeline1 {
     color: var(--cor-texto-principal);
 }
 
-#timeline{
+#timeline {
     position: relative;
 }
 
-.line{
+.line {
     position: absolute;
 
     top: 0;
@@ -407,17 +407,15 @@ div#timeline1{
     height: 100%;
 
     background:
-    linear-gradient(
-        to bottom,
-        rgba(255,255,255,0.1),
-        var(--cor-extra),
-        rgba(255,255,255,0.1)
-    );
+        linear-gradient(to bottom,
+            rgba(255, 255, 255, 0.1),
+            var(--cor-extra),
+            rgba(255, 255, 255, 0.1));
 
     z-index: 100;
 }
 
-.item{
+.item {
     position: relative;
 
     width: 100%;
@@ -438,22 +436,20 @@ div#timeline1{
     animation: zoom 15s ease-in-out infinite alternate;
 }
 
-.overlay{
+.overlay {
     position: absolute;
     inset: 0;
 
     background:
-    linear-gradient(
-        to top,
-        rgba(0,0,0,0.995),
-        rgba(0,0,0,0.3),
-        rgba(0,0,0,0.995)
-    );
+        linear-gradient(to top,
+            rgba(0, 0, 0, 0.995),
+            rgba(0, 0, 0, 0.3),
+            rgba(0, 0, 0, 0.995));
 
     z-index: 1;
 }
 
-.dot{
+.dot {
     position: absolute;
 
     left: 21px;
@@ -473,15 +469,15 @@ div#timeline1{
     z-index: 100;
 }
 
-.dot.active{
+.dot.active {
     background: var(--cor-extra);
 
     box-shadow:
-    0 0 10px var(--cor-extra),
-    0 0 30px var(--cor-extra);
+        0 0 10px var(--cor-extra),
+        0 0 30px var(--cor-extra);
 }
 
-.content{
+.content {
     position: relative;
 
     z-index: 5;
@@ -491,15 +487,15 @@ div#timeline1{
     max-width: 300px;
 }
 
-.content h3{
-    color: rgba(255,255,255,0.15);
+.content h3 {
+    color: rgba(255, 255, 255, 0.15);
 
     font-size: 5rem;
 
     line-height: 1;
 }
 
-.content h4{
+.content h4 {
     background-color: rgba(255, 255, 255, 0.15);
     color: var(--cor-fundo-principal);
     border-radius: 16px;
@@ -514,7 +510,7 @@ div#timeline1{
     display: inline-block;
 }
 
-.content p{
+.content p {
     color: var(--cor-texto-principal);
 
     line-height: 1.7;
@@ -522,59 +518,59 @@ div#timeline1{
     font-size: 1rem;
 }
 
-.item1{
+.item1 {
     background-image: url(imagens/linha/virus.jpg);
 }
 
-.item2{
+.item2 {
     background-image: url(imagens/linha/fuga.jpg);
 }
 
-.item3{
+.item3 {
     background-image: url(imagens/linha/cidades.jpg);
 }
 
-.item4{
+.item4 {
     background-image: url(imagens/linha/ellie_joel.jpg);
 }
 
-.item5{
+.item5 {
     background-image: url(imagens/linha/jornada.jpg);
 }
 
-.item6{
+.item6 {
     background-image: url(imagens/linha/inverno.jpg);
 }
 
-.item7{
+.item7 {
     background-image: url(imagens/linha/vagalumes.jpg);
 }
 
-.item8{
+.item8 {
     background-image: url(imagens/linha/jackson.jpg);
 }
 
-.item9{
+.item9 {
     background-image: url(imagens/linha/conflitos.jpg);
 }
 
-.item10{
+.item10 {
     background-image: url(imagens/linha/seattle.jpg);
 }
 
-@keyframes zoom{
+@keyframes zoom {
 
-    from{
+    from {
         background-size: 150%;
     }
 
-    to{
+    to {
         background-size: 140%;
     }
 
 }
 
-.universo{
+.universo {
     position: relative;
 
     padding: 100px 20px;
@@ -587,25 +583,23 @@ div#timeline1{
     overflow: hidden;
 }
 
-.universo .overlay{
+.universo .overlay {
     position: absolute;
     inset: 0;
 
     background:
-    linear-gradient(
-        to bottom,
-        rgba(0,0,0,0.9),
-        rgba(0,0,0,0.6),
-        rgba(0,0,0,0.95)
-    );
+        linear-gradient(to bottom,
+            rgba(0, 0, 0, 0.9),
+            rgba(0, 0, 0, 0.6),
+            rgba(0, 0, 0, 0.95));
 }
 
-.universo .container{
+.universo .container {
     position: relative;
     z-index: 2;
 }
 
-.mini-title{
+.mini-title {
     color: var(--cor-link-destaque);
 
     letter-spacing: 4px;
@@ -613,7 +607,7 @@ div#timeline1{
     font-size: 0.9rem;
 }
 
-.universo h2{
+.universo h2 {
     color: var(--cor-branco);
 
     font-size: clamp(3rem, 8vw, 7rem);
@@ -623,7 +617,7 @@ div#timeline1{
     line-height: 1;
 }
 
-.universo h2::after{
+.universo h2::after {
     content: "";
 
     display: block;
@@ -636,10 +630,10 @@ div#timeline1{
     background: var(--cor-link-destaque);
 
     box-shadow:
-    0 0 10px var(--cor-link-destaque);
+        0 0 10px var(--cor-link-destaque);
 }
 
-.descricao{
+.descricao {
     color: var(--cor-texto-principal);
 
     max-width: 700px;
@@ -649,7 +643,7 @@ div#timeline1{
     line-height: 1.8;
 }
 
-.cards{
+.cards {
     display: grid;
 
     grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
@@ -659,7 +653,7 @@ div#timeline1{
     margin-top: 60px;
 }
 
-.card{
+.card {
     position: relative;
 
     height: 320px;
@@ -671,47 +665,45 @@ div#timeline1{
     text-decoration: none;
 
     background:
-    rgba(255,255,255,0.05);
+        rgba(255, 255, 255, 0.05);
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
 
     backdrop-filter: blur(2px);
 
-    border: 3px solid rgba(255,255,255,0.08);
+    border: 3px solid rgba(255, 255, 255, 0.08);
 
     transition: 0.5s ease;
 }
 
-.cardpers{
+.cardpers {
     background-image: url(imagens/personagens/card-pers.jpg);
 }
 
-.cardfac{
+.cardfac {
     background-image: url(imagens/faccao/card-fac.jpg);
 }
 
-.cardinfec{
+.cardinfec {
     background-image: url(imagens/infectados/card-infectados.jpg);
 }
 
-.cardcur{
+.cardcur {
     background-image: url(imagens/tlouvibes/curiosidades.jpg);
 }
 
-.card-overlay{
+.card-overlay {
     position: absolute;
     inset: 0;
 
     background:
-    linear-gradient(
-        to top,
-        rgba(0,0,0,0.95),
-        rgba(0,0,0,0.2)
-    );
+        linear-gradient(to top,
+            rgba(0, 0, 0, 0.95),
+            rgba(0, 0, 0, 0.2));
 }
 
-.card-content{
+.card-content {
     position: relative;
 
     z-index: 2;
@@ -724,7 +716,7 @@ div#timeline1{
     align-items: center;
 }
 
-.card-content h3{
+.card-content h3 {
     color: var(--cor-branco);
 
     width: 90%;
@@ -733,7 +725,7 @@ div#timeline1{
     font-size: 2rem;
 }
 
-.card-content p{
+.card-content p {
     color: var(--cor-texto-principal);
 
     height: 20%;
@@ -744,16 +736,16 @@ div#timeline1{
     line-height: 1.6;
 }
 
-.card:hover{
+.card:hover {
     transform: translateY(-12px);
 
     border-color: var(--cor-borda);
 
     box-shadow:
-    0 0 30px rgba(58, 96, 0, 0.2);
+        0 0 30px rgba(58, 96, 0, 0.2);
 }
 
-.frase-final{
+.frase-final {
     color: var(--cor-texto-secundario);
 
     text-align: center;
@@ -767,34 +759,34 @@ div#timeline1{
     letter-spacing: 2px;
 }
 
-footer.container{
+footer.container {
     background-color: var(--cor-card);
 
     display: grid;
     grid-template-columns:
-    repeat(auto-fit, minmax(250px, 1fr));
+        repeat(auto-fit, minmax(250px, 1fr));
 
     gap: 16px;
 
     padding: 20px;
 }
 
-.caixa1 h2{
+.caixa1 h2 {
     color: var(--cor-principal);
     margin-bottom: 20px;
 }
 
-.caixa1 p{
+.caixa1 p {
     color: var(--cor-texto-secundario);
 }
 
-.caixa2 h2{
+.caixa2 h2 {
     color: var(--cor-principal);
 
     margin-bottom: 20px;
 }
 
-.caixa2 .footer-links{
+.caixa2 .footer-links {
     display: flex;
     justify-content: center;
     flex-direction: column;
@@ -804,7 +796,7 @@ footer.container{
     gap: 16px;
 }
 
-.footer-links a{
+.footer-links a {
     color: var(--cor-texto-secundario);
 
     letter-spacing: 2px;
@@ -812,63 +804,63 @@ footer.container{
     text-decoration: none;
 }
 
-.caixa2 .footer-links a:hover{
+.caixa2 .footer-links a:hover {
     color: var(--cor-link-destaque);
 }
 
-.caixa3 h2{
+.caixa3 h2 {
     color: var(--cor-principal);
 
     margin-bottom: 20px;
 }
 
-.caixa3 #icons{
+.caixa3 #icons {
     display: flex;
 
     font-size: 1.6rem;
     gap: 20px;
 }
 
-.caixa3 #icons a{
+.caixa3 #icons a {
     color: rgba(255, 255, 255, 0.448);
 }
 
-.caixa3 #icons a:hover{
+.caixa3 #icons a:hover {
     color: var(--cor-link-destaque);
 }
 
-.caixa3 #icons #icon-email a:hover{
+.caixa3 #icons #icon-email a:hover {
     color: var(--cor-extra);
 }
 
-.caixa3 #icons #icon-linkedin a:hover{
+.caixa3 #icons #icon-linkedin a:hover {
     color: #4545ff;
 }
 
-.caixa3 #icons #icon-github a:hover{
+.caixa3 #icons #icon-github a:hover {
     color: rgb(255, 0, 255);
 }
 
-#icons i{
+#icons i {
     transition: transform .3s ease;
 }
 
-#icons i:hover{
+#icons i:hover {
     transform: scale(1.2);
 }
 
-.linha{
+.linha {
     width: 100%;
     height: 2px;
 
     background-color: var(--cor-texto-secundario);
 }
 
-.caixa4{
+.caixa4 {
     color: var(--cor-texto-secundario);
 }
 
-.caixa4 a{
+.caixa4 a {
     color: var(--cor-link);
 
     text-decoration: none;
@@ -877,7 +869,7 @@ footer.container{
     transition: .3s;
 }
 
-.caixa4 a:hover{
+.caixa4 a:hover {
     color: var(--cor-link-destaque);
 }
 
