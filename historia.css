@@ -25,6 +25,7 @@
 
     --cor-verde-claro: #7A8B5D;
 
+    --cor-line: #c8832a;
     --cor-branco: #ffffff;
     --cor-extra: #ff2a2a;
     --cor-extra2: red;
@@ -38,8 +39,6 @@
 }
 
 header {
-    background-color: var(--cor-fundo-principal);
-
     height: 60px;
     width: 100%;
 
@@ -47,9 +46,6 @@ header {
 
     display: flex;
     justify-content: space-between;
-
-    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
-
     z-index: 1000;
 }
 
@@ -163,9 +159,52 @@ div#menu {
     justify-content: center;
 }
 
-.intro {
+.ellie .intro{
     background-image: url(imagens/personagens/ellie_capa.jpg);
     background-position: 22% center;
+}
+
+.joel .intro{
+    background-image: url(imagens/personagens/joel_capa.jpg);
+    background-position: center;
+}
+
+.abby .intro{
+    background-image: url(imagens/personagens/abby_capa.jpg);
+    background-position: 25% center;
+}
+
+.tommy .intro{
+    background-image: url(imagens/personagens/tommy_capa.jpg);
+    background-position: center;
+}
+
+.dina .intro{
+    background-image: url(imagens/personagens/dina_capa.jpg);
+    background-position: 30% center;
+}
+
+.jesse .intro{
+    background-image: url(imagens/personagens/jesse_capa.jpg);
+    background-position: 30% center;
+}
+
+.lev .intro{
+    background-image: url(imagens/personagens/lev_capa.jpg);
+    background-position: 35% center;
+}
+
+.yara .intro{
+    background-image: url(imagens/personagens/yara_capa.jpg);
+    background-position: 75% center;
+}
+
+.riley .intro{
+    background-image: url(imagens/personagens/riley_capa.jpg);
+    background-position: center;
+}
+
+.intro {
     background-repeat: no-repeat;
     background-size: cover;
     height: 100vh;
@@ -186,6 +225,16 @@ div#menu {
         radial-gradient(circle at 70% 20%, rgba(180, 90, 30, .18), transparent 35%),
         linear-gradient(to right, rgba(0, 0, 0, .8), transparent 70%);
     z-index: 1;
+}
+
+.intro-txt{
+    width: 95%;
+    flex: 1;
+
+    display: flex;
+    justify-content: end;
+    align-items: start;
+    flex-direction: column;
 }
 
 .spore {
@@ -276,28 +325,6 @@ div#menu {
     animation-delay: -8s;
 }
 
-@keyframes subir {
-    0% {
-        bottom: -10px;
-        opacity: 0;
-        transform: translateX(0px);
-    }
-
-    10% {
-        opacity: 1;
-    }
-
-    90% {
-        opacity: 1;
-    }
-
-    100% {
-        bottom: 110%;
-        opacity: 0;
-        transform: translateX(25px);
-    }
-}
-
 .intro-line-mini {
     width: 95%;
 
@@ -306,14 +333,15 @@ div#menu {
 }
 
 .intro-line {
-    background-color: var(--cor-principal);
-
     height: 1px;
     width: 80px;
 
-    margin-right: 10px;
+    background: linear-gradient(90deg,
+            transparent,
+            var(--cor-line),
+            transparent);
 
-    box-shadow: 0px 0px 5px 2px var(--cor-principal);
+    margin-right: 10px;
 }
 
 .intro-mini {
@@ -340,18 +368,41 @@ div#menu {
 
     display: block;
 
-    width: 150px;
-    height: 2px;
-
     margin-top: 10px;
 
     background: var(--cor-principal);
 
-    box-shadow: 0px 0px 5px 2px var(--cor-principal);
+    height: 1px;
+    width: 150px;
+
+    background: linear-gradient(90deg,
+            transparent,
+            var(--cor-line),
+            transparent);
 }
 
-.sobrenome {
-    color: rgba(166, 166, 166, 0.533);
+.nome{
+    background: linear-gradient(45deg, var(--cor-fundo-principal), var(--cor-texto-secundario));
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+
+  z-index: 10;
+}
+
+.sobrenome{
+    color: transparent;
+
+    -webkit-text-stroke: 1px rgba(255,255,255,0.15);
+
+    background-image:
+    linear-gradient(rgba(0,0,0,.3), rgba(0,0,0,.3));
+
+    background-size: cover;
+    background-position: center;
+
+    background-clip: text;
+    -webkit-background-clip: text;
 }
 
 .txt {
@@ -360,11 +411,20 @@ div#menu {
     width: 95%;
     margin-top: 20px;
 
-    font-size: 0.9rem;
+    letter-spacing: 1px;
+    font-size: 1.1rem;
 }
 
 strong {
-    color: var(--cor-link);
+    color: var(--cor-line);
+}
+
+.btn-explorar {
+    height: 30%;
+
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
 }
 
 .explorar {
@@ -392,9 +452,8 @@ strong {
     transition: .4s ease;
 }
 
-/* TEXTO */
 .explorar .text {
-    color: #f3eee2;
+    color: var(--cor-texto-secundario);
 
     font-size: .8rem;
     font-weight: 800;
@@ -404,9 +463,9 @@ strong {
     transition: .4s ease;
 
     text-shadow: 0 0 10px rgba(255, 255, 255, .15);
+    text-decoration: none;
 }
 
-/* LINHAS */
 .explorar .line {
     position: absolute;
 
@@ -414,13 +473,12 @@ strong {
 
     background: linear-gradient(90deg,
             transparent,
-            #c8832a,
+            var(--cor-line),
             transparent);
 
     transition: .5s ease;
 }
 
-/* linha superior esquerda */
 .explorar .left {
     width: 120px;
 
@@ -428,7 +486,6 @@ strong {
     left: -40px;
 }
 
-/* linha inferior direita */
 .explorar .right {
     width: 120px;
 
@@ -436,7 +493,6 @@ strong {
     right: -40px;
 }
 
-/* brilho */
 .explorar button::before {
     content: "";
 
@@ -472,19 +528,18 @@ strong {
 
 .explorar button:hover .left {
     left: 20px;
-    width: 70px;
+    width: 100px;
 
     box-shadow: 0 0 12px #c8832a;
 }
 
 .explorar button:hover .right {
     right: 20px;
-    width: 70px;
+    width: 100px;
 
     box-shadow: 0 0 12px #c8832a;
 }
 
-/* clique */
 .explorar button:active {
     transform: scale(.96);
 }
@@ -495,4 +550,26 @@ strong {
 .explorar {
     position: relative;
     z-index: 2;
+}
+
+@keyframes subir {
+    0% {
+        bottom: -10px;
+        opacity: 0;
+        transform: translateX(0px);
+    }
+
+    10% {
+        opacity: 1;
+    }
+
+    90% {
+        opacity: 1;
+    }
+
+    100% {
+        bottom: 110%;
+        opacity: 0;
+        transform: translateX(25px);
+    }
 }
