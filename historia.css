@@ -214,6 +214,61 @@ div#menu {
     background-position: 30% center;
 }
 
+.sarah .intro {
+    background-image: url(imagens/personagens/sarah_capa.jpg);
+    background-position: 44% center;
+}
+
+.sam .intro {
+    background-image: url(imagens/personagens/henryandsam_capa.jpg);
+    background-position: 60% center;
+}
+
+.henry .intro {
+    background-image: url(imagens/personagens/henryandsam_capa.jpg);
+    background-position: 60% center;
+}
+
+.bill .intro {
+    background-image: url(imagens/personagens/bill_capa.jpg);
+    background-position: 25% center;
+}
+
+.maria .intro {
+    background-image: url(imagens/personagens/maria_capa.jpg);
+    background-position: center;
+}
+
+.owen .intro {
+    background-image: url(imagens/personagens/owen_capa.jpg);
+    background-position:30% center;
+}
+
+.nora .intro {
+    background-image: url(imagens/personagens/nora_capa.jpg);
+    background-position: 25% center;
+}
+
+.mel .intro {
+    background-image: url(imagens/personagens/mel_capa.jpg);
+    background-position: 30% center;
+}
+
+.manny .intro {
+    background-image: url(imagens/personagens/manny_capa.jpg);
+    background-position: 32% center;
+}
+
+.isaac .intro {
+    background-image: url(imagens/personagens/isaac_capa.jpg);
+    background-position:45% center;
+}
+
+.jerry .intro {
+    background-image: url(imagens/personagens/jerry_capa.jpg);
+    background-position: 55% center;
+}
+
 .intro {
     background-repeat: no-repeat;
     background-size: cover;
