@@ -159,49 +159,59 @@ div#menu {
     justify-content: center;
 }
 
-.ellie .intro{
+.ellie .intro {
     background-image: url(imagens/personagens/ellie_capa.jpg);
     background-position: 22% center;
 }
 
-.joel .intro{
+.joel .intro {
     background-image: url(imagens/personagens/joel_capa.jpg);
     background-position: center;
 }
 
-.abby .intro{
+.abby .intro {
     background-image: url(imagens/personagens/abby_capa.jpg);
     background-position: 25% center;
 }
 
-.tommy .intro{
+.tommy .intro {
     background-image: url(imagens/personagens/tommy_capa.jpg);
     background-position: center;
 }
 
-.dina .intro{
+.dina .intro {
     background-image: url(imagens/personagens/dina_capa.jpg);
     background-position: 30% center;
 }
 
-.jesse .intro{
+.jesse .intro {
     background-image: url(imagens/personagens/jesse_capa.jpg);
     background-position: 30% center;
 }
 
-.lev .intro{
+.lev .intro {
     background-image: url(imagens/personagens/lev_capa.jpg);
     background-position: 35% center;
 }
 
-.yara .intro{
+.yara .intro {
     background-image: url(imagens/personagens/yara_capa.jpg);
     background-position: 75% center;
 }
 
-.riley .intro{
+.riley .intro {
     background-image: url(imagens/personagens/riley_capa.jpg);
     background-position: center;
+}
+
+.tess .intro {
+    background-image: url(imagens/personagens/tess_capa.jpg);
+    background-position: center;
+}
+
+.marlene .intro {
+    background-image: url(imagens/personagens/marlene_capa.jpg);
+    background-position: 30% center;
 }
 
 .intro {
@@ -227,7 +237,7 @@ div#menu {
     z-index: 1;
 }
 
-.intro-txt{
+.intro-txt {
     width: 95%;
     flex: 1;
 
@@ -355,12 +365,11 @@ div#menu {
 
 .title {
     color: var(--cor-texto-principal);
-
-    width: 95%;
-
+    width: auto;
+    
     margin-top: 10px;
 
-    font-size: clamp(2em, 8vw, 4em);
+    font-size: clamp(1.5rem, 6.9vw, 4rem);
 }
 
 .title::after {
@@ -381,22 +390,22 @@ div#menu {
             transparent);
 }
 
-.nome{
+.nome {
     background: linear-gradient(45deg, var(--cor-fundo-principal), var(--cor-texto-secundario));
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
-  background-clip: text;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
 
-  z-index: 10;
+    z-index: 10;
 }
 
-.sobrenome{
+.sobrenome {
     color: transparent;
 
-    -webkit-text-stroke: 1px rgba(255,255,255,0.15);
+    -webkit-text-stroke: 1px rgba(255, 255, 255, 0.15);
 
     background-image:
-    linear-gradient(rgba(0,0,0,.3), rgba(0,0,0,.3));
+        linear-gradient(rgba(0, 0, 0, .3), rgba(0, 0, 0, .3));
 
     background-size: cover;
     background-position: center;
