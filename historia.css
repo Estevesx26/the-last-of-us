@@ -279,6 +279,8 @@ div#menu {
     align-items: center;
     flex-direction: column;
 
+    overflow: hidden;
+
     position: relative;
 }
 
@@ -409,6 +411,19 @@ div#menu {
     margin-right: 10px;
 }
 
+.intro-line-end{
+    height: 1px;
+    width: 170px;
+
+    background: linear-gradient(90deg,
+            transparent,
+            var(--cor-line),
+            transparent);
+
+    margin-right: 10px;
+    z-index: 2;
+}
+
 .intro-mini {
     color: var(--cor-texto-secundario);
 }
@@ -420,38 +435,113 @@ div#menu {
 
 .title {
     color: var(--cor-texto-principal);
-    width: auto;
+    width: 100%;
+    min-height: 160px;
 
     margin-top: 10px;
+    margin-bottom: 10px;
+
+    position: relative;
+    min-height: 100px;
+
+    display: flex;
+    align-items: start;
+    justify-content: center;
+    flex-direction: column;
 
     font-size: clamp(1.5rem, 6vw, 4rem);
 }
 
-.title::after {
-    content: "";
+.bg-name {
+    position: absolute;
+    left: 0;
+    top: 50%;
+    
+    transform: translateY(-50%);
 
-    display: block;
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    font-size: clamp(5rem, 28vw, 10rem);
+    font-weight: 900;
+    letter-spacing: -8px;
 
-    margin-top: 10px;
+    color: transparent;
+    -webkit-text-stroke: 1px rgba(255, 255, 255, 0.09);
 
-    background: var(--cor-principal);
+    opacity: .8;
 
-    height: 1px;
-    width: 150px;
+    text-shadow:
+        0 0 25px rgba(200, 131, 42, 0.15),
+        0 0 60px rgba(0, 0, 0, 0.8);
 
-    background: linear-gradient(90deg,
-            transparent,
-            var(--cor-line),
-            transparent);
+    z-index: 1;
+    pointer-events: none;
+
+    transition: .5s ease;
+}
+
+.bg-name::after {
+    position: absolute;
+    inset: 0;
+    
+    color: transparent;
+    -webkit-text-stroke: 1px rgba(0, 0, 0, .4);
+
+    transform: translate(4px, 4px);
+
+    z-index: -1;
+}
+
+.dina .bg-name::after {
+    content: "DINA";
+}
+
+.bill .bg-name::after {
+    content: "BILL";
+}
+
+.henry .bg-name::after {
+    content: "HENRY";
+}
+
+.jesse .bg-name::after {
+    content: "JESSE";
+}
+
+.lev .bg-name::after {
+    content: "LEV";
+}
+
+.yara .bg-name::after {
+    content: "YARA";
+}
+
+.marlene .bg-name::after {
+    content: "MARLENE";
+}
+
+.sam .bg-name::after {
+    content: "SAM";
+}
+
+.mel .bg-name::after {
+    content: "MEL";
 }
 
 .nome {
+    position: relative;
+    z-index: 2;
+
+    font-size: clamp(4rem, 12vw, 6rem);
+    font-weight: 900;
+
     background: linear-gradient(45deg, var(--cor-sombra), var(--cor-texto-secundario));
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
     background-clip: text;
-
-    z-index: 10;
+    
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
 .sobrenome {
@@ -461,10 +551,6 @@ div#menu {
 
     background-image:
         linear-gradient(rgba(0, 0, 0, .3), rgba(0, 0, 0, .3));
-
-
-    background-size: cover;
-    background-position: center;
 
     background-clip: text;
     -webkit-background-clip: text;
