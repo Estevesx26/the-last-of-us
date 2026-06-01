@@ -194,7 +194,7 @@ section#tlou-img {
     height: 100%;
     width: 100%;
 
-    background-image: url(imagens/tlouvibes/janela_tlou.jpg);
+    background-image: url(../imagens/tlouvibes/janela_tlou.jpg);
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
@@ -288,7 +288,7 @@ section#linha {
 
     overflow: hidden;
 
-    background-image: url(imagens/tlouvibes/fundotlou1.jpg);
+    background-image: url(../imagens/tlouvibes/fundotlou1.jpg);
     background-position: top left;
     background-size: cover;
     background-repeat: no-repeat;
@@ -519,43 +519,43 @@ div#timeline1 {
 }
 
 .item1 {
-    background-image: url(imagens/linha/virus.jpg);
+    background-image: url(../imagens/linha/virus.jpg);
 }
 
 .item2 {
-    background-image: url(imagens/linha/fuga.jpg);
+    background-image: url(../imagens/linha/fuga.jpg);
 }
 
 .item3 {
-    background-image: url(imagens/linha/cidades.jpg);
+    background-image: url(../imagens/linha/cidades.jpg);
 }
 
 .item4 {
-    background-image: url(imagens/linha/ellie_joel.jpg);
+    background-image: url(../imagens/linha/ellie_joel.jpg);
 }
 
 .item5 {
-    background-image: url(imagens/linha/jornada.jpg);
+    background-image: url(../imagens/linha/jornada.jpg);
 }
 
 .item6 {
-    background-image: url(imagens/linha/inverno.jpg);
+    background-image: url(../imagens/linha/inverno.jpg);
 }
 
 .item7 {
-    background-image: url(imagens/linha/vagalumes.jpg);
+    background-image: url(../imagens/linha/vagalumes.jpg);
 }
 
 .item8 {
-    background-image: url(imagens/linha/jackson.jpg);
+    background-image: url(../imagens/linha/jackson.jpg);
 }
 
 .item9 {
-    background-image: url(imagens/linha/conflitos.jpg);
+    background-image: url(../imagens/linha/conflitos.jpg);
 }
 
 .item10 {
-    background-image: url(imagens/linha/seattle.jpg);
+    background-image: url(../imagens/linha/seattle.jpg);
 }
 
 @keyframes zoom {
@@ -575,7 +575,7 @@ div#timeline1 {
 
     padding: 100px 20px;
 
-    background-image: url(imagens/tlouvibes/fundotlou1.jpg);
+    background-image: url(../imagens/tlouvibes/fundotlou1.jpg);
     background-position: bottom left;
     background-size: cover;
     background-repeat: no-repeat;
@@ -678,19 +678,19 @@ div#timeline1 {
 }
 
 .cardpers {
-    background-image: url(imagens/personagens/card-pers.jpg);
+    background-image: url(../imagens/personagens/card-pers.jpg);
 }
 
 .cardfac {
-    background-image: url(imagens/faccao/card-fac.jpg);
+    background-image: url(../imagens/faccao/card-fac.jpg);
 }
 
 .cardinfec {
-    background-image: url(imagens/infectados/card-infectados.jpg);
+    background-image: url(../imagens/infectados/card-infectados.jpg);
 }
 
 .cardcur {
-    background-image: url(imagens/tlouvibes/curiosidades.jpg);
+    background-image: url(../imagens/tlouvibes/curiosidades.jpg);
 }
 
 .card-overlay {
