@@ -33,7 +33,7 @@
 /*Fonte h1 TLOU*/
 @font-face {
     font-family: 'tloufonts';
-    src: url('fontes/brixton.otf');
+    src: url('../fontes/brixton.otf');
 }
 
 /*Fonte padrão TLOU*/
