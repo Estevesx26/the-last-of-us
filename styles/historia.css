@@ -272,7 +272,7 @@ div#menu {
 .intro {
     background-repeat: no-repeat;
     background-size: cover;
-    height: 100vh;
+    height: 100dvh;
 
     display: flex;
     justify-content: center;
