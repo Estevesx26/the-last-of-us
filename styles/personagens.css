@@ -573,6 +573,9 @@ section#tlou-img h1{
 ========================================= */
 
 .overlay{
+    height: 90%;
+    width: 100%;
+    border: 2px solid blue;
     position: absolute;
     left: 50%;
     top: 100%;
@@ -586,6 +589,25 @@ section#tlou-img h1{
     opacity: 0;
 
     background: transparent;
+}
+
+.img-logo{
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+
+    height: 50px;
+    width: 50px;
+
+    border-radius: 50%;
+}
+
+.img-logo.vagalumes{
+    background-image: url(../imagens/faccao/logo-vagalumes.jpg);
+}
+
+.img-logo.wlf{
+    background-image: url(../imagens/faccao/logo-wlf.jpg);
 }
 
 /* =========================================
