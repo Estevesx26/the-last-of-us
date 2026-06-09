@@ -596,14 +596,12 @@ section#tlou-img h1{
     background-repeat: no-repeat;
     background-size: cover;
 
-    height: 50px;
-    width: 50px;
-
-    border-radius: 50%;
+    height: 80px;
+    width: 80px;
 }
 
 .img-logo.vagalumes{
-    background-image: url(../imagens/faccao/logo-vagalumes.jpg);
+    background-image: url(../imagens/faccao/logo-vagalumes.png);
 }
 
 .img-logo.wlf{
