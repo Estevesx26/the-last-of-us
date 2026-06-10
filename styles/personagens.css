@@ -575,7 +575,7 @@ section#tlou-img h1{
 .overlay{
     height: 90%;
     width: 100%;
-    border: 2px solid blue;
+
     position: absolute;
     left: 50%;
     top: 100%;
@@ -589,6 +589,9 @@ section#tlou-img h1{
     opacity: 0;
 
     background: transparent;
+
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
 }
 
 .img-logo{
@@ -596,8 +599,8 @@ section#tlou-img h1{
     background-repeat: no-repeat;
     background-size: cover;
 
-    height: 80px;
-    width: 80px;
+    height: 70px;
+    width: 60px;
 }
 
 .img-logo.vagalumes{
@@ -605,16 +608,25 @@ section#tlou-img h1{
 }
 
 .img-logo.wlf{
-    background-image: url(../imagens/faccao/logo-wlf.jpg);
+    background-image: url(../imagens/faccao/logo-wlf.png);
+}
+
+.img-logo.jackson{
+    background-image: url(../imagens/faccao/logo-jackson.png);
+}
+
+.img-logo.serafitas{
+    background-image: url(../imagens/faccao/logo-serafitas.png);
+}
+
+.img-logo.sobrevivente{
+    background-image: url(../imagens/faccao/logo-sobrevivente.png);
+    width: 80px;
 }
 
 /* =========================================
    HOVER
 ========================================= */
-
-.characters-container:hover .character-card{
-    filter: brightness(.55) blur(1px);
-}
 
 .characters-container .character-card:hover{
     transform:
@@ -629,6 +641,7 @@ section#tlou-img h1{
 
 .character-card:hover img{
     transform: scale(1.08);
+    filter: brightness(.55) blur(2px);
 }
 
 .character-card:hover .overlay{
@@ -640,20 +653,50 @@ section#tlou-img h1{
    TEXTOS
 ========================================= */
 
-.overlay h2{
-    color: white;
+.title-personagem{
+    color: var(--cor-hover);
 
-    margin: 5px;
-    font-size: 1.5rem;
+    display: flex;
+    justify-content: end;
+    align-items: end;
+
+    padding: 17px;
+
+    font-size: 1.1rem;
+}
+
+.participacao{
+    color: var(--cor-texto-secundario);
+    
+    padding: 15px;
+
+    display: flex;
+    align-items: end;
+    flex-direction: column;
 }
 
 .overlay p{
     color:var(--cor-texto-secundario );
 
     font-size: .95rem;
-    line-height: 1.5;
+    line-height: 1.6;
+    text-align: center;
 
     margin: 5px;
+
+    padding: 10px;
+    grid-column: 1/3;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.link-personagem{
+    padding-bottom: 10px;
+    display: flex;
+    justify-content: start;
+    align-items: end;
 }
 
 .overlay a{
