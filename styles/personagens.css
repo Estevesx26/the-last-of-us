@@ -678,9 +678,12 @@ section#tlou-img h1{
 .overlay p{
     color:var(--cor-texto-secundario );
 
-    font-size: .95rem;
+    font-size: 1.1rem;
     line-height: 1.6;
     text-align: center;
+    letter-spacing: 1px;
+
+    text-shadow: 2px 2px 5px rgba(4, 4, 4, 0.722);
 
     margin: 5px;
 
@@ -705,8 +708,8 @@ section#tlou-img h1{
     padding: 10px 18px;
     border-radius: 8px;
 
-    background:#7A8B5D;
-    color: white;
+    background:var(--cor-link);
+    color: var(--cor-texto-principal);
 
     text-decoration: none;
     font-weight: bold;
@@ -715,7 +718,7 @@ section#tlou-img h1{
 }
 
 .overlay a:hover{
-    background:#92a96d;
+    background: var(--cor-link-destaque);
 
     transform:
     translateY(-2px);
