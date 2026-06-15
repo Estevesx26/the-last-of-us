@@ -724,3 +724,61 @@ strong {
         transform: translateX(25px);
     }
 }
+
+#sobre{
+    background-color: red;
+}
+
+.img-txt{
+    background-color: green;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+.img-ellie{
+    object-position: 50% 20%;
+}
+
+.img-historia img{
+    width: 170px;
+    height: 170px;
+    margin-top: 50px;
+    margin-bottom: 10px;
+
+    object-fit: cover;
+    object-position: 50% 20%;
+
+    border: 5px solid transparent;
+    outline: 5px solid var(--cor-texto-secundario);
+    border-radius: 50%;
+}
+
+.img-historia h2{
+    padding:10px;
+    background-color: teal;
+    text-align: center;
+}
+
+.txt-historia{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+.cards-info{
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+    gap: 15px;
+    padding: 15px;
+}
+
+.container-info{
+    padding: 20px;
+    border: 1px solid rgba(255,255,255,.12);
+    background: rgba(0,0,0,.35);
+
+}
