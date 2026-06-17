@@ -802,7 +802,28 @@ strong {
 
 .container-info{
     color: var(--cor-texto-secundario);
+
     padding: 20px;
     border: 1px solid rgba(255,255,255,.12);
+    border-radius: 15px;
+
     background: rgba(0,0,0,.35);
+}
+
+.cards-info i{
+    color: var(--cor-line);
+    margin-bottom: 10px;
+
+    font-size: 25px;
+}
+
+.txt-sub-title{
+    color: var(--cor-texto-secundario);
+
+    font-weight: bold;
+    margin-bottom: 10px;
+}
+
+.txt-sub-texto{
+    color: var(--cor-texto-principal);
 }
