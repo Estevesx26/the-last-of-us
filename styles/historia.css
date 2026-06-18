@@ -819,6 +819,10 @@ strong {
     border-radius: 15px;
 
     background: rgba(0,0,0,.35);
+
+    transition: transform 0.3s ease, border 0.3s ease;
+    will-change: transform;
+    backface-visibility: hidden;
 }
 
 .cards-info i{
@@ -846,7 +850,7 @@ strong {
 
 .container-info:hover{
     border: 1px solid var(--cor-line);
-    transition: 0.5s;
+    transform: scale(1.03);
 }
 
 .txt-sub-texto a:hover{
