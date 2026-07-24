@@ -763,7 +763,7 @@ main#layout{
     position:relative;
     background-image: url(../imagens/tlouvibes/fundotlou1.jpg);
     color: var(--cor-texto-principal);
-    padding: 15px;
+    padding: 20px;
 }
 
 .overlay {
@@ -786,6 +786,61 @@ main#layout{
 
 .txt-conteudo{
     color: var(--cor-texto-secundario);
+
+    margin-bottom: 100px;
+    font-size: 20px;
+}
+
+.title-capitulos{
+    display: flex;
+    justify-content: space-between;
+}
+
+h3{
+    font-size: 1.8em;
+}
+
+.sub-capitulos{
+    display: flex;
+    align-items: center;
+}
+
+.line{
+    background-color: var(--cor-line);
+    width: 100%;
+    height: 1px;
+
+    margin-top: 25px;
+    margin-bottom: 60px;
+}
+
+.capitulo{
+    background-color: red;
+    margin-bottom: 40px;
+}
+
+.img-cap{
+    background-image: url(../imagens/personagens/ellie_capa.jpg);
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 300px;
+
+    margin-bottom: 40px;
+
+    display: flex;
+    align-items: end;
+}
+
+.num-cap{
+    color: rgba(255, 255, 255, 0.203);
+    padding: 30px;
+    font-size: 3em;
+}
+
+.mini-title{
+    padding-top: 15px;
+    padding-bottom: 15px;
 }
 
 
