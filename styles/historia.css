@@ -841,9 +841,23 @@ h3{
 .mini-title{
     padding-top: 15px;
     padding-bottom: 15px;
+    background-color: green;
 }
 
+.large-title{
+    background-color: blueviolet;
+    font-size: 1.5em;
+    padding-bottom: 15px;
+}
 
+.line-large-title{
+    height: 2px;
+    width: 80px;
+
+    background-color: var(--cor-line);
+
+    margin-bottom: 25px;
+}
 
 #conteudo, #container-capitulos, #lacos, #curiosidades, #galeria, #frase{
     position: relative;
