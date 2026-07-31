@@ -811,8 +811,43 @@ h3{
     margin-bottom: 100px;
 }
 
+.ellie-cap-01{
+    background-image: url(../imagens/capítulos-personagens/ellie-cap-01.jpg);
+}
+
+.ellie-cap-02{
+    background-image: url(../imagens/capítulos-personagens/ellie-cap-02.jpg);
+}
+
+.ellie-cap-03{
+    background-image: url(../imagens/capítulos-personagens/ellie-cap-03.jpg);
+}
+
+.ellie-cap-04{
+    background-image: url(../imagens/capítulos-personagens/ellie-cap-04.jpg);
+}
+
+.ellie-cap-05{
+    background-image: url(../imagens/capítulos-personagens/ellie-cap-05.jpg);
+}
+
+.ellie-cap-06{
+    background-image: url(../imagens/capítulos-personagens/ellie-cap-06.jpg);
+}
+
+.ellie-cap-07{
+    background-image: url(../imagens/capítulos-personagens/ellie-cap-07.jpg);
+}
+
+.ellie-cap-08{
+    background-image: url(../imagens/capítulos-personagens/ellie-cap-08.jpg);
+}
+
+.ellie-cap-09{
+    background-image: url(../imagens/capítulos-personagens/ellie-cap-09.jpg);
+}
+
 .img-cap{
-    background-image: url(../imagens/personagens/ellie_capa.jpg);
     background-position: center center;
     background-repeat: no-repeat;
     background-size: cover;
@@ -1087,5 +1122,27 @@ section#galeria{
 }
 
 main#frase{
-    background-color: red;
+    background-image: url(../imagens/tlouvibes/janela_tlou.jpg);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 600px;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+.caixa-frase{
+    text-align: center;
+}
+
+.caixa-frase p{
+    color: var(--cor-texto-principal);
+    padding: 30px;
+}
+
+.caixa-frase span{
+    color: var(--cor-texto-leve);
 }
