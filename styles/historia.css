@@ -15,7 +15,7 @@
     --cor-principal: #4E5B3C;
     --cor-secundaria: #C2A96A;
     --cor-hover: #8F7A4F;
-    --cor-borda: #2B2F29; 
+    --cor-borda: #2B2F29;
     --cor-sombra: #00000073;
     --cor-verde-claro: #7A8B5D;
     --cor-line: #c8832a;
@@ -288,7 +288,7 @@ div#menu {
     background:
         radial-gradient(circle at 70% 20%, rgba(180, 90, 30, .18), transparent 35%),
         linear-gradient(to right, rgba(0, 0, 0, .8), transparent 70%);
-        
+
     z-index: 1;
 }
 
@@ -301,13 +301,11 @@ div#menu {
     width: 100%;
     height: 220px;
 
-    background:linear-gradient(
-        to bottom,
-        transparent,
-        rgba(0,0,0,.3),
-        rgba(0,0,0,.7),
-        #000
-    );
+    background: linear-gradient(to bottom,
+            transparent,
+            rgba(0, 0, 0, .3),
+            rgba(0, 0, 0, .7),
+            #000);
 
     z-index: 2;
     pointer-events: none;
@@ -430,7 +428,7 @@ div#menu {
     margin-right: 10px;
 }
 
-.intro-line-end{
+.intro-line-end {
     height: 1px;
     width: 170px;
 
@@ -475,7 +473,7 @@ div#menu {
     position: absolute;
     left: 0;
     top: 50%;
-    
+
     transform: translateY(-50%);
 
     font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
@@ -501,7 +499,7 @@ div#menu {
 .bg-name::after {
     position: absolute;
     inset: 0;
-    
+
     color: transparent;
     -webkit-text-stroke: 1px rgba(0, 0, 0, .4);
 
@@ -557,7 +555,7 @@ div#menu {
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
     background-clip: text;
-    
+
     display: flex;
     justify-content: center;
     align-items: center;
@@ -752,8 +750,8 @@ strong {
     }
 }
 
-main#layout{
-    position:relative;
+main#layout {
+    position: relative;
     background-image: url(../imagens/tlouvibes/fundotlou1.jpg);
     color: var(--cor-texto-principal);
     padding: 20px;
@@ -765,40 +763,45 @@ main#layout{
     background: rgba(0, 0, 0, 0.90);
 }
 
-#conteudo{
+#conteudo {
     display: flex;
     justify-content: center;
     align-items: center;
     flex-direction: column;
 }
 
-.title-conteudo{
+.title-conteudo {
     color: var(--cor-txt-detalhe);
     padding: 30px;
+    letter-spacing: 3px;
+    font-size: 0.9em;
 }
 
-.txt-conteudo{
+.txt-conteudo {
     color: var(--cor-texto-secundario);
 
-    margin-bottom: 100px;
-    font-size: 20px;
+    margin-bottom: 140px;
+    font-size: 1.2em;
+    text-align: center;
+    line-height: 1.8;
 }
 
-.title-capitulos{
+.title-capitulos {
     display: flex;
     justify-content: space-between;
 }
 
-h3{
+h3 {
     font-size: 1.8em;
 }
 
-.sub-capitulos{
+.sub-capitulos {
     display: flex;
     align-items: center;
+    letter-spacing: 2px;
 }
 
-.line{
+.line {
     background-color: var(--cor-line);
     width: 100%;
     height: 1px;
@@ -807,47 +810,47 @@ h3{
     margin-bottom: 60px;
 }
 
-.capitulo{
+.capitulo {
     margin-bottom: 100px;
 }
 
-.ellie-cap-01{
+.ellie-cap-01 {
     background-image: url(../imagens/capítulos-personagens/ellie-cap-01.jpg);
 }
 
-.ellie-cap-02{
+.ellie-cap-02 {
     background-image: url(../imagens/capítulos-personagens/ellie-cap-02.jpg);
 }
 
-.ellie-cap-03{
+.ellie-cap-03 {
     background-image: url(../imagens/capítulos-personagens/ellie-cap-03.jpg);
 }
 
-.ellie-cap-04{
+.ellie-cap-04 {
     background-image: url(../imagens/capítulos-personagens/ellie-cap-04.jpg);
 }
 
-.ellie-cap-05{
+.ellie-cap-05 {
     background-image: url(../imagens/capítulos-personagens/ellie-cap-05.jpg);
 }
 
-.ellie-cap-06{
+.ellie-cap-06 {
     background-image: url(../imagens/capítulos-personagens/ellie-cap-06.jpg);
 }
 
-.ellie-cap-07{
+.ellie-cap-07 {
     background-image: url(../imagens/capítulos-personagens/ellie-cap-07.jpg);
 }
 
-.ellie-cap-08{
+.ellie-cap-08 {
     background-image: url(../imagens/capítulos-personagens/ellie-cap-08.jpg);
 }
 
-.ellie-cap-09{
+.ellie-cap-09 {
     background-image: url(../imagens/capítulos-personagens/ellie-cap-09.jpg);
 }
 
-.img-cap{
+.img-cap {
     background-position: center center;
     background-repeat: no-repeat;
     background-size: cover;
@@ -859,23 +862,26 @@ h3{
     align-items: end;
 }
 
-.num-cap{
+.num-cap {
     color: rgba(255, 255, 255, 0.203);
     padding: 30px;
     font-size: 3em;
 }
 
-.mini-title{
+.mini-title {
+    color: var(--cor-txt-detalhe);
     padding-top: 15px;
     padding-bottom: 15px;
+    letter-spacing: 3px;
+    font-size: 0.9em;
 }
 
-.large-title{
+.large-title {
     font-size: 1.5em;
     padding-bottom: 15px;
 }
 
-.line-large-title{
+.line-large-title {
     height: 2px;
     width: 80px;
 
@@ -884,7 +890,157 @@ h3{
     margin-bottom: 25px;
 }
 
-#conteudo, #container-capitulos, #lacos, #curiosidades, #galeria, #frase{
+#container-capitulos .capitulo>input[type="radio"] {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    padding: 0;
+    margin: -1px;
+    overflow: hidden;
+    clip: rect(0, 0, 0, 0);
+    white-space: nowrap;
+    border: 0;
+}
+
+#container-capitulos .menu-partes {
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 12px;
+    margin: 28px 0 30px;
+}
+
+#container-capitulos .menu-partes label {
+    position: relative;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    min-width: 38px;
+    padding: 8px 4px;
+    color: rgba(216, 212, 200, 0.45);
+    font-size: 0.85rem;
+    font-weight: 700;
+    letter-spacing: 0.12em;
+    cursor: pointer;
+    user-select: none;
+    transition: color 0.3s ease, transform 0.3s ease;
+}
+
+#container-capitulos .menu-partes label::after {
+    content: "";
+    position: absolute;
+    left: 50%;
+    bottom: 0;
+    width: 0;
+    height: 2px;
+    background-color: var(--cor-link-destaque);
+    transform: translateX(-50%);
+    transition: width 0.3s ease;
+}
+
+#container-capitulos .separador-parte {
+    color: rgba(216, 212, 200, 0.22);
+    font-size: 1rem;
+    pointer-events: none;
+    transition: color 0.3s ease;
+}
+
+#container-capitulos .menu-partes label:hover {
+    color: var(--cor-branco);
+    transform: translateY(-2px);
+}
+
+#container-capitulos .menu-partes label:focus-visible {
+    outline: 2px solid var(--cor-link-destaque, #00df04);
+    outline-offset: 5px;
+}
+
+#container-capitulos .conteudo-partes .parte {
+    display: none;
+}
+
+#container-capitulos .conteudo-partes .parte h5 {
+    margin: 0 0 14px;
+    color: var(--cor-texto-principal, #d8d4c8);
+    font-size: clamp(1.15rem, 2vw, 1.45rem);
+    font-weight: 600;
+    letter-spacing: 0.025em;
+}
+
+#container-capitulos .conteudo-partes .parte p {
+    margin: 0;
+    color: var(--cor-texto-secundario);
+    line-height: 1.9;
+}
+
+#container-capitulos .conteudo-partes .parte a {
+    color: var(--cor-line);
+    text-decoration: none;
+    transition: opacity 0.25s ease;
+}
+
+#container-capitulos .conteudo-partes .parte a:hover {
+    opacity: 0.72;
+}
+
+#container-capitulos .capitulo>input[type="radio"]:checked~.conteudo-partes .parte {
+    animation: aparecer-parte 0.45s ease both;
+}
+
+@keyframes aparecer-parte {
+    from {
+        opacity: 0;
+        transform: translateY(12px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+#container-capitulos .capitulo>input[id$="-parte-1"]:checked~.conteudo-partes .parte-1,
+#container-capitulos .capitulo>input[id$="-parte-1"]:checked~.conteudo-partes .parte-01 {
+    display: block;
+}
+
+#container-capitulos .capitulo>input[id$="-parte-2"]:checked~.conteudo-partes .parte-02 {
+    display: block;
+}
+
+#container-capitulos .capitulo>input[id$="-parte-3"]:checked~.conteudo-partes .parte-03 {
+    display: block;
+}
+
+#container-capitulos .capitulo>input[id$="-parte-4"]:checked~.conteudo-partes .parte-04 {
+    display: block;
+}
+
+#container-capitulos .capitulo>input[id$="-parte-1"]:checked~.menu-partes label[for$="-parte-1"],
+#container-capitulos .capitulo>input[id$="-parte-2"]:checked~.menu-partes label[for$="-parte-2"],
+#container-capitulos .capitulo>input[id$="-parte-3"]:checked~.menu-partes label[for$="-parte-3"],
+#container-capitulos .capitulo>input[id$="-parte-4"]:checked~.menu-partes label[for$="-parte-4"] {
+    color: var(--cor-link-destaque, #00df04);
+    transform: translateY(-2px);
+}
+
+#container-capitulos .capitulo>input[id$="-parte-1"]:checked~.menu-partes label[for$="-parte-1"]::after,
+#container-capitulos .capitulo>input[id$="-parte-2"]:checked~.menu-partes label[for$="-parte-2"]::after,
+#container-capitulos .capitulo>input[id$="-parte-3"]:checked~.menu-partes label[for$="-parte-3"]::after,
+#container-capitulos .capitulo>input[id$="-parte-4"]:checked~.menu-partes label[for$="-parte-4"]::after {
+    width: 100%;
+}
+
+#container-capitulos .capitulo>input[type="radio"]:checked~.menu-partes .separador-parte {
+    color: rgba(216, 212, 200, 0.38);
+}
+
+#conteudo,
+#container-capitulos,
+#lacos,
+#curiosidades,
+#galeria,
+#frase {
     position: relative;
     z-index: 1;
 }
@@ -898,30 +1054,28 @@ main#layout::before {
     width: 100%;
     height: 220px;
 
-    background: linear-gradient(
-        to bottom,
-        #000 0%,
-        rgba(0,0,0,.95) 30%,
-        rgba(0,0,0,.90) 70%,
-        transparent 100%
-    );
+    background: linear-gradient(to bottom,
+            #000 0%,
+            rgba(0, 0, 0, .95) 30%,
+            rgba(0, 0, 0, .90) 70%,
+            transparent 100%);
 
     z-index: 1;
     pointer-events: none;
 }
 
-section#lacos{
+section#lacos {
     display: grid;
     grid-template-columns: 5% 90% 5%;
 }
 
-.titles-lacos{
+.titles-lacos {
     margin-bottom: 40px;
 
     grid-column: 1/4;
 }
 
-.container-lacos{
+.container-lacos {
     display: flex;
     justify-content: center;
     align-items: center;
@@ -930,7 +1084,7 @@ section#lacos{
     grid-column: 1/4;
 }
 
-.img-lacos{
+.img-lacos {
     width: 100%;
     height: 600px;
     margin-bottom: 40px;
@@ -940,7 +1094,7 @@ section#lacos{
     flex-direction: column;
 }
 
-.txt-lacos{
+.txt-lacos {
     padding: 20px;
     z-index: 1;
 
@@ -948,72 +1102,72 @@ section#lacos{
     flex-direction: column;
 }
 
-.sub-txt-lacos{
+.sub-txt-lacos {
     color: var(--cor-txt-detalhe);
     padding-bottom: 5px;
     font-size: 0.8em;
 }
 
-.title-txt-lacos{
+.title-txt-lacos {
     color: var(--cor-texto-principal);
     padding-bottom: 10px;
     font-size: 1.4em;
 }
 
-.conteudo-txt-lacos{
+.conteudo-txt-lacos {
     color: var(--cor-texto-secundario);
 }
 
-.joel-lacos{
+.joel-lacos {
     background-image: url(../imagens/personagens/joel_perfil.jpg);
     background-position: center 20%;
     background-size: cover;
     background-repeat: no-repeat;
 }
 
-.riley-lacos{
+.riley-lacos {
     background-image: url(../imagens/personagens/riley_perfil.jpg);
     background-position: center;
     background-size: cover;
     background-repeat: no-repeat;
 }
 
-.tommy-lacos{
+.tommy-lacos {
     background-image: url(../imagens/personagens/tommy_perfil.jpg);
     background-position: center 40%;
     background-size: cover;
     background-repeat: no-repeat;
 }
 
-.dina-lacos{
+.dina-lacos {
     background-image: url(../imagens/personagens/dina_perfil.jpg);
     background-position: center 25%;
     background-size: cover;
     background-repeat: no-repeat;
 }
 
-.jesse-lacos{
+.jesse-lacos {
     background-image: url(../imagens/personagens/jesse_perfil.jpg);
     background-position: center 40%;
     background-size: cover;
     background-repeat: no-repeat;
 }
 
-.marlene-lacos{
+.marlene-lacos {
     background-image: url(../imagens/personagens/marlene_perfil.jpg);
     background-position: center 20%;
     background-size: cover;
     background-repeat: no-repeat;
 }
 
-section#curiosidades{
+section#curiosidades {
     margin-top: 90px;
 
     display: grid;
     grid-template-columns: 5% 90% 5%;
 }
 
-.title-curiosidades{
+.title-curiosidades {
     grid-column: 2/3;
     padding: 40px;
 
@@ -1022,22 +1176,22 @@ section#curiosidades{
     align-items: center;
 }
 
-.txt-frag{
+.txt-frag {
     color: var(--cor-txt-detalhe);
     font-size: 0.9em;
 }
 
-.sub-title-curiosidades{
+.sub-title-curiosidades {
     color: var(--cor-texto-principal);
 }
 
-.info-curiosidades{
+.info-curiosidades {
     grid-column: 2/3;
     border: 1px solid var(--cor-verde-claro);
     margin-bottom: 150px;
 }
 
-.container-curiosidades{
+.container-curiosidades {
     background-color: var(--cor-fundo-principal);
     padding: 25px;
     border-top: 1px solid var(--cor-verde-claro);
@@ -1046,44 +1200,44 @@ section#curiosidades{
     flex-direction: column;
 }
 
-.num-curiosidades{
+.num-curiosidades {
     color: var(--cor-link);
     font-size: 0.9em;
     padding-bottom: 10px;
 }
 
-.sub-curiosidades{
+.sub-curiosidades {
     color: var(--cor-texto-principal);
     font-size: 1.3em;
     padding-bottom: 10px;
 }
 
-.txt-curiosidades{
+.txt-curiosidades {
     color: var(--cor-texto-leve);
     font-size: 0.9em;
 }
 
-section#galeria{
+section#galeria {
     margin-bottom: 90px;
     display: grid;
 }
 
-.titles-galeria{
+.titles-galeria {
     padding-bottom: 40px;
 }
 
-.titles-galeria p{
+.titles-galeria p {
     padding-bottom: 5px;
 }
 
-.caixa-galeria{
+.caixa-galeria {
     display: grid;
     grid-template-columns: repeat(2, 1fr);
     gap: 16px;
     aspect-ratio: 1 / 2;
 }
 
-.photos{
+.photos {
     border: 2px solid white;
     background-image: url(../imagens/tlouvibes/janela_tlou.jpg);
     background-position: center;
@@ -1091,37 +1245,37 @@ section#galeria{
     background-size: cover;
 }
 
-.photo-1{
+.photo-1 {
     grid-column: 1/3;
     grid-row: 1/2;
 }
 
-.photo-2{
+.photo-2 {
     grid-column: 1/2;
     grid-row: 2/3;
 }
 
-.photo-3{
+.photo-3 {
     grid-column: 2/3;
     grid-row: 2/3;
 }
 
-.photo-4{
+.photo-4 {
     grid-column: 1/2;
     grid-row: 3/4;
 }
 
-.photo-5{
+.photo-5 {
     grid-column: 2/3;
     grid-row: 3/4;
 }
 
-.photo-6{
+.photo-6 {
     grid-column: 1/3;
     grid-row: 4/5;
 }
 
-main#frase{
+main#frase {
     background-image: url(../imagens/tlouvibes/janela_tlou.jpg);
     background-position: center;
     background-repeat: no-repeat;
@@ -1134,15 +1288,15 @@ main#frase{
     flex-direction: column;
 }
 
-.caixa-frase{
+.caixa-frase {
     text-align: center;
 }
 
-.caixa-frase p{
+.caixa-frase p {
     color: var(--cor-texto-principal);
     padding: 30px;
 }
 
-.caixa-frase span{
+.caixa-frase span {
     color: var(--cor-texto-leve);
 }
