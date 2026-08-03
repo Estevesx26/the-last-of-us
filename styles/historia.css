@@ -1075,6 +1075,10 @@ section#lacos {
     grid-column: 1/4;
 }
 
+.titles-lacos h3{
+    font-size: 1.8em;
+}
+
 .container-lacos {
     display: flex;
     justify-content: center;
