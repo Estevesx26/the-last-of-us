@@ -1670,10 +1670,10 @@ section#galeria {
 .footer-topo > span {
     color: #778064;
 
-    font-size: 0.6rem;
-    font-weight: 700;
+    font-size: 0.8rem;
+    font-weight: 400;
 
-    letter-spacing: 4px;
+    letter-spacing: 6px;
 }
 
 .footer-topo h2 {
@@ -1681,7 +1681,7 @@ section#galeria {
 
     color: #deded8;
 
-    font-size: 2.3rem;
+    font-size: 2.1rem;
     font-weight: 700;
 
     letter-spacing: 9px;
