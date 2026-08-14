@@ -22,13 +22,21 @@
     --cor-branco: #ffffff;
     --cor-extra: #ff2a2a;
     --cor-extra2: red;
+
+    /*FONTES*/
+    --fonte-titulo: 'Oswald', Sans-Serif;
+    --fonte-texto: 'Source Sans 3', Sans-Serif;
+    --fonte-title: 'Archivo Black', Sans-serif;
+    --fonte-leve: 'Story Script', Sans-serif;
 }
 
 * {
     margin: 0px;
     padding: 0px;
+}
 
-    font-family: Arial, Helvetica, sans-serif;
+body {
+    font-family: 'inter', Arial, sans-serif;
 }
 
 html {
@@ -54,7 +62,7 @@ div#icon img {
 div#title a {
     color: var(--cor-texto-principal);
 
-    font-family: 'Oswald', sans-serif;
+    font-family: Arial, Helvetica, sans-serif;
     font-weight: 800;
     font-size: 1.6em;
 
@@ -127,21 +135,26 @@ div#menu {
 }
 
 .sidebar a {
-    color: white;
+    color: var(--cor-texto-secundario);
+
+    font-family: var(--fonte-titulo);
+    font-size: 0.9rem;
+    font-weight: 500;
+
+    letter-spacing: 0.12em;
+    text-transform: uppercase;
 
     text-decoration: none;
 
     padding: 20px 30px;
 
-    font-size: 1.2rem;
-
     transition: .3s;
 }
 
 .sidebar a:hover {
-    color: var(--cor-link-destaque);
+    color: var(--cor-line);
 
-    transform: translateX(10px);
+    transform: translateX(5px);
 }
 
 #menu-toggle:checked~.sidebar {
@@ -547,7 +560,8 @@ div#menu {
 .nome {
     position: relative;
     z-index: 2;
-
+  
+    font-family: var(--fonte-title);
     font-size: clamp(4rem, 12vw, 6rem);
     font-weight: 900;
 
@@ -571,9 +585,12 @@ div#menu {
 
     background-clip: text;
     -webkit-background-clip: text;
+    
 }
 
 .txt {
+    font-family: var(--fonte-leve);
+
     color: var(--cor-texto-secundario);
 
     width: 95%;
@@ -781,9 +798,10 @@ main#layout {
     color: var(--cor-texto-secundario);
 
     margin-bottom: 140px;
-    font-size: 1.2em;
+    font-family: var(--fonte-texto);
+    line-height: 1.9;
+    font-size: 1.08em;
     text-align: center;
-    line-height: 1.8;
 }
 
 .title-capitulos {
@@ -806,7 +824,7 @@ h3 {
     width: 100%;
     height: 1px;
 
-    margin-top: 25px; 
+    margin-top: 25px;
     margin-bottom: 60px;
 }
 
@@ -968,9 +986,11 @@ h3 {
 }
 
 #container-capitulos .conteudo-partes .parte p {
+    font-family: var(--fonte-texto);
     margin: 0;
     color: var(--cor-texto-secundario);
     line-height: 1.9;
+    font-size: 1.05em;
 }
 
 #container-capitulos .conteudo-partes .parte a {
@@ -1075,13 +1095,13 @@ section#lacos {
     grid-column: 1/4;
 }
 
-.titles-lacos p{
+.titles-lacos p {
     padding-bottom: 15px;
     color: var(--cor-txt-detalhe);
     letter-spacing: 3px;
 }
 
-.titles-lacos h3{
+.titles-lacos h3 {
     font-size: 1.8em;
 }
 
@@ -1102,7 +1122,7 @@ section#lacos {
     margin-bottom: 40px;
     overflow: hidden;
 
-    border: 1px solid rgba(155,162,144,.18);
+    border: 1px solid rgba(155, 162, 144, .18);
 
     display: flex;
     justify-content: end;
@@ -1115,25 +1135,23 @@ section#lacos {
     position: absolute;
     inset: 0;
 
-    background: linear-gradient(
-        to top,
-        rgba(0, 0, 0, 0.95) 0%,
-        rgba(0, 0, 0, 0.65) 30%,
-        rgba(0, 0, 0, 0.25) 55%,
-        transparent 80%
-    );
+    background: linear-gradient(to top,
+            rgba(0, 0, 0, 0.95) 0%,
+            rgba(0, 0, 0, 0.65) 30%,
+            rgba(0, 0, 0, 0.25) 55%,
+            transparent 80%);
 
     pointer-events: none;
 }
 
-.img-lacos::after{
+.img-lacos::after {
     content: "";
 
     position: absolute;
 
     inset: 12px;
 
-    border: 1px solid rgba(255,255,255,.05);
+    border: 1px solid rgba(255, 255, 255, .05);
 
     pointer-events: none;
 }
@@ -1147,7 +1165,7 @@ section#lacos {
     flex-direction: column;
 }
 
-.txt-lacos span{
+.txt-lacos span {
     display: inline-block;
 
     margin-bottom: 5px;
@@ -1163,7 +1181,7 @@ section#lacos {
     position: relative;
 }
 
-.txt-lacos span::after{
+.txt-lacos span::after {
     content: "";
 
     display: block;
@@ -1173,11 +1191,9 @@ section#lacos {
 
     margin-top: 8px;
 
-    background: linear-gradient(
-        to right,
-        var(--cor-line),
-        transparent
-    );
+    background: linear-gradient(to right,
+            var(--cor-line),
+            transparent);
 }
 
 .txt-lacos h4 {
@@ -1188,16 +1204,17 @@ section#lacos {
     user-select: none;
 }
 
-.txt-lacos h4 > a{
+.txt-lacos h4>a {
     color: var(--cor-texto-principal);
     text-decoration: none;
 }
 
-.txt-lacos p{
+.txt-lacos p {
+    font-family: var(--fonte-texto);
     max-width: 520px;
 
-    font-size: .98rem;
-    line-height: 1.75;
+    font-size: 1.05em;
+    line-height: 1.55;
 
     color: var(--cor-texto-leve);
 }
@@ -1367,14 +1384,16 @@ section#curiosidades {
     height: 2px;
     margin-top: 10px;
 
-    background: linear-gradient(
-        to right,
-        var(--cor-line),
-        transparent
-    );
+    background: linear-gradient(to right,
+            var(--cor-line),
+            transparent);
 }
 
 .txt-curiosidades {
+    font-family: var(--fonte-texto);
+    line-height: 1.9;
+    font-size: 1.05em;
+
     position: relative;
 
     max-width: 580px;
@@ -1397,13 +1416,12 @@ section#curiosidades {
     opacity: 1;
 
     transform:
-        translateY(-50%)
-        translateX(-8px);
+        translateY(-50%) translateX(-8px);
 
     -webkit-text-stroke: 1px rgba(200, 131, 42, 0.16);
 }
 
-.container-curiosidades::before{
+.container-curiosidades::before {
     content: "";
 
     position: absolute;
@@ -1419,19 +1437,15 @@ section#curiosidades {
 
     opacity: 0.03;
 
-    -webkit-mask-image: linear-gradient(
-        to left,
-        black 0%,
-        rgba(0, 0, 0, 0.8) 45%,
-        transparent 100%
-    );
+    -webkit-mask-image: linear-gradient(to left,
+            black 0%,
+            rgba(0, 0, 0, 0.8) 45%,
+            transparent 100%);
 
-    mask-image: linear-gradient(
-        to left,
-        black 0%,
-        rgba(0, 0, 0, 0.8) 45%,
-        transparent 100%
-    );
+    mask-image: linear-gradient(to left,
+            black 0%,
+            rgba(0, 0, 0, 0.8) 45%,
+            transparent 100%);
 
     pointer-events: none;
     z-index: -1;
@@ -1485,7 +1499,7 @@ section#galeria {
     letter-spacing: 3px;
 }
 
-.titles-galeria h3{
+.titles-galeria h3 {
     font-size: 1.8em;
 }
 
@@ -1497,7 +1511,7 @@ section#galeria {
 }
 
 .photos {
-    
+
     background-image: url(../imagens/tlouvibes/janela_tlou.jpg);
     background-position: center;
     background-repeat: no-repeat;
@@ -1508,7 +1522,7 @@ section#galeria {
     grid-column: 1/3;
     grid-row: 1/2;
 
-    background-image: url(../imagens/home-personagens/personagens/ellie/galeria/ellie-astronauta.jpg);  
+    background-image: url(../imagens/home-personagens/personagens/ellie/galeria/ellie-astronauta.jpg);
 }
 
 .photo-2 {
@@ -1570,17 +1584,13 @@ section#galeria {
     inset: 0;
 
     background:
-        radial-gradient(
-            circle at center,
+        radial-gradient(circle at center,
             transparent 20%,
             rgba(0, 0, 0, 0.25) 55%,
-            rgba(0, 0, 0, 0.9) 100%
-        ),
-        linear-gradient(
-            to bottom,
+            rgba(0, 0, 0, 0.9) 100%),
+        linear-gradient(to bottom,
             rgba(0, 0, 0, 0.15),
-            rgba(0, 0, 0, 0.65)
-        );
+            rgba(0, 0, 0, 0.65));
 
     pointer-events: none;
 }
@@ -1599,6 +1609,7 @@ section#galeria {
 .caixa-frase p {
     color: rgba(235, 235, 230, 0.92);
 
+    font-family: var(--fonte-leve);
     font-size: 1.25rem;
     font-weight: 400;
     line-height: 1.7;
@@ -1607,11 +1618,11 @@ section#galeria {
     max-width: 650px;
 
     text-shadow:
-        0 2px 4px rgba(0, 0, 0, 1),
-        0 4px 12px rgba(0, 0, 0, 0.9),
-        0 0 25px rgba(0, 0, 0, 0.7);
+        0 2px 4px rgba(0, 0, 0, 0.441),
+        0 4px 12px rgba(0, 0, 0, 0.44),
+        0 0 25px rgba(0, 0, 0, 0.455);
 
-    transition: 
+    transition:
         color 0.4s ease,
         text-shadow 0.4s ease;
 }
@@ -1648,11 +1659,9 @@ section#galeria {
     padding: 40px 25px 25px;
 
     background:
-        radial-gradient(
-            circle at 50% 0%,
+        radial-gradient(circle at 50% 0%,
             rgba(105, 120, 78, 0.10),
-            transparent 45%
-        ),
+            transparent 45%),
         #070807;
 
     border-top: 1px solid rgba(122, 139, 93, 0.15);
@@ -1667,7 +1676,7 @@ section#galeria {
    PARTE DE CIMA
 -------------------- */
 
-.footer-topo > span {
+.footer-topo>span {
     color: #778064;
 
     font-size: 0.8rem;
@@ -1771,19 +1780,15 @@ section#galeria {
 
     height: 1px;
 
-    background: linear-gradient(
-        to right,
-        transparent,
-        rgba(122, 139, 93, 0.4)
-    );
+    background: linear-gradient(to right,
+            transparent,
+            rgba(122, 139, 93, 0.4));
 }
 
 .footer-divisor span:last-child {
-    background: linear-gradient(
-        to left,
-        transparent,
-        rgba(122, 139, 93, 0.4)
-    );
+    background: linear-gradient(to left,
+            transparent,
+            rgba(122, 139, 93, 0.4));
 }
 
 .footer-divisor p {
