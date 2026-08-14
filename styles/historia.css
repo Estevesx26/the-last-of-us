@@ -28,6 +28,7 @@
     --fonte-texto: 'Source Sans 3', Sans-Serif;
     --fonte-title: 'Archivo Black', Sans-serif;
     --fonte-leve: 'Story Script', Sans-serif;
+    --fonte-sub: 'Barlow Semi Condensed', Sans-serif;
 }
 
 * {
@@ -36,7 +37,7 @@
 }
 
 body {
-    font-family: 'inter', Arial, sans-serif;
+    font-family: Arial, Helvetica, sans-serif;
 }
 
 html {
@@ -787,11 +788,23 @@ main#layout {
     flex-direction: column;
 }
 
+.title-conteudo, .titles-lacos p, .txt-frag, .titles-galeria p{
+    font-family: var(--fonte-sub);
+    font-size: 0.9rem;
+    font-weight: 700;
+    letter-spacing: 3px;
+}
+
+.title-capitulos h3, .titles-lacos h3, .sub-title-curiosidades, .titles-galeria h3{
+    font-family: var(--fonte-sub);
+    font-size: 1.8rem;
+    font-weight: 700;
+    letter-spacing: 3px;
+}
+
 .title-conteudo {
     color: var(--cor-txt-detalhe);
     padding: 30px;
-    letter-spacing: 3px;
-    font-size: 0.9em;
 }
 
 .txt-conteudo {
@@ -809,13 +822,12 @@ main#layout {
     justify-content: space-between;
 }
 
-h3 {
-    font-size: 1.8em;
-}
-
 .sub-capitulos {
     display: flex;
     align-items: center;
+
+    font-family: var(--fonte-texto);
+    font-size: 1.05em;
     letter-spacing: 2px;
 }
 
@@ -887,14 +899,18 @@ h3 {
 }
 
 .mini-title {
+    font-family: var(--fonte-sub);
+    font-weight: 600;
+    font-size: 0.95em;
+    letter-spacing: 3px;
+    
     color: var(--cor-txt-detalhe);
     padding-top: 15px;
     padding-bottom: 15px;
-    letter-spacing: 3px;
-    font-size: 0.9em;
 }
 
 .large-title {
+    font-family: var(--fonte-titulo);
     font-size: 1.5em;
     padding-bottom: 15px;
 }
@@ -980,8 +996,10 @@ h3 {
 #container-capitulos .conteudo-partes .parte h5 {
     margin: 0 0 14px;
     color: var(--cor-texto-principal, #d8d4c8);
+
+    font-family: var(--fonte-texto);
     font-size: clamp(1.15rem, 2vw, 1.45rem);
-    font-weight: 600;
+    font-weight: 700;
     letter-spacing: 0.025em;
 }
 
@@ -1098,7 +1116,6 @@ section#lacos {
 .titles-lacos p {
     padding-bottom: 15px;
     color: var(--cor-txt-detalhe);
-    letter-spacing: 3px;
 }
 
 .titles-lacos h3 {
@@ -1213,7 +1230,7 @@ section#lacos {
     font-family: var(--fonte-texto);
     max-width: 520px;
 
-    font-size: 1.05em;
+    font-size: 1.08em;
     line-height: 1.55;
 
     color: var(--cor-texto-leve);
@@ -1282,10 +1299,6 @@ section#curiosidades {
     margin-bottom: 8px;
 
     color: var(--cor-txt-detalhe);
-
-    font-size: 0.75rem;
-    font-weight: 700;
-    letter-spacing: 3px;
 }
 
 .sub-title-curiosidades {
@@ -1392,7 +1405,7 @@ section#curiosidades {
 .txt-curiosidades {
     font-family: var(--fonte-texto);
     line-height: 1.9;
-    font-size: 1.05em;
+    font-size: 1.08em;
 
     position: relative;
 
@@ -1496,7 +1509,6 @@ section#galeria {
 .titles-galeria p {
     padding-bottom: 15px;
     color: var(--cor-txt-detalhe);
-    letter-spacing: 3px;
 }
 
 .titles-galeria h3 {
