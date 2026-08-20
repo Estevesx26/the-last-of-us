@@ -44,15 +44,37 @@ html {
     scroll-behavior: smooth;
 }
 
-header {
-    height: 60px;
-    width: 100%;
+header { 
+    height: 60px; 
+    width: 100%; 
 
     position: fixed;
+    top: 0;
+    left: 0;
 
-    display: flex;
-    justify-content: space-between;
+    display: flex; 
+    justify-content: space-between; 
     z-index: 1000;
+
+    background: transparent;
+
+    animation: header-scroll linear both;
+    animation-timeline: scroll();
+    animation-range: 0px 80px;
+}
+
+@keyframes header-scroll {
+    from {
+        background: transparent;
+        backdrop-filter: blur(0px);
+        -webkit-backdrop-filter: blur(0px);
+    }
+
+    to {
+        background: rgba(8, 10, 8, 0.55);
+        backdrop-filter: blur(3px);
+        -webkit-backdrop-filter: blur(10px);
+    }
 }
 
 div#icon img {
@@ -786,6 +808,10 @@ main#layout {
     justify-content: center;
     align-items: center;
     flex-direction: column;
+
+    animation: subir-fade linear both;
+    animation-timeline: view();
+    animation-range: entry 10% cover 35%;
 }
 
 .title-conteudo, .titles-lacos p, .txt-frag, .titles-galeria p{
@@ -820,6 +846,8 @@ main#layout {
 .title-capitulos {
     display: flex;
     justify-content: space-between;
+
+    padding: 30px 0px  30px 0px;
 }
 
 .sub-capitulos {
@@ -836,7 +864,6 @@ main#layout {
     width: 100%;
     height: 1px;
 
-    margin-top: 25px;
     margin-bottom: 60px;
 }
 
@@ -890,6 +917,10 @@ main#layout {
 
     display: flex;
     align-items: end;
+
+    animation: aparecer-img linear both;
+    animation-timeline: view();
+    animation-range: entry 10% cover 35%;
 }
 
 .num-cap {
@@ -907,12 +938,20 @@ main#layout {
     color: var(--cor-txt-detalhe);
     padding-top: 15px;
     padding-bottom: 15px;
+
+    animation: entrar-esquerda linear both;
+    animation-timeline: view();
+    animation-range: entry 10% cover 30%;
 }
 
 .large-title {
     font-family: var(--fonte-titulo);
     font-size: 1.5em;
     padding-bottom: 15px;
+
+    animation: subir-fade linear both;
+    animation-timeline: view();
+    animation-range: entry 10% cover 30%;
 }
 
 .line-large-title {
@@ -922,6 +961,73 @@ main#layout {
     background-color: var(--cor-line);
 
     margin-bottom: 25px;
+
+    transform-origin: left;
+
+    animation: crescer-linha linear both;
+    animation-timeline: view();
+    animation-range: entry 10% cover 25%;
+}
+
+.conteudo-partes {
+    animation: subir-fade linear both;
+    animation-timeline: view();
+    animation-range: entry 5% cover 25%;
+}
+
+@keyframes subir-fade {
+
+    from {
+        opacity: 0;
+        transform: translateY(35px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+
+@keyframes entrar-esquerda {
+
+    from {
+        opacity: 0;
+        transform: translateX(-35px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
+
+@keyframes aparecer-img {
+
+    from {
+        opacity: 0;
+        transform: scale(.95);
+    }
+
+    to {
+        opacity: 1;
+        transform: scale(1);
+    }
+}
+
+
+@keyframes crescer-linha {
+
+    from {
+        transform: scaleX(0);
+        opacity: 0;
+    }
+
+    to {
+        transform: scaleX(1);
+        opacity: 1;
+    }
 }
 
 #container-capitulos .capitulo>input[type="radio"] {
@@ -1072,7 +1178,7 @@ main#layout {
 #container-capitulos .capitulo>input[type="radio"]:checked~.menu-partes .separador-parte {
     color: rgba(216, 212, 200, 0.38);
 }
-
+#layout,
 #conteudo,
 #container-capitulos,
 #lacos,
@@ -1081,6 +1187,8 @@ main#layout {
 #frase {
     position: relative;
     z-index: 1;
+
+    scroll-margin-top: 60px;
 }
 
 main#layout::before {
@@ -1108,7 +1216,97 @@ section#lacos {
 }
 
 .titles-lacos {
+    animation: lacos-title linear both;
+    animation-timeline: view();
+    animation-range: entry 10% cover 30%;
+}
+
+
+/* CARDS */
+.img-lacos {
+    animation: lacos-esquerda linear both;
+    animation-timeline: view();
+    animation-range: entry 5% cover 35%;
+}
+
+
+/* CARDS PARES ENTRAM PELO OUTRO LADO */
+.img-lacos:nth-child(even) {
+    animation-name: lacos-direita;
+}
+
+
+/* TEXTO DENTRO DOS CARDS */
+.txt-lacos {
+    animation: texto-lacos linear both;
+    animation-timeline: view();
+    animation-range: entry 15% cover 40%;
+}
+
+
+/* ==========================================
+   KEYFRAMES
+========================================== */
+
+
+/* TÍTULO SUBINDO */
+@keyframes lacos-title {
+    from {
+        opacity: 0;
+        transform: translateY(30px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+
+/* CARD ENTRANDO DA ESQUERDA */
+@keyframes lacos-esquerda {
+    from {
+        opacity: 0;
+        transform: translateX(-30px) scale(.97);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateX(0) scale(1);
+    }
+}
+
+
+/* CARD ENTRANDO DA DIREITA */
+@keyframes lacos-direita {
+    from {
+        opacity: 0;
+        transform: translateX(30px) scale(.97);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateX(0) scale(1);
+    }
+}
+
+
+/* TEXTO SUBINDO DENTRO DO CARD */
+@keyframes texto-lacos {
+    from {
+        opacity: 0;
+        transform: translateY(25px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.titles-lacos {
     margin-bottom: 40px;
+    padding: 30px 0px 0px 0px;
 
     grid-column: 1/4;
 }
@@ -1504,6 +1702,8 @@ section#galeria {
 
 .titles-galeria {
     padding-bottom: 40px;
+
+    padding: 30px 0px  30px 0px;
 }
 
 .titles-galeria p {
