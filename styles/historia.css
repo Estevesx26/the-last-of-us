@@ -305,7 +305,7 @@ div#menu {
 .intro {
     background-repeat: no-repeat;
     background-size: cover;
-    height: 100dvh;
+    height: 100svh;
 
     display: flex;
     justify-content: center;
@@ -808,10 +808,6 @@ main#layout {
     justify-content: center;
     align-items: center;
     flex-direction: column;
-
-    animation: subir-fade linear both;
-    animation-timeline: view();
-    animation-range: entry 10% cover 35%;
 }
 
 .title-conteudo, .titles-lacos p, .txt-frag, .titles-galeria p{
@@ -917,10 +913,6 @@ main#layout {
 
     display: flex;
     align-items: end;
-
-    animation: aparecer-img linear both;
-    animation-timeline: view();
-    animation-range: entry 10% cover 35%;
 }
 
 .num-cap {
@@ -938,20 +930,12 @@ main#layout {
     color: var(--cor-txt-detalhe);
     padding-top: 15px;
     padding-bottom: 15px;
-
-    animation: entrar-esquerda linear both;
-    animation-timeline: view();
-    animation-range: entry 10% cover 30%;
 }
 
 .large-title {
     font-family: var(--fonte-titulo);
     font-size: 1.5em;
     padding-bottom: 15px;
-
-    animation: subir-fade linear both;
-    animation-timeline: view();
-    animation-range: entry 10% cover 30%;
 }
 
 .line-large-title {
@@ -961,73 +945,6 @@ main#layout {
     background-color: var(--cor-line);
 
     margin-bottom: 25px;
-
-    transform-origin: left;
-
-    animation: crescer-linha linear both;
-    animation-timeline: view();
-    animation-range: entry 10% cover 25%;
-}
-
-.conteudo-partes {
-    animation: subir-fade linear both;
-    animation-timeline: view();
-    animation-range: entry 5% cover 25%;
-}
-
-@keyframes subir-fade {
-
-    from {
-        opacity: 0;
-        transform: translateY(35px);
-    }
-
-    to {
-        opacity: 1;
-        transform: translateY(0);
-    }
-}
-
-
-@keyframes entrar-esquerda {
-
-    from {
-        opacity: 0;
-        transform: translateX(-35px);
-    }
-
-    to {
-        opacity: 1;
-        transform: translateX(0);
-    }
-}
-
-
-@keyframes aparecer-img {
-
-    from {
-        opacity: 0;
-        transform: scale(.95);
-    }
-
-    to {
-        opacity: 1;
-        transform: scale(1);
-    }
-}
-
-
-@keyframes crescer-linha {
-
-    from {
-        transform: scaleX(0);
-        opacity: 0;
-    }
-
-    to {
-        transform: scaleX(1);
-        opacity: 1;
-    }
 }
 
 #container-capitulos .capitulo>input[type="radio"] {
@@ -1213,95 +1130,6 @@ main#layout::before {
 section#lacos {
     display: grid;
     grid-template-columns: 5% 90% 5%;
-}
-
-.titles-lacos {
-    animation: lacos-title linear both;
-    animation-timeline: view();
-    animation-range: entry 10% cover 30%;
-}
-
-
-/* CARDS */
-.img-lacos {
-    animation: lacos-esquerda linear both;
-    animation-timeline: view();
-    animation-range: entry 5% cover 35%;
-}
-
-
-/* CARDS PARES ENTRAM PELO OUTRO LADO */
-.img-lacos:nth-child(even) {
-    animation-name: lacos-direita;
-}
-
-
-/* TEXTO DENTRO DOS CARDS */
-.txt-lacos {
-    animation: texto-lacos linear both;
-    animation-timeline: view();
-    animation-range: entry 15% cover 40%;
-}
-
-
-/* ==========================================
-   KEYFRAMES
-========================================== */
-
-
-/* TÍTULO SUBINDO */
-@keyframes lacos-title {
-    from {
-        opacity: 0;
-        transform: translateY(30px);
-    }
-
-    to {
-        opacity: 1;
-        transform: translateY(0);
-    }
-}
-
-
-/* CARD ENTRANDO DA ESQUERDA */
-@keyframes lacos-esquerda {
-    from {
-        opacity: 0;
-        transform: translateX(-30px) scale(.97);
-    }
-
-    to {
-        opacity: 1;
-        transform: translateX(0) scale(1);
-    }
-}
-
-
-/* CARD ENTRANDO DA DIREITA */
-@keyframes lacos-direita {
-    from {
-        opacity: 0;
-        transform: translateX(30px) scale(.97);
-    }
-
-    to {
-        opacity: 1;
-        transform: translateX(0) scale(1);
-    }
-}
-
-
-/* TEXTO SUBINDO DENTRO DO CARD */
-@keyframes texto-lacos {
-    from {
-        opacity: 0;
-        transform: translateY(25px);
-    }
-
-    to {
-        opacity: 1;
-        transform: translateY(0);
-    }
 }
 
 .titles-lacos {
