@@ -61,6 +61,8 @@ header {
     animation: header-scroll linear both;
     animation-timeline: scroll();
     animation-range: 0px 80px;
+
+    user-select: none;
 }
 
 @keyframes header-scroll {
@@ -315,6 +317,8 @@ div#menu {
     overflow: hidden;
 
     position: relative;
+
+    user-select: none;
 }
 
 .intro::before {
@@ -844,6 +848,8 @@ main#layout {
     justify-content: space-between;
 
     padding: 30px 0px  30px 0px;
+
+    user-select: none;
 }
 
 .sub-capitulos {
@@ -856,11 +862,17 @@ main#layout {
 }
 
 .line-cap {
-    background-color: var(--cor-line);
     width: 100%;
     height: 1px;
 
     margin-bottom: 60px;
+
+    background: linear-gradient(90deg,
+            transparent,
+            var(--cor-line),
+            transparent);
+
+    margin-right: 10px;
 }
 
 .capitulo {
@@ -904,21 +916,92 @@ main#layout {
 }
 
 .img-cap {
-    background-position: center center;
+    position: relative;
+    overflow: hidden;
+
+    height: 300px;
+    margin-bottom: 40px;
+
+    background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
-    height: 300px;
-
-    margin-bottom: 40px;
 
     display: flex;
     align-items: end;
+
+    filter:
+        contrast(1.08)
+        saturate(.92)
+        brightness(.96);
+}
+
+.img-cap::before {
+    content: "";
+
+    position: absolute;
+    inset: 0;
+
+    background:
+        radial-gradient(
+            ellipse at 50% 45%,
+            transparent 35%,
+            rgba(0, 0, 0, .12) 60%,
+            rgba(0, 0, 0, .48) 100%
+        );
+
+    z-index: 1;
+    pointer-events: none;
+}
+
+.img-cap::after {
+    content: "";
+
+    position: absolute;
+
+    width: 70%;
+    height: 90%;
+
+    top: -25%;
+    right: -20%;
+
+    background:
+        radial-gradient(
+            ellipse,
+            rgba(220, 200, 160, .18),
+            transparent 65%
+        );
+
+    transform: rotate(-15deg);
+
+    filter: blur(18px);
+
+    z-index: 1;
+    pointer-events: none;
 }
 
 .num-cap {
-    color: rgba(255, 255, 255, 0.203);
-    padding: 30px;
-    font-size: 3em;
+    position: relative;
+    z-index: 2;
+
+    padding: 20px 25px;
+
+    font-family: var(--fonte-titulo);
+    font-size: 6.5rem;
+    font-weight: 500;
+    line-height: .85;
+    letter-spacing: -5px;
+
+    color: rgba(225, 225, 215, .55);
+
+    mix-blend-mode: soft-light;
+
+    text-shadow:
+        0 2px 3px rgba(0, 0, 0, .5),
+        0 0 15px rgba(255, 255, 255, .12);
+
+    opacity: .95;
+
+    user-select: none;
 }
 
 .mini-title {
@@ -930,6 +1013,8 @@ main#layout {
     color: var(--cor-txt-detalhe);
     padding-top: 15px;
     padding-bottom: 15px;
+
+    user-select: none;
 }
 
 .large-title {
@@ -939,12 +1024,18 @@ main#layout {
 }
 
 .line-large-title {
-    height: 2px;
-    width: 80px;
-
-    background-color: var(--cor-line);
+    width: 140px;
+    height: 1px;
 
     margin-bottom: 25px;
+
+    background: linear-gradient(
+        90deg,
+        var(--cor-line) 0%,
+        rgba(200, 131, 42, 0.55) 35%,
+        rgba(200, 131, 42, 0.15) 70%,
+        transparent 100%
+    );
 }
 
 #container-capitulos .capitulo>input[type="radio"] {
@@ -1000,6 +1091,8 @@ main#layout {
     font-size: 1rem;
     pointer-events: none;
     transition: color 0.3s ease;
+    
+    user-select: none;
 }
 
 #container-capitulos .menu-partes label:hover {
@@ -1137,6 +1230,8 @@ section#lacos {
     padding: 30px 0px 0px 0px;
 
     grid-column: 1/4;
+
+    user-select: none;
 }
 
 .titles-lacos p {
@@ -1157,20 +1252,39 @@ section#lacos {
     grid-column: 1/4;
 }
 
+/* ==========================================
+   LAÇOS — PÔSTER CINEMATOGRÁFICO
+========================================== */
+
 .img-lacos {
     position: relative;
+    overflow: hidden;
+    isolation: isolate;
 
     width: 100%;
     height: 550px;
     margin-bottom: 40px;
-    overflow: hidden;
-
-    border: 1px solid rgba(155, 162, 144, .18);
 
     display: flex;
     justify-content: end;
     flex-direction: column;
+
+    background-size: cover;
+    background-repeat: no-repeat;
+
+    filter:
+        contrast(1.06)
+        saturate(.92)
+        brightness(.96);
+
+    box-shadow:
+        0 20px 45px rgba(0, 0, 0, .32);
 }
+
+
+/* ==========================================
+   LUZ DE RECORTE + PROFUNDIDADE
+========================================== */
 
 .img-lacos::before {
     content: "";
@@ -1178,31 +1292,92 @@ section#lacos {
     position: absolute;
     inset: 0;
 
-    background: linear-gradient(to top,
-            rgba(0, 0, 0, 0.95) 0%,
-            rgba(0, 0, 0, 0.65) 30%,
-            rgba(0, 0, 0, 0.25) 55%,
-            transparent 80%);
+    background:
 
+        /* luz quente no personagem */
+        radial-gradient(
+            ellipse at 68% 28%,
+            rgba(220, 185, 130, .22) 0%,
+            rgba(220, 185, 130, .08) 24%,
+            transparent 48%
+        ),
+
+        /* sombra lateral */
+        linear-gradient(
+            90deg,
+            rgba(0, 0, 0, .38) 0%,
+            rgba(0, 0, 0, .08) 38%,
+            transparent 65%
+        ),
+
+        /* vinheta elegante */
+        radial-gradient(
+            ellipse at center,
+            transparent 42%,
+            rgba(0, 0, 0, .16) 72%,
+            rgba(0, 0, 0, .50) 115%
+        );
+
+    z-index: 1;
     pointer-events: none;
 }
+
+
+/* ==========================================
+   FUNDO DO TEXTO + MOLDURA INTERNA
+========================================== */
 
 .img-lacos::after {
     content: "";
 
     position: absolute;
+    inset: 0;
 
-    inset: 12px;
+    background:
 
-    border: 1px solid rgba(255, 255, 255, .05);
+        /* moldura interna */
+        linear-gradient(
+            rgba(255,255,255,.055),
+            rgba(255,255,255,.055)
+        )
+        top 12px left 12px / calc(100% - 24px) 1px no-repeat,
 
+        linear-gradient(
+            rgba(255,255,255,.055),
+            rgba(255,255,255,.055)
+        )
+        bottom 12px left 12px / calc(100% - 24px) 1px no-repeat,
+
+        linear-gradient(
+            rgba(255,255,255,.055),
+            rgba(255,255,255,.055)
+        )
+        top 12px left 12px / 1px calc(100% - 24px) no-repeat,
+
+        linear-gradient(
+            rgba(255,255,255,.055),
+            rgba(255,255,255,.055)
+        )
+        top 12px right 12px / 1px calc(100% - 24px) no-repeat,
+
+        /* sombra pro texto */
+        linear-gradient(
+            to top,
+            rgba(5, 6, 5, .98) 0%,
+            rgba(5, 6, 5, .82) 18%,
+            rgba(5, 6, 5, .38) 42%,
+            transparent 68%
+        );
+
+    z-index: 2;
     pointer-events: none;
 }
+
 
 .txt-lacos {
     position: relative;
     padding: 20px;
-    z-index: 1;
+    z-index: 3;
 
     display: flex;
     flex-direction: column;
@@ -1319,6 +1494,8 @@ section#curiosidades {
     display: flex;
     flex-direction: column;
     align-items: center;
+
+    user-select: none;
 }
 
 .txt-frag {
@@ -1397,6 +1574,8 @@ section#curiosidades {
         opacity 0.35s ease,
         transform 0.35s ease,
         -webkit-text-stroke 0.35s ease;
+
+        user-select: none;
 }
 
 .sub-curiosidades {
@@ -1412,6 +1591,8 @@ section#curiosidades {
     line-height: 1.2;
 
     z-index: 1;
+
+    user-select: none;
 }
 
 .sub-curiosidades::after {
@@ -1526,6 +1707,8 @@ section#curiosidades {
 section#galeria {
     margin-bottom: 90px;
     display: grid;
+
+    user-select: none;
 }
 
 .titles-galeria {
@@ -1551,11 +1734,66 @@ section#galeria {
 }
 
 .photos {
+    position: relative;
+    overflow: hidden;
 
-    background-image: url(../imagens/tlouvibes/janela_tlou.jpg);
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
+
+    transition:
+        transform .7s cubic-bezier(.22, 1, .36, 1),
+        filter .7s cubic-bezier(.22, 1, .36, 1),
+        opacity .7s ease;
+}
+
+
+.caixa-galeria:hover .photos {
+    filter: blur(0.8px) brightness(.75);
+    opacity: .72;
+}
+
+
+.caixa-galeria .photos:hover {
+    transform: scale(1.035);
+
+    filter: blur(0) brightness(1);
+    opacity: 1;
+
+    z-index: 3;
+}
+
+
+.photos span {
+    position: absolute;
+
+    left: 15px;
+    bottom: 20px;
+
+    color: var(--cor-texto-secundario);
+
+    font-weight: bold;
+    letter-spacing: 1px;
+
+    opacity: 0;
+    visibility: hidden;
+
+    transform: translateY(12px);
+
+    transition:
+        opacity .55s ease,
+        transform .65s cubic-bezier(.22, 1, .36, 1),
+        visibility .55s;
+
+    z-index: 4;
+}
+
+
+.photos:hover span {
+    opacity: 1;
+    visibility: visible;
+
+    transform: translateY(0);
 }
 
 .photo-1 {
