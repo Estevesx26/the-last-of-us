@@ -1223,6 +1223,64 @@ main#layout::before {
 section#lacos {
     display: grid;
     grid-template-columns: 5% 90% 5%;
+
+    position: relative;
+    overflow: hidden;
+}
+
+/* VAGALUMES / PONTOS DE LUZ */
+#lacos::before {
+    content: "";
+
+    position: absolute;
+    inset: 0;
+
+    background-image:
+        radial-gradient(circle, rgba(200, 131, 42, .85) 0 1px, transparent 2px),
+        radial-gradient(circle, rgba(200, 131, 42, .55) 0 1px, transparent 2px),
+        radial-gradient(circle, rgba(122, 139, 93, .65) 0 1px, transparent 2px),
+        radial-gradient(circle, rgba(255, 220, 150, .50) 0 1px, transparent 2px);
+
+    background-size:
+        170px 210px,
+        230px 270px,
+        310px 190px,
+        270px 330px;
+
+    background-position:
+        20px 30px,
+        100px 170px,
+        40px 260px,
+        170px 80px;
+
+    opacity: .45;
+
+    animation: vagalumes-lacos 14s ease-in-out infinite alternate;
+
+    pointer-events: none;
+    z-index: 0;
+}
+
+
+@keyframes vagalumes-lacos {
+    0% {
+        transform: translate3d(0, 0, 0);
+        opacity: .25;
+    }
+
+    35% {
+        opacity: .55;
+    }
+
+    65% {
+        transform: translate3d(8px, -18px, 0);
+        opacity: .35;
+    }
+
+    100% {
+        transform: translate3d(-5px, -35px, 0);
+        opacity: .6;
+    }
 }
 
 .titles-lacos {
@@ -1485,6 +1543,7 @@ section#curiosidades {
     display: grid;
     grid-template-columns: 5% 90% 5%;
 }
+
 
 .title-curiosidades {
     grid-column: 2 / 3;
