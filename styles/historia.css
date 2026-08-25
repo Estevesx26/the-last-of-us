@@ -1594,6 +1594,8 @@ section#lacos {
     letter-spacing: -3px;
 
     z-index: 2;
+
+    user-select: none;
 }
 
 
@@ -1710,18 +1712,24 @@ section#lacos {
 .txt-lacos p {
     position: relative;
 
-    max-width: 390px;
+    width: 100%;
+    max-width: 380px;
 
     margin: 0;
-
     padding-left: 18px;
 
     font-family: var(--fonte-texto);
-    font-size: .97rem;
 
-    line-height: 1.68;
+    /* se adapta à tela */
+    font-size: clamp(.97rem, 2.8vw, .99rem);
+
+    font-weight: 400;
+    line-height: 1.65;
 
     color: rgba(216, 212, 200, .68);
+
+    /* evita estouro */
+    overflow-wrap: break-word;
 }
 
 
