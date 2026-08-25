@@ -1431,68 +1431,344 @@ section#lacos {
     pointer-events: none;
 }
 
+/* ==================================================
+   LAÇOS — REGISTRO / MEMÓRIA
+================================================== */
 
 .txt-lacos {
     position: relative;
-    padding: 20px;
-    z-index: 3;
+    z-index: 5;
+
+    width: 100%;
+    padding: 78px 26px 30px;
 
     display: flex;
     flex-direction: column;
+    align-items: flex-start;
+
+    overflow: hidden;
+
+    background: linear-gradient(
+        to top,
+        rgba(3, 4, 3, .98) 0%,
+        rgba(3, 4, 3, .78) 45%,
+        rgba(3, 4, 3, .12) 78%,
+        transparent 100%
+    );
 }
 
-.txt-lacos span {
-    display: inline-block;
 
-    margin-bottom: 5px;
+/* PALAVRA FANTASMA */
+.txt-lacos::before {
+    position: absolute;
 
-    color: var(--cor-line);
+    left: 20px;
+    bottom: 58px;
 
-    font-size: .72rem;
+    font-family: var(--fonte-titulo);
+    font-size: clamp(4rem, 10vw, 7rem);
     font-weight: 700;
-    letter-spacing: 3px;
-    text-transform: uppercase;
-    user-select: none;
 
-    position: relative;
+    line-height: .8;
+    letter-spacing: -4px;
+
+    color: transparent;
+
+    -webkit-text-stroke:
+        1px rgba(255, 255, 255, .045);
+
+    opacity: .9;
+
+    pointer-events: none;
+
+    z-index: -1;
 }
 
-.txt-lacos span::after {
+/* JOEL */
+.joel-lacos .txt-lacos::before {
+    content: "FAMÍLIA";
+}
+
+/* RILEY */
+.riley-lacos .txt-lacos::before {
+    content: "AMOR";
+}
+
+/* TOMMY */
+.tommy-lacos .txt-lacos::before {
+    content: "LEGADO";
+}
+
+/* DINA */
+.dina-lacos .txt-lacos::before {
+    content: "PARCEIRA";
+}
+
+/* JESSE */
+.jesse-lacos .txt-lacos::before {
+    content: "LEALDADE";
+}
+
+/* MARLENE */
+.marlene-lacos .txt-lacos::before {
+    content: "DESTINO";
+}
+
+
+
+/* ==================================================
+   FIGURA PATERNA
+================================================== */
+
+.txt-lacos > span {
+    position: relative;
+
+    margin-bottom: 12px;
+
+    font-family: var(--fonte-sub);
+    font-size: .64rem;
+    font-weight: 600;
+
+    letter-spacing: 4px;
+
+    color: rgba(216, 212, 200, .58);
+}
+
+/* ==================================================
+   LINHA
+================================================== */
+
+.line-lacos {
+    position: relative;
+
+    width: 110px;
+    height: 1px;
+
+    margin-bottom: 14px;
+
+    background: linear-gradient(
+        90deg,
+        var(--cor-line),
+        rgba(200, 131, 42, .28),
+        transparent
+    );
+
+    overflow: hidden;
+}
+
+
+/* reflexo */
+.line-lacos::after {
     content: "";
 
-    display: block;
+    position: absolute;
 
-    width: 50px;
-    height: 2px;
+    top: 0;
+    left: -40px;
 
-    margin-top: 8px;
+    width: 30px;
+    height: 1px;
 
-    background: linear-gradient(to right,
-            var(--cor-line),
-            transparent);
+    background: rgba(255, 215, 145, .85);
+
+    box-shadow:
+        0 0 8px rgba(200, 131, 42, .45);
+
+    animation: brilho-lacos 5.5s ease-in-out infinite;
 }
+
+/* ==========================================
+   NOME DOS LAÇOS
+========================================== */
 
 .txt-lacos h4 {
-    color: var(--cor-texto-principal);
-    padding-bottom: 5px;
-    font-size: 2.5em;
-    font-weight: 800;
-    user-select: none;
+    position: relative;
+
+    margin: 0 0 18px;
+
+    font-family: var(--fonte-titulo);
+    font-size: clamp(3.2rem, 8vw, 5.8rem);
+    font-weight: 700;
+
+    line-height: .82;
+    letter-spacing: -3px;
+
+    z-index: 2;
 }
 
-.txt-lacos h4>a {
-    color: var(--cor-texto-principal);
+
+/* ==========================================
+   LINK
+========================================== */
+
+.txt-lacos h4 a {
+    position: relative;
+    display: inline-block;
+
+    color: rgba(240, 238, 228, .92);
+
     text-decoration: none;
+
+    transform-origin: left center;
+
+    text-shadow:
+        0 5px 18px rgba(0, 0, 0, .35);
+
+    transition:
+        color .65s ease,
+        letter-spacing .75s cubic-bezier(.16, 1, .3, 1),
+        transform .75s cubic-bezier(.16, 1, .3, 1),
+        text-shadow .75s ease;
 }
+
+
+/* ==========================================
+   LUZ ATRÁS DO PRÓPRIO NOME
+========================================== */
+
+.txt-lacos h4 a::before {
+    content: "";
+
+    position: absolute;
+
+    left: -10%;
+    top: 50%;
+
+    width: 120%;
+    height: 70%;
+
+    transform:
+        translateY(-50%)
+        scaleX(.45);
+
+    transform-origin: left center;
+
+    background: radial-gradient(
+        ellipse,
+        rgba(200, 131, 42, .14) 0%,
+        rgba(200, 131, 42, .055) 40%,
+        transparent 72%
+    );
+
+    opacity: 0;
+
+    z-index: -1;
+
+    pointer-events: none;
+
+    transition:
+        opacity .7s ease,
+        transform .9s cubic-bezier(.16, 1, .3, 1);
+}
+
+
+/* ==========================================
+   HOVER
+========================================== */
+
+.txt-lacos h4 a:hover {
+    color: rgba(255, 250, 235, 1);
+
+    letter-spacing: 0px;
+
+    transform: translateX(3px);
+
+    text-shadow:
+        0 6px 20px rgba(0, 0, 0, .45),
+
+        /* iluminação bem discreta */
+        0 0 12px rgba(200, 131, 42, .10),
+
+        /* profundidade */
+        3px 3px 0 rgba(200, 131, 42, .045);
+}
+
+
+.txt-lacos h4 a:hover::before {
+    opacity: 1;
+
+    transform:
+        translateY(-50%)
+        scaleX(1);
+}
+
+
+/* ==========================================
+   CLIQUE / TOQUE
+========================================== */
+
+.txt-lacos h4 a:active {
+    transform:
+        translateX(2px)
+        scale(.98);
+}
+
+/* ==================================================
+   TEXTO
+================================================== */
 
 .txt-lacos p {
+    position: relative;
+
+    max-width: 390px;
+
+    margin: 0;
+
+    padding-left: 18px;
+
     font-family: var(--fonte-texto);
-    max-width: 520px;
+    font-size: .97rem;
 
-    font-size: 1.08em;
-    line-height: 1.55;
+    line-height: 1.68;
 
-    color: var(--cor-texto-leve);
+    color: rgba(216, 212, 200, .68);
+}
+
+
+/* traço lateral */
+.txt-lacos p::before {
+    content: "";
+
+    position: absolute;
+
+    left: 0;
+    top: 5px;
+
+    width: 1px;
+    height: calc(100% - 10px);
+
+    background: linear-gradient(
+        to bottom,
+        rgba(200, 131, 42, .65),
+        rgba(200, 131, 42, .08)
+    );
+}
+
+
+/* ==================================================
+   ANIMAÇÃO
+================================================== */
+
+@keyframes brilho-lacos {
+    0%,
+    20% {
+        left: -40px;
+        opacity: 0;
+    }
+
+    30% {
+        opacity: .85;
+    }
+
+    65% {
+        opacity: .55;
+    }
+
+    78%,
+    100% {
+        left: 120px;
+        opacity: 0;
+    }
 }
 
 .joel-lacos {
@@ -1537,6 +1813,10 @@ section#lacos {
     background-repeat: no-repeat;
 }
 
+/* ==========================================
+   CURIOSIDADES
+========================================== */
+
 section#curiosidades {
     margin-top: 90px;
 
@@ -1544,6 +1824,10 @@ section#curiosidades {
     grid-template-columns: 5% 90% 5%;
 }
 
+
+/* ==========================================
+   TÍTULO DA SEÇÃO
+========================================== */
 
 .title-curiosidades {
     grid-column: 2 / 3;
@@ -1569,15 +1853,26 @@ section#curiosidades {
     font-size: 1.8rem;
 }
 
+
+/* ==========================================
+   CONTAINER DOS CARDS
+========================================== */
+
 .info-curiosidades {
     grid-column: 2 / 3;
+
+    display: grid;
+    gap: 18px;
 
     margin-bottom: 150px;
 
     overflow: hidden;
-
-    border: 1px solid rgba(122, 139, 93, 0.35);
 }
+
+
+/* ==========================================
+   CARD
+========================================== */
 
 .container-curiosidades {
     position: relative;
@@ -1585,125 +1880,157 @@ section#curiosidades {
     overflow: hidden;
 
     min-height: 170px;
+
     padding: 35px 30px;
-
-    background-color: var(--cor-fundo-principal);
-
-    border-top: 1px solid rgba(122, 139, 93, 0.25);
+    margin-top: 10px;
 
     display: flex;
     justify-content: center;
     flex-direction: column;
 
+    background:
+        linear-gradient(
+            135deg,
+            rgba(255, 255, 255, .018),
+            transparent 45%
+        ),
+        rgba(10, 12, 10, .34);
+
+    border: 1px solid rgba(122, 139, 93, .20);
+
     transition:
-        background-color 0.35s ease,
-        padding-left 0.35s ease;
+        transform .55s cubic-bezier(.16, 1, .3, 1),
+        border-color .45s ease,
+        background .45s ease,
+        box-shadow .55s ease;
 }
 
-/* Remove a borda duplicada do primeiro card */
 
-.container-curiosidades:first-child {
-    border-top: none;
-}
-
-/* Número grande ao fundo */
+/* ==========================================
+   NÚMERO GIGANTE
+========================================== */
 
 .num-curiosidades {
     position: absolute;
+
     right: 20px;
     top: 50%;
 
     transform: translateY(-50%);
 
-    color: transparent;
-
+    font-family: var(--fonte-titulo);
     font-size: clamp(6rem, 20vw, 9rem);
     font-weight: 900;
+
     line-height: 1;
+    letter-spacing: -6px;
 
-    -webkit-text-stroke: 1px rgba(216, 212, 200, 0.08);
+    color: transparent;
 
-    opacity: 0.8;
+    -webkit-text-stroke:
+        1px rgba(216, 212, 200, .08);
+
+    opacity: .8;
 
     pointer-events: none;
+    user-select: none;
 
     z-index: -1;
 
     transition:
-        opacity 0.35s ease,
-        transform 0.35s ease,
-        -webkit-text-stroke 0.35s ease;
-
-        user-select: none;
+        opacity .5s ease,
+        transform .7s cubic-bezier(.16, 1, .3, 1),
+        -webkit-text-stroke .5s ease;
 }
+
+
+/* ==========================================
+   TÍTULO DO CARD
+========================================== */
 
 .sub-curiosidades {
     position: relative;
+    z-index: 2;
 
     max-width: 500px;
+
     margin-bottom: 12px;
 
-    color: var(--cor-texto-principal);
-
-    font-size: 1.35rem;
+    font-family: var(--fonte-sub);
+    font-size: 1.15rem;
     font-weight: 700;
-    line-height: 1.2;
 
-    z-index: 1;
+    line-height: 1.2;
+    letter-spacing: 2px;
+
+    color: rgba(235, 232, 220, .92);
 
     user-select: none;
+
+    transition:
+        transform .55s cubic-bezier(.16, 1, .3, 1),
+        color .45s ease;
 }
 
-.sub-curiosidades::after {
+
+/* bolinha antes do título */
+.sub-curiosidades::before {
     content: "";
 
-    display: block;
+    display: inline-block;
 
-    width: 40px;
-    height: 2px;
-    margin-top: 10px;
+    width: 5px;
+    height: 5px;
 
-    background: linear-gradient(to right,
-            var(--cor-line),
-            transparent);
+    margin-right: 10px;
+
+    border-radius: 50%;
+
+    background: var(--cor-line);
+
+    opacity: .55;
+
+    vertical-align: middle;
+
+    box-shadow:
+        0 0 8px rgba(200, 131, 42, .25);
 }
 
-.txt-curiosidades {
-    font-family: var(--fonte-texto);
-    line-height: 1.9;
-    font-size: 1.08em;
 
+/* ==========================================
+   TEXTO
+========================================== */
+
+.txt-curiosidades {
     position: relative;
+    z-index: 2;
 
     max-width: 580px;
 
-    color: var(--cor-texto-leve);
+    margin: 0;
 
-    font-size: 0.96em;
+    font-family: var(--fonte-texto);
+    font-size: .96rem;
+
     line-height: 1.7;
 
-    z-index: 1;
+    color: var(--cor-texto-leve);
+
+    transition:
+        color .45s ease,
+        transform .55s cubic-bezier(.16, 1, .3, 1);
 }
 
-/* Efeito ao passar o mouse */
 
-.container-curiosidades:hover {
-    background-color: var(--cor-card);
-}
-
-.container-curiosidades:hover .num-curiosidades {
-    opacity: 1;
-
-    transform:
-        translateY(-50%) translateX(-8px);
-
-    -webkit-text-stroke: 1px rgba(200, 131, 42, 0.16);
-}
+/* ==========================================
+   IMAGEM SUTIL NO FUNDO
+========================================== */
 
 .container-curiosidades::before {
     content: "";
 
     position: absolute;
+
     top: 0;
     right: 0;
 
@@ -1714,53 +2041,161 @@ section#curiosidades {
     background-size: cover;
     background-repeat: no-repeat;
 
-    opacity: 0.03;
+    opacity: .03;
 
-    -webkit-mask-image: linear-gradient(to left,
-            black 0%,
-            rgba(0, 0, 0, 0.8) 45%,
-            transparent 100%);
+    -webkit-mask-image: linear-gradient(
+        to left,
+        black 0%,
+        rgba(0, 0, 0, .8) 45%,
+        transparent 100%
+    );
 
-    mask-image: linear-gradient(to left,
-            black 0%,
-            rgba(0, 0, 0, 0.8) 45%,
-            transparent 100%);
+    mask-image: linear-gradient(
+        to left,
+        black 0%,
+        rgba(0, 0, 0, .8) 45%,
+        transparent 100%
+    );
 
     pointer-events: none;
+
     z-index: -1;
 
     transition:
-        opacity 0.4s ease,
-        transform 0.4s ease;
+        opacity .4s ease,
+        transform .4s ease;
 }
 
+
+/* ==========================================
+   REFLEXO DO CARD
+========================================== */
+
+.container-curiosidades::after {
+    content: "";
+
+    position: absolute;
+
+    left: -30%;
+    top: -70%;
+
+    width: 75%;
+    height: 220%;
+
+    background: linear-gradient(
+        115deg,
+        transparent 20%,
+        rgba(200, 131, 42, .05) 48%,
+        rgba(255, 255, 255, .025) 55%,
+        transparent 75%
+    );
+
+    transform: rotate(10deg);
+
+    opacity: 0;
+
+    pointer-events: none;
+
+    transition:
+        left .9s cubic-bezier(.16, 1, .3, 1),
+        opacity .45s ease;
+}
+
+
+/* ==========================================
+   HOVER
+========================================== */
+
+.container-curiosidades:hover {
+    transform: translateY(-3px);
+
+    border-color: rgba(122, 139, 93, .38);
+
+    background:
+        linear-gradient(
+            135deg,
+            rgba(255, 255, 255, .028),
+            transparent 50%
+        ),
+        rgba(10, 12, 10, .48);
+
+    box-shadow:
+        0 14px 28px rgba(0, 0, 0, .18);
+}
+
+
+/* número */
+.container-curiosidades:hover .num-curiosidades {
+    opacity: 1;
+
+    transform:
+        translateY(-50%)
+        translateX(-8px)
+        scale(1.04);
+
+    -webkit-text-stroke:
+        1px rgba(200, 131, 42, .16);
+}
+
+
+/* título */
+.container-curiosidades:hover .sub-curiosidades {
+    transform: translateX(4px);
+
+    color: rgba(255, 255, 255, .98);
+}
+
+
+/* texto */
+.container-curiosidades:hover .txt-curiosidades {
+    transform: translateX(3px);
+
+    color: rgba(216, 212, 200, .80);
+}
+
+
+/* imagem do fundo */
 .container-curiosidades:hover::before {
-    opacity: 0.3;
+    opacity: .30;
+
     transform: scale(1.03);
 }
+
+
+/* reflexo */
+.container-curiosidades:hover::after {
+    left: 85%;
+
+    opacity: 1;
+}
+
+
+/* ==========================================
+   IMAGENS
+========================================== */
 
 .trocadilhos::before {
     background-image: url("../imagens/home-personagens/personagens/ellie/curiosidades/trocadilhos.jpg");
 }
 
 .navalha::before {
-    background-image: url(../imagens/home-personagens/personagens/ellie/curiosidades/navalha.jpg);
+    background-image: url("../imagens/home-personagens/personagens/ellie/curiosidades/navalha.jpg");
 }
 
 .diario::before {
-    background-image: url(../imagens/home-personagens/personagens/ellie/curiosidades/diario.jpg);
+    background-image: url("../imagens/home-personagens/personagens/ellie/curiosidades/diario.jpg");
 }
 
 .astronomia::before {
-    background-image: url(../imagens/home-personagens/personagens/ellie/curiosidades/astronomia.jpg);
+    background-image: url("../imagens/home-personagens/personagens/ellie/curiosidades/astronomia.jpg");
 }
 
 .dinossauros::before {
-    background-image: url(../imagens/home-personagens/personagens/ellie/curiosidades/dinossauros.jpg);
+    background-image: url("../imagens/home-personagens/personagens/ellie/curiosidades/dinossauros.jpg");
 }
 
 .tatuagem::before {
-    background-image: url(../imagens/home-personagens/personagens/ellie/curiosidades/tatuagem.jpg);
+    background-image: url("../imagens/home-personagens/personagens/ellie/curiosidades/tatuagem.jpg");
 }
 
 section#galeria {
