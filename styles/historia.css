@@ -34,6 +34,8 @@
 * {
     margin: 0px;
     padding: 0px;
+
+    box-sizing: border-box;
 }
 
 body {
@@ -490,62 +492,146 @@ div#menu {
     font-size: 0.7rem;
 }
 
+/* ==========================================
+   TÍTULO — CAPA
+========================================== */
+
 .title {
-    color: var(--cor-texto-principal);
-    width: 100%;
-    min-height: 160px;
-
-    margin-top: 10px;
-    margin-bottom: 10px;
-
     position: relative;
-    min-height: 100px;
+    z-index: 5;
+
+    width: fit-content;
 
     display: flex;
-    align-items: start;
-    justify-content: center;
     flex-direction: column;
 
-    font-size: clamp(1.5rem, 6vw, 4rem);
+    user-select: none;
 }
 
-.bg-name {
-    position: absolute;
-    left: 0;
-    top: 50%;
 
-    transform: translateY(-50%);
+/* ==========================================
+   ELLIE — ECO / SOMBRA TIPOGRÁFICA
+========================================== */
 
-    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
-    font-size: clamp(5rem, 28vw, 10rem);
-    font-weight: 900;
-    letter-spacing: -8px;
+.nome {
+    position: relative;
+    z-index: 3;
 
-    color: transparent;
-    -webkit-text-stroke: 1px rgba(255, 255, 255, 0.09);
+    margin: 0 0 5px 3px;
 
-    opacity: .8;
+    font-family: var(--fonte-titulo);
 
+    /* MANTIDO */
+    font-size: clamp(2.8rem, 13vw, 4.5rem);
+    font-weight: 800;
+
+    line-height: .85;
+    letter-spacing: 2px;
+
+    /*
+       Um pouco mais preenchido que WILLIAMS.
+       Continua translúcido.
+    */
+    color: var(--cor-branco);
+
+    -webkit-text-stroke:
+        1px rgba(238, 232, 211, .48);
+
+    /*
+       Sombra quente e envelhecida.
+       Bem discreta.
+    */
     text-shadow:
-        0 0 25px rgba(200, 131, 42, 0.15),
-        0 0 60px rgba(0, 0, 0, 0.8);
-
-    z-index: 1;
-    pointer-events: none;
-
-    transition: .5s ease;
+        3px 3px 0 rgba(200, 131, 42, .055),
+        7px 7px 0 rgba(200, 131, 42, .025),
+        0 8px 22px rgba(0, 0, 0, .32);
 }
 
-.bg-name::after {
+
+/* ECO DO ELLIE */
+
+.nome::before {
+    content: "ELLIE";
+
     position: absolute;
-    inset: 0;
+
+    left: 6px;
+    top: 5px;
+
+    width: 100%;
 
     color: transparent;
-    -webkit-text-stroke: 1px rgba(0, 0, 0, .4);
 
-    transform: translate(4px, 4px);
+    -webkit-text-stroke:
+        1px rgba(200, 131, 42, .10);
+
+    opacity: .65;
 
     z-index: -1;
+
+    pointer-events: none;
+}
+/* ==========================================
+   WILLIAMS — ECO
+========================================== */
+
+.sobrenome {
+    position: relative;
+    z-index: 2;
+
+    margin: 7px 0 0 8px;
+
+    font-family: var(--fonte-titulo);
+    font-size: clamp(2.5rem, 12vw, 4.8rem);
+    font-weight: 800;
+
+    line-height: .85;
+    letter-spacing: 2px;
+
+    color: rgba(225, 222, 210, .13);
+
+    -webkit-text-stroke:
+        1px rgba(235, 232, 220, .30);
+
+    text-shadow:
+        4px 4px 0 rgba(235, 232, 220, .035),
+        8px 8px 0 rgba(235, 232, 220, .022),
+        12px 12px 0 rgba(200, 131, 42, .018);
+
+    transition:
+        color .8s ease,
+        letter-spacing .8s cubic-bezier(.16, 1, .3, 1),
+        transform .8s cubic-bezier(.16, 1, .3, 1),
+        text-shadow .8s ease;
+}
+
+
+/* ==========================================
+   SEGUNDA CAMADA DE WILLIAMS
+========================================== */
+
+.sobrenome::before {
+    content: "WILLIAMS";
+
+    position: absolute;
+
+    left: 7px;
+    top: 6px;
+
+    color: transparent;
+
+    -webkit-text-stroke:
+        1px rgba(235, 232, 220, .07);
+
+    opacity: .7;
+
+    z-index: -1;
+
+    pointer-events: none;
+
+    transition:
+        transform .9s cubic-bezier(.16, 1, .3, 1),
+        opacity .7s ease;
 }
 
 .dina .bg-name::after {
@@ -582,37 +668,6 @@ div#menu {
 
 .mel .bg-name::after {
     content: "MEL";
-}
-
-.nome {
-    position: relative;
-    z-index: 2;
-  
-    font-family: var(--fonte-title);
-    font-size: clamp(4rem, 12vw, 6rem);
-    font-weight: 900;
-
-    background: linear-gradient(45deg, var(--cor-sombra), var(--cor-texto-secundario));
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
-    background-clip: text;
-
-    display: flex;
-    justify-content: center;
-    align-items: center;
-}
-
-.sobrenome {
-    color: transparent;
-
-    -webkit-text-stroke: 1px rgba(255, 255, 255, 0.15);
-
-    background-image:
-        linear-gradient(rgba(0, 0, 0, .3), rgba(0, 0, 0, .3));
-
-    background-clip: text;
-    -webkit-background-clip: text;
-    
 }
 
 .txt {
@@ -2232,7 +2287,7 @@ section#galeria {
     display: grid;
     grid-template-columns: repeat(2, 1fr);
     gap: 16px;
-    aspect-ratio: 1 / 2;
+    aspect-ratio: 1 / 3;
 }
 
 .photos {
@@ -2465,15 +2520,18 @@ section#galeria {
     letter-spacing: 6px;
 }
 
-.footer-topo h2 {
+.footer-topo h2{
     margin: 10px 0 15px;
-
-    color: #deded8;
 
     font-size: 2.1rem;
     font-weight: 700;
 
     letter-spacing: 9px;
+}
+
+footer h2 a {
+        text-decoration: none;
+        color: var(--cor-texto-secundario);
 }
 
 .footer-topo p {
