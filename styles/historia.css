@@ -26,7 +26,7 @@
     /*FONTES*/
     --fonte-titulo: 'Oswald', Sans-Serif;
     --fonte-texto: 'Source Sans 3', Sans-Serif;
-    --fonte-title: 'Archivo Black', Sans-serif;
+    --fonte-title: 'Rubik Doodle Shadow', Sans-serif;
     --fonte-leve: 'Story Script', Sans-serif;
     --fonte-sub: 'Barlow Semi Condensed', Sans-serif;
 }
@@ -37,6 +37,8 @@
 
     box-sizing: border-box;
 }
+
+
 
 body {
     font-family: Arial, Helvetica, sans-serif;
@@ -513,49 +515,62 @@ div#menu {
    ELLIE — ECO / SOMBRA TIPOGRÁFICA
 ========================================== */
 
+/* ==========================================
+   ELLIE — DEGRADÊ CINEMATOGRÁFICO
+========================================== */
+
 .nome {
     position: relative;
     z-index: 3;
 
-    margin: 0 0 5px 3px;
+    margin-top: 15px;
+    margin-bottom: 5px;
 
-    font-family: var(--fonte-titulo);
+    font-family: var(--fonte-texto);
 
-    /* MANTIDO */
-    font-size: clamp(2.8rem, 13vw, 4.5rem);
+    font-size: clamp(3.2rem, 15vw, 5rem);
     font-weight: 800;
 
     line-height: .85;
     letter-spacing: 2px;
 
-    /*
-       Um pouco mais preenchido que WILLIAMS.
-       Continua translúcido.
-    */
-    color: var(--cor-branco);
+    /* DEGRADÊ MAIS VIVO */
+    background: linear-gradient(
+        115deg,
+        #e0d9c8 0%,
+        #d3a96700 24%,
+        #e5891988 50%,
+        #c66a0a 72%,
+        #e1b85b 100%
+    );
 
+    background-size: 160% 100%;
+
+    -webkit-background-clip: text;
+    background-clip: text;
+
+    color: transparent;
+
+    /* deixa as letras mais definidas */
     -webkit-text-stroke:
-        1px rgba(238, 232, 211, .48);
+        .5px rgba(244, 221, 177, .28);
 
-    /*
-       Sombra quente e envelhecida.
-       Bem discreta.
-    */
-    text-shadow:
-        3px 3px 0 rgba(200, 131, 42, .055),
-        7px 7px 0 rgba(200, 131, 42, .025),
-        0 8px 22px rgba(0, 0, 0, .32);
+    /* PROFUNDIDADE + LUZ */
+    filter:
+        drop-shadow(0 2px 1px rgba(0, 0, 0, .60))
+        drop-shadow(0 6px 8px rgba(0, 0, 0, .38))
+        drop-shadow(0 0 8px rgba(224, 132, 20, .20))
+        drop-shadow(0 0 18px rgba(224, 132, 20, .08));
 }
 
 
-/* ECO DO ELLIE */
-
+/* ECO ATRÁS */
 .nome::before {
     content: "ELLIE";
 
     position: absolute;
 
-    left: 6px;
+    left: 4px;
     top: 5px;
 
     width: 100%;
@@ -563,7 +578,9 @@ div#menu {
     color: transparent;
 
     -webkit-text-stroke:
-        1px rgba(200, 131, 42, .10);
+        1px rgba(225, 132, 20, .20);
+
+    filter: blur(.3px);
 
     opacity: .65;
 
@@ -571,6 +588,7 @@ div#menu {
 
     pointer-events: none;
 }
+
 /* ==========================================
    WILLIAMS — ECO
 ========================================== */
@@ -579,7 +597,8 @@ div#menu {
     position: relative;
     z-index: 2;
 
-    margin: 7px 0 0 8px;
+    margin-top: 5px;
+    margin-bottom: 25px;
 
     font-family: var(--fonte-titulo);
     font-size: clamp(2.5rem, 12vw, 4.8rem);
@@ -588,7 +607,7 @@ div#menu {
     line-height: .85;
     letter-spacing: 2px;
 
-    color: rgba(225, 222, 210, .13);
+    color: rgba(225, 222, 210, 0.021);
 
     -webkit-text-stroke:
         1px rgba(235, 232, 220, .30);
