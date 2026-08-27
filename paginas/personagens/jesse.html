@@ -14,6 +14,42 @@
 
     <!-- LINK CSS-->
     <link rel="stylesheet" href="../../styles/historia.css">
+
+    <!-- LINK FONTES -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Oswald:wght@400;500;600;700&display=swap"
+        rel="stylesheet">
+
+    <!-- FONTE LEVE -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Story+Script&display=swap" rel="stylesheet">
+
+    <!-- TITLE NOME-->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Rubik+Doodle+Shadow&display=swap" rel="stylesheet">
+
+    <!-- TEXTO -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Source+Sans+3:ital,wght@0,200..900;1,200..900&display=swap"
+        rel="stylesheet">
+
+    <!-- TEXTO OPC 2-->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Varela+Round&display=swap" rel="stylesheet">
+
+    <!-- Sub-Title -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Barlow+Semi+Condensed:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
+        rel="stylesheet">
+
 </head>
 
 <body class="jesse">
@@ -25,22 +61,34 @@
             <div id="title">
                 <a href="#">The Last Of Us</a>
             </div>
+            
             <!-- MENU MOBILE -->
             <div id="menu">
-                <input type="checkbox" id="menu-toggle">
 
-                <label for="menu-toggle" class="menu-btn">
+                <a href="#menu-aberto" class="menu-btn menu-open">
                     <i></i>
-                </label>
+                </a>
 
-                <nav class="sidebar">
-                    <a href="../../index.html">Início</a>
-                    <a href="../principais/personagens.html">Personagens</a>
-                    <a href="#">Facções</a>
-                    <a href="#">Infectados</a>
-                    <a href="#">Curiosidades</a>
-                </nav>
+                <div id="menu-aberto" class="menu-target">
+
+                    <div class="menu-close-div">
+                        <a href="#fechar-menu" class="menu-btn menu-close">
+                            <i></i>
+                        </a>
+                    </div>
+
+                    <nav class="sidebar">
+                        <a href="../principais/personagens.html">Personagens</a>
+                        <a href="#container-capitulos">Capítulos</a>
+                        <a href="#lacos">Laços</a>
+                        <a href="#curiosidades">Curiosidades</a>
+                        <a href="#galeria">Galeria</a>
+                    </nav>
+
+                </div>
+
             </div>
+
         </header>
 
         <div class="intro">
@@ -64,8 +112,7 @@
                     </div>
                 </div>
                 <div class="title">
-                    <h1 class="bg-name">JESSE</h1>
-                    <h1 class="nome">JESSE</h1>
+                    <h1 class="nome solo">JESSE</h1>
                 </div>
                 <div class="intro-line-end"></div>
                 <div class="txt">
@@ -85,61 +132,685 @@
         </div>
     </main>
     
-    <main id="sobre">
-        <div class="img-txt">
-            <div class="img-historia img-ellie">
-                <img src="../../imagens/personagens/jesse_perfil.jpg" alt="Jesse">
-                <h2>JESSE</h2>
-            </div>
+    <main id="layout">
+        <div class="overlay"></div>
+        <div id="conteudo">
+            <span class="title-conteudo">
+                A PROTAGONISTA
+            </span>
+            <p class="txt-conteudo">Em um mundo consumido pela infecção, uma única vida carrega o peso da esperança e da
+                culpa. Esta é a jornada de Ellie - da sobrevivência à vingança, do amor à perda. Uma história sobre o
+                que estamos dispostos a fazer por quem amamos.</p>
         </div>
 
-        <div class="cards-info">
-            <div class="container-info info-idade">
-                <i class="fa-regular fa-calendar-days"></i>
-                <p class="txt-sub-title">Idade</p>
-                <p class="txt-sub-texto">24 anos</p>
+        <section id="container-capitulos">
+            <div class="title-capitulos">
+                <h3>HISTÓRIA</h3>
+                <p class="sub-capitulos">NOVE CAPÍTULOS</p>
             </div>
 
-            <div class="container-info info-origem">
-                <i class="fa-solid fa-location-dot"></i>
-                <p class="txt-sub-title">Origem</p>
-                <p class="txt-sub-texto">Wyoming</p>
+            <div class="line-cap"></div>
+
+            <article class="capitulo">
+                <div class="img-cap ellie-cap-01">
+                    <span class="num-cap" data-num="01">01</span>
+                </div>
+
+                <p class="mini-title">CAPÍTULO 01</p>
+
+                <h4 class="large-title">A MENINA IMUNE</h4>
+                <div class="line-large-title left"></div>
+
+                <input type="radio" name="partes-capitulo-1" id="capitulo-1-parte-1" checked>
+                <input type="radio" name="partes-capitulo-1" id="capitulo-1-parte-2">
+                <input type="radio" name="partes-capitulo-1" id="capitulo-1-parte-3">
+
+                <nav class="menu-partes" aria-label="Partes do capítulo">
+                    <label for="capitulo-1-parte-1">01</label>
+                    <span class="separador-parte">—</span>
+                    <label for="capitulo-1-parte-2">02</label>
+                    <span class="separador-parte">—</span>
+                    <label for="capitulo-1-parte-3">03</label>
+                </nav>
+
+                <div class="conteudo-partes">
+                    <div class="parte parte-1">
+                        <h5>O Nascimento de Ellie</h5>
+                        <p>Ellie Williams nasceu em 2019, quando o mundo já havia sido devastado pela infecção do
+                            Cordyceps. Sua mãe, Anna, morreu pouco depois de seu nascimento, mas antes disso confiou a
+                            filha a <a href="../personagens/marlene.html" target="_blank">Marlene</a>, uma velha amiga
+                            que anos mais tarde se tornaria líder dos <a href="#" target="_blank">Vagalumes</a>. Ellie
+                            cresceu sem conhecer a mãe e passou boa parte da infância em uma escola militar da <a
+                                href="#" target="_blank">FEDRA</a>, dentro da zona de quarentena de Boston. </p>
+                    </div>
+
+                    <div class="parte parte-02">
+                        <h5>A amizade com Riley.</h5>
+                        <P>Foi durante essa fase que Ellie conheceu <a href="../personagens/riley.html"
+                                target="_blank">Riley Abel</a>, sua melhor amiga e uma das pessoas mais importantes de
+                            sua vida. As duas criaram uma relação muito próxima, até Riley desaparecer e retornar algum
+                            tempo depois contando que havia se juntado aos Vagalumes. Como estava prestes a deixar
+                            Boston, ela levou Ellie para passar uma última noite em um shopping abandonado. As duas
+                            brincaram, conversaram sobre o futuro e, quando chegou o momento da despedida, Ellie pediu
+                            que Riley não fosse embora. Riley aceitou ficar, e as duas se beijaram.</P>
+                    </div>
+
+                    <div class="parte parte-03">
+                        <h5>Ellie descobre que é imune</h5>
+                        <p>A felicidade durou pouco. Infectados apareceram no shopping e, durante a fuga, Ellie e Riley
+                            foram mordidas. Sabendo que estavam condenadas, decidiram permanecer juntas e esperar pela
+                            transformação. Riley acabou sucumbindo à infecção, mas Ellie não. Os dias passaram e ela
+                            continuou completamente consciente. Sem saber como ou por quê, Ellie descobriu que era imune
+                            ao Cordyceps.
+                            Ela havia sobrevivido ao que deveria ser uma sentença de morte, mas perdeu Riley no
+                            processo. A partir daquele momento, sua imunidade e a culpa por continuar viva passariam a
+                            acompanhar Ellie por praticamente toda a sua história.</p>
+                    </div>
+
+                </div>
+            </article>
+
+            <article class="capitulo">
+                <div class="img-cap ellie-cap-02">
+                    <span class="num-cap">02</span>
+                </div>
+
+                <p class="mini-title">CAPÍTULO 02</p>
+
+                <h4 class="large-title">A ÚLTIMA ESPERANÇA</h4>
+                <div class="line-large-title"></div>
+
+                <input type="radio" name="partes-capitulo-2" id="capitulo-2-parte-1" checked>
+                <input type="radio" name="partes-capitulo-2" id="capitulo-2-parte-2">
+
+                <nav class="menu-partes" aria-label="Partes do capítulo">
+                    <label for="capitulo-2-parte-1">01</label>
+                    <span class="separador-parte">—</span>
+                    <label for="capitulo-2-parte-2">02</label>
+                </nav>
+
+                <div class="conteudo-partes">
+                    <div class="parte parte-01">
+                        <h5>A carga</h5>
+                        <p>Quando Marlene descobriu a imunidade de Ellie, percebeu que aquela garota poderia representar
+                            uma esperança para a humanidade. Como os Vagalumes precisavam levá-la para fora da zona de
+                            quarentena, Marlene entregou a missão a dois contrabandistas: <a
+                                href="../personagens/joel.html" target="_blank">Joel Miller</a> e <a
+                                href="../personagens/tess.html" target="_blank">Tess Servopoulos</a>.
+                            Joel inicialmente enxergava Ellie apenas como uma carga que precisava transportar. A
+                            situação mudou quando ele e Tess descobriram que ela havia sido mordida semanas antes e
+                            ainda não apresentava qualquer sinal de infecção. Pela primeira vez, Joel percebeu que a
+                            história da garota poderia ser verdadeira.</p>
+                    </div>
+
+                    <div class="parte parte-02">
+                        <h5>O Sacrifício</h5>
+                        <p>A missão sofreu um golpe quando Tess foi infectada e decidiu se sacrificar para permitir que
+                            Joel e Ellie escapassem. Antes de morrer, pediu que Joel terminasse o trabalho e levasse a
+                            garota até os Vagalumes. Mesmo relutante, ele aceitou.
+                            Assim começou uma viagem que deveria servir apenas para entregar Ellie aos Vagalumes, mas
+                            que acabaria mudando completamente a vida dos dois.</p>
+                    </div>
+
+                </div>
+
+            </article>
+
+            <article class="capitulo">
+                <div class="img-cap ellie-cap-03">
+                    <span class="num-cap">03</span>
+                </div>
+
+                <p class="mini-title">CAPÍTULO 03</p>
+
+                <h4 class="large-title">A JORNADA</h4>
+                <div class="line-large-title"></div>
+
+                <input type="radio" name="partes-capitulo-3" id="capitulo-3-parte-1" checked>
+                <input type="radio" name="partes-capitulo-3" id="capitulo-3-parte-2">
+                <input type="radio" name="partes-capitulo-3" id="capitulo-3-parte-3">
+                <input type="radio" name="partes-capitulo-3" id="capitulo-3-parte-4">
+
+                <nav class="menu-partes" aria-label="Partes do capítulo">
+                    <label for="capitulo-3-parte-1">01</label>
+                    <span class="separador-parte">—</span>
+                    <label for="capitulo-3-parte-2">02</label>
+                    <span class="separador-parte">—</span>
+                    <label for="capitulo-3-parte-3">03</label>
+                    <span class="separador-parte">—</span>
+                    <label for="capitulo-3-parte-4">04</label>
+                </nav>
+
+                <div class="conteudo-partes">
+                    <div class="parte parte-01">
+                        <h5>Bill</h5>
+                        <p>Depois da morte de Tess, Joel e Ellie seguem até Lincoln, onde vive <a
+                                href="../personagens/bill.html" target="_blank">Bill</a>, um antigo conhecido de Joel. A
+                            cidade está abandonada e cheia de armadilhas e infectados.
+                            Joel procura Bill para conseguir um carro. Para ajudá-los, Bill acompanha os dois pela
+                            cidade em busca de uma bateria, enfrentando vários infectados pelo caminho. Durante a busca,
+                            eles encontram Frank, antigo parceiro de Bill, morto após ter sido mordido.
+                            No fim, conseguem fazer um carro funcionar. Bill permanece em Lincoln, enquanto Joel e Ellie
+                            partem juntos, continuando a viagem em busca dos Vagalumes.</p>
+                    </div>
+
+                    <div class="parte parte-02">
+                        <h5>Joel e Ellie</h5>
+                        <p>Durante meses, Joel e Ellie atravessaram os Estados Unidos em busca dos Vagalumes. No começo,
+                            Joel mantinha distância emocional, enquanto Ellie constantemente tentava conversar e
+                            conhecê-lo melhor. Aos poucos, porém, as experiências que viveram juntos começaram a
+                            aproximá-los.</p>
+                    </div>
+
+                    <div class="parte parte-03">
+                        <h5>Henry e Sam</h5>
+                        <p>Durante a viagem, Ellie conheceu pessoas como <a href="../personagens/henry.html"
+                                target="_blank">Henry</a> e seu irmão mais novo, <a href="../personagens/sam.html"
+                                target="_blank">Sam</a>, com quem rapidamente criou uma amizade. Sam acabou sendo
+                            infectado e, depois de se transformar, foi morto por Henry, que logo em seguida tirou a
+                            própria vida. Para Ellie, foi mais uma perda que se somava à de Riley e Tess.</p>
+                    </div>
+
+                    <div class="parte parte-04">
+                        <h5>A inversão</h5>
+                        <p>Quando finalmente encontraram <a href="../personagens/tommy.html" target="_blank">Tommy</a>,
+                            irmão de Joel, Joel pensou em entregar Ellie a ele para que continuasse a missão. Ellie
+                            interpretou aquilo como mais um abandono e revelou o quanto temia ficar sozinha. Joel acabou
+                            mudando de ideia e decidiu permanecer com ela. Nesse ponto, os dois já não eram simplesmente
+                            contrabandista e carga. Ellie começava a enxergar Joel como a única pessoa que ainda não
+                            havia morrido ou a abandonado, enquanto Joel começava a amá-la como uma filha.
+                            A jornada continuou até uma antiga universidade onde esperavam encontrar os Vagalumes. Eles
+                            já haviam partido, e durante uma fuga Joel ficou gravemente ferido. Pela primeira vez, os
+                            papéis se inverteram: agora era Ellie quem precisava manter Joel vivo.</p>
+                    </div>
+
+                </div>
+
+            </article>
+
+            <article class="capitulo">
+                <div class="img-cap ellie-cap-04">
+                    <span class="num-cap">04</span>
+                </div>
+
+                <p class="mini-title">CAPÍTULO 04</p>
+
+                <h4 class="large-title">O Inverno</h4>
+                <div class="line-large-title"></div>
+
+                <input type="radio" name="partes-capitulo-4" id="capitulo-4-parte-1" checked>
+                <input type="radio" name="partes-capitulo-4" id="capitulo-4-parte-2">
+
+                <nav class="menu-partes" aria-label="Partes do capítulo">
+                    <label for="capitulo-4-parte-1">01</label>
+                    <span class="separador-parte">—</span>
+                    <label for="capitulo-4-parte-2">02</label>
+                </nav>
+
+                <div class="conteudo-partes">
+                    <div class="parte parte-01">
+                        <h5>Canibais</h5>
+                        <p>Com Joel praticamente incapaz de se mover, Ellie passou a caçar e procurar suprimentos
+                            sozinha. Foi assim que conheceu David, um homem que inicialmente parecia disposto a
+                            ajudá-la. Pouco depois, Ellie descobriu que o grupo dele estava procurando Joel e ela pelas
+                            mortes que haviam causado anteriormente.
+                            Ellie acabou capturada e percebeu rapidamente que David era muito mais perigoso do que
+                            aparentava. Depois de conseguir escapar, os dois se enfrentaram dentro de um restaurante em
+                            chamas. Ellie conseguiu alcançar um facão e matou David brutalmente.</p>
+                    </div>
+
+                    <div class="parte parte-02">
+                        <h5>Baby Girl</h5>
+                        <p>Joel chegou momentos depois e encontrou Ellie completamente abalada. Quando tentou acalmá-la,
+                            chamou-a de "baby girl", a mesma forma carinhosa como havia chamado sua própria filha, <a
+                                href="../personagens/sarah.html" target="_blank">Sarah</a>. Aquele momento deixou claro
+                            o que a viagem havia criado entre eles. Joel já não estava apenas levando Ellie aos
+                            Vagalumes. Ele a amava como uma filha, e Ellie finalmente havia encontrado nele a família
+                            que nunca teve.</p>
+                    </div>
+
+                </div>
+
+            </article>
+
+            <article class="capitulo">
+                <div class="img-cap ellie-cap-05">
+                    <span class="num-cap">05</span>
+                </div>
+
+                <p class="mini-title">CAPÍTULO 05</p>
+
+                <h4 class="large-title">A VERDADE ESCONDIDA</h4>
+                <div class="line-large-title"></div>
+
+                <input type="radio" name="partes-capitulo-5" id="capitulo-5-parte-1" checked>
+                <input type="radio" name="partes-capitulo-5" id="capitulo-5-parte-2">
+                <input type="radio" name="partes-capitulo-5" id="capitulo-5-parte-3">
+
+                <nav class="menu-partes" aria-label="Partes do capítulo">
+                    <label for="capitulo-5-parte-1">01</label>
+                    <span class="separador-parte">—</span>
+                    <label for="capitulo-5-parte-2">02</label>
+                    <span class="separador-parte">—</span>
+                    <label for="capitulo-5-parte-3">03</label>
+                </nav>
+
+                <div class="conteudo-partes">
+                    <div class="parte parte-01">
+                        <h5>Hospital dos Vagalumes</h5>
+                        <p>Meses depois, Joel e Ellie finalmente chegaram aos Vagalumes em Salt Lake City. Ellie
+                            acreditava que sua imunidade poderia ser usada para desenvolver uma cura, mas Joel descobriu
+                            que o procedimento necessário para estudá-la causaria sua morte. Ellie estava inconsciente e
+                            nem chegou a saber que seria sacrificada.
+                            Incapaz de suportar a ideia de perder outra filha, Joel decidiu salvá-la. Ele atravessou o
+                            hospital, matou o médico <a href="../personagens/jerry.html" target="_blank">Jerry
+                                Anderson</a>, responsável pela cirurgia, retirou Ellie da sala de operação e, durante a
+                            fuga, também matou Marlene para impedir que os Vagalumes fossem atrás dela.</p>
+                    </div>
+                    <div class="parte parte-02">
+                        <h5>A mentira</h5>
+                        <p>Quando Ellie acordou, Joel mentiu. Disse que existiam outras pessoas imunes e que os
+                            Vagalumes haviam desistido de procurar uma cura. Ellie desconfiou e pediu que ele jurasse
+                            que estava falando a verdade. Joel jurou, e ela decidiu aceitar sua resposta.</p>
+                    </div>
+                    <div class="parte parte-03">
+                        <h5>Reconciliação</h5>
+                        <p>Os dois passaram a viver em <a href="#">Jackson</a>, mas a dúvida nunca abandonou Ellie. 4
+                            anos depois, ela retornou ao antigo hospital dos Vagalumes e descobriu a verdade. Joel
+                            finalmente admitiu que havia impedido a cirurgia e tirado dela a possibilidade de contribuir
+                            para uma vacina. Ellie ficou devastada e se afastou dele.
+                            A relação permaneceu quebrada até uma noite em que os dois conversaram na varanda de Joel.
+                            Ellie disse que não sabia se conseguiria perdoá-lo, mas gostaria de tentar. Joel aceitou.
+                            Pela primeira vez em muito tempo, parecia existir uma possibilidade de reconstruírem aquela
+                            relação.
+                            Eles só não sabiam que aquela seria a última conversa entre os dois.</p>
+                    </div>
+
+                </div>
+
+            </article>
+
+            <article class="capitulo">
+                <div class="img-cap ellie-cap-06">
+                    <span class="num-cap">06</span>
+                </div>
+
+                <p class="mini-title">CAPÍTULO 06</p>
+
+                <h4 class="large-title">O dia mais doloroso</h4>
+                <div class="line-large-title"></div>
+
+                <input type="radio" name="partes-capitulo-6" id="capitulo-6-parte-1" checked>
+                <input type="radio" name="partes-capitulo-6" id="capitulo-6-parte-2">
+                <input type="radio" name="partes-capitulo-6" id="capitulo-6-parte-3">
+
+                <nav class="menu-partes" aria-label="Partes do capítulo">
+                    <label for="capitulo-6-parte-1">01</label>
+                    <span class="separador-parte">—</span>
+                    <label for="capitulo-6-parte-2">02</label>
+                    <span class="separador-parte">—</span>
+                    <label for="capitulo-6-parte-3">03</label>
+                </nav>
+
+                <div class="conteudo-partes">
+                    <div class="parte parte-01">
+                        <h5>O Passado</h5>
+                        <p>No dia seguinte, durante uma patrulha, Joel e Tommy encontraram um grupo de desconhecidos.
+                            Entre eles estava <a href="../personagens/abby.html">Abby Anderson</a>, que procurava Joel
+                            por acontecimentos relacionados ao hospital dos Vagalumes.</p>
+                    </div>
+
+                    <div class="parte parte-02">
+                        <h5>...</h5>
+                        <p>Quando Ellie percebeu que Joel estava desaparecido, saiu atrás dele. Ao encontrá-lo, chegou
+                            tarde demais. Foi dominada pelo grupo e obrigada a assistir enquanto Abby matava Joel
+                            brutalmente diante dela.
+                            Ellie implorou para que parassem, mas não conseguiu salvá-lo. O homem que havia atravessado
+                            o país ao seu lado, protegido sua vida e se tornado sua família morreu diante de seus olhos
+                            apenas um dia depois de ela decidir tentar perdoá-lo.</p>
+                    </div>
+
+                    <div class="parte parte-03">
+                        <h5>Vingança</h5>
+                        <p>A culpa rapidamente se transformou em ódio. Quando descobriu que os responsáveis estavam em
+                            Seattle, Ellie decidiu encontrá-los. Para ela, não bastava sobreviver à morte de Joel.
+                            Alguém precisava pagar por ela.</p>
+                    </div>
+
+                </div>
+
+            </article>
+
+            <article class="capitulo">
+                <div class="img-cap ellie-cap-07">
+                    <span class="num-cap">07</span>
+                </div>
+
+                <p class="mini-title">CAPÍTULO 07</p>
+
+                <h4 class="large-title">CONSUMIDA PELA VINGANÇA</h4>
+                <div class="line-large-title"></div>
+
+                <input type="radio" name="partes-capitulo-7" id="capitulo-7-parte-1" checked>
+                <input type="radio" name="partes-capitulo-7" id="capitulo-7-parte-2">
+                <input type="radio" name="partes-capitulo-7" id="capitulo-7-parte-3">
+
+                <nav class="menu-partes" aria-label="Partes do capítulo">
+                    <label for="capitulo-7-parte-1">01</label>
+                    <span class="separador-parte">—</span>
+                    <label for="capitulo-7-parte-2">02</label>
+                    <span class="separador-parte">—</span>
+                    <label for="capitulo-7-parte-3">03</label>
+                </nav>
+
+                <div class="conteudo-partes">
+                    <div class="parte parte-01">
+                        <h5>Seattle</h5>
+                        <p>Ellie viajou até Seattle acompanhada por <a href="dina.html" target="_blank">Dina</a> e
+                            começou a procurar Abby e todos que haviam participado da morte de Joel. Conforme avançava,
+                            sua busca se tornava cada vez mais violenta. Ela matou várias pessoas e chegou a torturar
+                            Nora para descobrir onde Abby estava.</p>
+                    </div>
+
+                    <div class="parte parte-02">
+                        <h5>Perca</h5>
+                        <p>A vingança começou a transformar Ellie. Depois de matar <a href="abby.html"
+                                target="_blank">Owen</a> e <a href="mel.html" target="_blank">Mel</a>, descobriu que Mel
+                            estava grávida e ficou profundamente abalada. Pela primeira vez, tornou-se impossível
+                            ignorar até onde aquela busca havia levado.
+                            Ellie decidiu abandonar Seattle e voltar para Jackson, mas Abby apareceu antes que isso
+                            acontecesse. No confronto, <a href="jesse.html" target="_blank">Jesse</a> morreu e Tommy
+                            ficou gravemente ferido. Abby derrotou Ellie e quase matou Dina, mas decidiu poupar as duas
+                            e foi embora.</p>
+                    </div>
+                    <div class="parte parte-03">
+                        <h5>...</h5>
+                        <p>Ellie havia encontrado a pessoa que perseguia desde Jackson e ainda assim nada havia sido
+                            resolvido. Joel continuava morto, e tudo o que sua vingança havia conseguido fazer era
+                            acrescentar novas perdas às antigas.</p>
+                    </div>
+                </div>
+
+            </article>
+
+            <article class="capitulo">
+                <div class="img-cap ellie-cap-08">
+                    <span class="num-cap">08</span>
+                </div>
+
+                <p class="mini-title">CAPÍTULO 08</p>
+
+                <h4 class="large-title">UMA PAZ IMPOSSÍVEL</h4>
+                <div class="line-large-title"></div>
+
+                <input type="radio" name="partes-capitulo-8" id="capitulo-8-parte-1" checked>
+
+                <nav class="menu-partes" aria-label="Partes do capítulo">
+                    <label for="capitulo-8-parte-1">01</label>
+                </nav>
+
+                <div class="conteudo-partes">
+                    <div class="parte parte-01">
+                        <h5>Família</h5>
+                        <p>Algum tempo depois, Ellie passou a viver em uma fazenda com Dina e o pequeno JJ. Ela tinha
+                            uma família, uma casa e uma oportunidade de reconstruir sua vida. Mesmo assim, não conseguia
+                            escapar do passado.
+                            Ellie sofria com pesadelos e crises traumáticas relacionadas à morte de Joel. Quando Tommy
+                            apareceu com informações sobre o paradeiro de Abby em Santa Barbara, aquela ferida se abriu
+                            novamente. Dina pediu que Ellie ficasse, mas ela acreditava que jamais conseguiria viver em
+                            paz enquanto não encerrasse aquilo.
+                            Por isso, mesmo sabendo o que poderia perder, Ellie deixou Dina e JJ e partiu novamente
+                            atrás de Abby.</p>
+                    </div>
+
+                </div>
+            </article>
+
+            <article class="capitulo">
+                <div class="img-cap ellie-cap-09">
+                    <span class="num-cap">09</span>
+                </div>
+
+                <p class="mini-title">CAPÍTULO 09</p>
+
+                <h4 class="large-title">PERDÃO</h4>
+                <div class="line-large-title"></div>
+
+                <input type="radio" name="partes-capitulo-9" id="capitulo-9-parte-1" checked>
+                <input type="radio" name="partes-capitulo-9" id="capitulo-9-parte-2">
+                <input type="radio" name="partes-capitulo-9" id="capitulo-9-parte-3">
+                <input type="radio" name="partes-capitulo-9" id="capitulo-9-parte-4">
+
+                <nav class="menu-partes" aria-label="Partes do capítulo">
+                    <label for="capitulo-9-parte-1">01</label>
+                    <span class="separador-parte">—</span>
+                    <label for="capitulo-9-parte-2">02</label>
+                    <span class="separador-parte">—</span>
+                    <label for="capitulo-9-parte-3">03</label>
+                    <span class="separador-parte">—</span>
+                    <label for="capitulo-9-parte-4">04</label>
+                </nav>
+
+                <div class="conteudo-partes">
+                    <div class="parte parte-01">
+                        <h5>Santa Barbara</h5>
+                        <p>Ellie encontrou Abby em Santa Barbara, capturada e enfraquecida por um grupo chamado <a
+                                href="#" target="_blank">Rattlers</a>. Depois de libertá-la, Ellie poderia simplesmente
+                            ter ido embora, mas as lembranças de Joel fizeram com que exigisse uma última luta.
+                            Ellie conseguiu dominar Abby e começou a afogá-la. Depois de tudo que havia acontecido,
+                            finalmente tinha a oportunidade de matar a pessoa responsável pela morte de Joel.</p>
+                    </div>
+
+                    <div class="parte parte-02">
+                        <h5>Realidade</h5>
+                        <p>Mas naquele momento Ellie olhou para o <a href="lev.html" target="_blank">Lev</a> no barco e
+                            se lembrou do Joel. Não de Joel morto no chão, mas de Joel vivo, sentado em sua varanda
+                            durante a última conversa que tiveram. Lembrou-se da noite em que disse que gostaria de
+                            tentar perdoá-lo.
+                            Ellie soltou Abby e permitiu que ela fosse embora.</p>
+                    </div>
+
+                    <div class="parte parte-03">
+                        <h5>...</h5>
+                        <p>Quando retornou à fazenda, encontrou a casa vazia. Dina e JJ haviam partido. Ellie tentou
+                            tocar o violão que Joel havia lhe dado, mas os dedos perdidos durante a luta contra Abby
+                            impediram que tocasse como antes. Então deixou o instrumento para trás e foi embora.
+                            Durante quase toda sua vida, Ellie tentou encontrar um significado para ter sobrevivido
+                            quando Riley, Tess, Sam e tantas outras pessoas morreram. Depois, acreditou que deveria ter
+                            morrido no hospital para que sua imunidade pudesse salvar outras pessoas. Quando perdeu
+                            Joel, passou a acreditar que precisava vingá-lo.</p>
+                    </div>
+
+                    <div class="parte parte-04">
+                        <h5>Seguir em frente</h5>
+                        <p>No fim, Ellie precisou perder quase tudo para perceber que matar Abby não traria Joel de
+                            volta e não apagaria sua culpa.
+                            Sua história termina sem revelar exatamente para onde ela vai.
+                            Mas talvez essa seja justamente a importância daquele final.
+                            Pela primeira vez, Ellie deixa o passado para trás e segue adiante sem precisar morrer por
+                            alguém, matar por alguém ou justificar por que continua viva.
+                            Agora, a vida que restou pertence a ela.</p>
+                    </div>
+
+                </div>
+
+            </article>
+        </section>
+
+        <section id="lacos">
+            <div class="titles-lacos">
+                <p>LAÇOS</p>
+                <h3>PESSOAS QUE A MARCARAM</h3>
             </div>
 
-            <div class="container-info info-grupo">
-                <i class="fa-solid fa-users"></i>
-                <p class="txt-sub-title">Grupo</p>
-                <!-- COLOCAR O SITE DA FAC-->
-                <p class="txt-sub-texto"><a href="#">Jackson Community</a></p>
+            <article class="container-lacos">
+                <div class="img-lacos joel-lacos">
+                    <div class="txt-lacos">
+                        <span>FIGURA PATERNA</span>
+                        <div class="line-lacos"></div>
+                        <h4><a href="joel.html" target="_blank">JOEL</a></h4>
+                        <p>O contrabandista que a levou pelo país e, contra tudo, tornou-se
+                            seu pai. O amor entre eles é o coração e a ferida de sua história.</p>
+                    </div>
+                </div>
+
+                <div class="img-lacos riley-lacos">
+                    <div class="txt-lacos">
+                        <span>PRIMEIRA AMIGA</span>
+                        <div class="line-lacos"></div>
+                        <h4><a href="riley.html" target="_blank">RILEY</a></h4>
+                        <p>A melhor amiga e primeiro amor de Ellie. Uma noite roubada em um
+                            shopping abandonado moldou para sempre quem Ellie viria a ser.</p>
+                    </div>
+                </div>
+                <div class="img-lacos tommy-lacos">
+                    <div class="txt-lacos">
+                        <span>IRMÃO DE JOEL</span>
+                        <div class="line-lacos"></div>
+                        <h4><a href="tommy.html" target="_blank">TOMMY</a></h4>
+                        <p>Fundador de Jackson e elo com o passado de Joel. Sua sede de
+                            justiça reacende o fogo dentro da Ellie</p>
+                    </div>
+                </div>
+                <div class="img-lacos dina-lacos">
+                    <div class="txt-lacos">
+                        <span>COMPANHEIRA</span>
+                        <div class="line-lacos"></div>
+                        <h4><a href="dina.html" target="_blank">DINA</a></h4>
+                        <p>Espirituosa e leal, Dina traz luz aos dias mais sombrios de Ellie
+                            e caminha ao seu lado quando o mundo ameaça desmoronar.</p>
+                    </div>
+                </div>
+                <div class="img-lacos jesse-lacos">
+                    <div class="txt-lacos">
+                        <span>ALIADO DE JACKSON</span>
+                        <div class="line-lacos"></div>
+                        <h4><a href="jesse.html" target="_blank">JESSE</a></h4>
+                        <p>Corajoso e altruísta, Jesse arriscou a própria vida para ajudar
+                            Ellie em Seattle. Sua lealdade permaneceu inabalável até seu destino final.</p>
+                    </div>
+                </div>
+                <div class="img-lacos marlene-lacos">
+                    <div class="txt-lacos">
+                        <span>LÍDER DOS VAGALUMES</span>
+                        <div class="line-lacos"></div>
+                        <h4><a href="marlene.html" target="_blank">MARLENE</a></h4>
+                        <p>Amiga de sua mãe, Anna, Marlene prometeu proteger Ellie desde o
+                            nascimento. Anos depois, depositou nela a esperança de encontrar uma cura para a humanidade.
+                        </p>
+                    </div>
+                </div>
+            </article>
+        </section>
+
+        <section id="curiosidades">
+            <div class="title-curiosidades">
+                <p class="txt-frag">FRAGMENTOS</p>
+                <h3 class="sub-title-curiosidades">CURIOSIDADES</h3>
             </div>
 
-            <div class="container-info info-status">
-                <i class="fa-regular fa-star"></i>
-                <p class="txt-sub-title">Status</p>
-                <p class="txt-sub-texto">Líder Nato</p>
+            <article class="info-curiosidades">
+                <div class="container-curiosidades trocadilhos">
+                    <span class="num-curiosidades">01</span>
+                    <h4 class="sub-curiosidades">Trocadilhos</h4>
+                    <p class="txt-curiosidades">Ellie carrega um livro de piadas ruins, "No Pun Intended" - Pequenas
+                        doses de humor em meio ao caos.</p>
+                </div>
+
+                <div class="container-curiosidades navalha">
+                    <span class="num-curiosidades">02</span>
+                    <h4 class="sub-curiosidades">A Navalha</h4>
+                    <p class="txt-curiosidades">O objeto foi um presente de sua mãe, Anna, antes de morrer, e se tornou
+                        uma de suas ferramentas mais importantes.
+                    </p>
+                </div>
+
+                <div class="container-curiosidades diario">
+                    <span class="num-curiosidades">03</span>
+                    <h4 class="sub-curiosidades">O diário</h4>
+                    <p class="txt-curiosidades">Grande parte do sofrimento de Ellie só aparece no diário. Ela escreve
+                        sobre culpa, medo, Joel, Dina e até sobre o quanto odeia a pessoa em que está se tornando.</p>
+                </div>
+
+                <div class="container-curiosidades astronomia">
+                    <span class="num-curiosidades">04</span>
+                    <h4 class="sub-curiosidades">Astronomia</h4>
+                    <p class="txt-curiosidades">Sonha em ver o espaço. Um traje de astronauta e uma fita cassete de
+                        gravações espaciais tornam-se seus tesouros.</p>
+                </div>
+
+                <div class="container-curiosidades dinossauros">
+                    <span class="num-curiosidades">05</span>
+                    <h4 class="sub-curiosidades">Dinossauros</h4>
+                    <p class="txt-curiosidades">Fascinada por dinossauros, encontra alegria genuína ao explorar um museu
+                        esquecido.</p>
+                </div>
+
+                <div class="container-curiosidades tatuagem">
+                    <span class="num-curiosidades">06</span>
+                    <h4 class="sub-curiosidades">A tatuagem</h4>
+                    <p class="txt-curiosidades">A samambaia e a mariposa escondem a cicatriz da mordida em seu braço e
+                        representam temas como transformação, perda e obsessão.</p>
+                </div>
+            </article>
+        </section>
+
+        <section id="galeria">
+            <div class="titles-galeria">
+                <p>MOMENTOS</p>
+                <h3>GALERIA</h3>
             </div>
 
-            <div class="container-info info-participacao">
-                <i class="fa-solid fa-gamepad"></i>
-                <p class="txt-sub-title">Participação</p>
-                <p class="txt-sub-texto">The Last Os Us parte II</p>
+            <div class="caixa-galeria">
+                <div class="photos photo-1"><span>ASTRONOMIA</span></div>
+                <div class="photos photo-2"><span>VIOLÃO</span></div>
+                <div class="photos photo-3"><span>ELLIE + DINA + JJ</span></div>
+                <div class="photos photo-4"><span>VINGANÇA</span></div>
+                <div class="photos photo-5"><span>AMIZADE</span></div>
+                <div class="photos photo-6"><span>AFETO</span></div>
             </div>
-
-            <div class="container-info info-relacao">
-                <i class="fa-regular fa-heart"></i>
-                <P class="txt-sub-title">Relações Importantes</P>
-                <p class="txt-sub-texto">
-                    <a href="../paginas/dina.html" target="_blank">Dina</a>, 
-
-                    <a href="../paginas/ellie.html" target="_blank">Ellie</a>, 
-
-                    <a href="../paginas/tommy.html" target="_blank">Tommy</a>, 
-
-                    <a href="../paginas/maria.html" target="_blank">Maria</a>
-                </p>
-            </div>
-        </div>
+        </section>
     </main>
+
+
+    <main id="frase">
+        <section class="caixa-frase">
+            <p>"Você sabe qual é meu maior medo ? Não é a morte. É acabar sozinha."</p>
+            <span>- Ellie</span>
+        </section>
+    </main>
+
+
+    <footer id="footer">
+
+        <div class="footer-topo">
+            <span>FIM DA JORNADA</span>
+            <h2><a href="#capa">ELLIE</a></h2>
+
+            <p>
+                Seu maior medo, se tornou sua atual realidade...
+            </p>
+        </div>
+
+        <nav class="footer-nav">
+            <a href="#container-capitulos">CAPÍTULOS</a>
+            <a href="#lacos">LAÇOS</a>
+            <a href="#curiosidades">CURIOSIDADES</a>
+            <a href="#galeria">GALERIA</a>
+        </nav>
+
+        <div class="footer-divisor">
+            <span></span>
+            <p>THE LAST OF US</p>
+            <span></span>
+        </div>
+
+        <div class="footer-final">
+            <p>GUIA NARRATIVO</p>
+            <span>© 2026 • PROJETO NÃO OFICIAL</span>
+        </div>
+
+    </footer>
 </body>
 
 </html>
