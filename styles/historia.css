@@ -758,6 +758,19 @@ body:has(#menu-aberto:target) .menu-open {
 .riley .nome::before{
     content: "RILEY";
 }
+
+.tess .nome::before{
+    content: "TESS";
+}
+
+.marlene .nome::before{
+    content: "MARLENE";
+}
+
+.sarah .nome::before{
+    content: "SARAH";
+}
+
 /* ==========================================
    WILLIAMS — ECO
 ========================================== */
@@ -842,6 +855,14 @@ body:has(#menu-aberto:target) .menu-open {
 
 .riley .sobrenome::before{
     content: "ABEL";
+}
+
+.tess .sobrenome::before{
+    content: "SERVOPOULOS";
+}   
+
+.sarah .sobrenome::before{
+    content: "MILLER";
 }
 
 
