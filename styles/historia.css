@@ -771,6 +771,42 @@ body:has(#menu-aberto:target) .menu-open {
     content: "SARAH";
 }
 
+.sam .nome::before{
+    content: "SAM";
+}
+
+.henry .nome::before{
+    content: "HENRY";
+}
+
+.bill .nome::before{
+    content: "BILL";
+}
+
+.maria .nome::before{
+    content: "MARIA";
+}
+
+.owen .nome::before{
+    content: "OWEN";
+}
+
+.nora .nome::before{
+    content: "NORA";
+}
+
+.mel .nome::before{
+    content: "MEL";
+}
+
+.manny .nome::before{
+    content: "MANNY";
+}
+
+.jerry .nome::before{
+    content: "JERRY";
+}
+
 /* ==========================================
    WILLIAMS — ECO
 ========================================== */
@@ -863,6 +899,26 @@ body:has(#menu-aberto:target) .menu-open {
 
 .sarah .sobrenome::before{
     content: "MILLER";
+}
+
+.maria .sobrenome::before{
+    content: "MILLER";
+}
+
+.owen .sobrenome::before{
+    content: "MOORE";
+}
+
+.nora .sobrenome::before{
+    content: "HARRIS";
+}
+
+.manny .sobrenome::before{
+    content: "ALVAREZ";
+}
+
+.jerry .sobrenome::before{
+    content: "ANDERSON";
 }
 
 
