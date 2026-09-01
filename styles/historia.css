@@ -1477,10 +1477,15 @@ main#layout {
     display: block;
 }
 
+#container-capitulos .capitulo>input[id$="-parte-5"]:checked~.conteudo-partes .parte-05 {
+    display: block;
+}
+
 #container-capitulos .capitulo>input[id$="-parte-1"]:checked~.menu-partes label[for$="-parte-1"],
 #container-capitulos .capitulo>input[id$="-parte-2"]:checked~.menu-partes label[for$="-parte-2"],
 #container-capitulos .capitulo>input[id$="-parte-3"]:checked~.menu-partes label[for$="-parte-3"],
-#container-capitulos .capitulo>input[id$="-parte-4"]:checked~.menu-partes label[for$="-parte-4"] {
+#container-capitulos .capitulo>input[id$="-parte-4"]:checked~.menu-partes label[for$="-parte-4"],
+#container-capitulos .capitulo>input[id$="-parte-5"]:checked~.menu-partes label[for$="-parte-5"] {
     color: var(--cor-link-destaque, #00df04);
     transform: translateY(-2px);
 }
@@ -1488,7 +1493,8 @@ main#layout {
 #container-capitulos .capitulo>input[id$="-parte-1"]:checked~.menu-partes label[for$="-parte-1"]::after,
 #container-capitulos .capitulo>input[id$="-parte-2"]:checked~.menu-partes label[for$="-parte-2"]::after,
 #container-capitulos .capitulo>input[id$="-parte-3"]:checked~.menu-partes label[for$="-parte-3"]::after,
-#container-capitulos .capitulo>input[id$="-parte-4"]:checked~.menu-partes label[for$="-parte-4"]::after {
+#container-capitulos .capitulo>input[id$="-parte-4"]:checked~.menu-partes label[for$="-parte-4"]::after,
+#container-capitulos .capitulo>input[id$="-parte-5"]:checked~.menu-partes label[for$="-parte-5"]::after {
     width: 100%;
 }
 
