@@ -1477,15 +1477,10 @@ main#layout {
     display: block;
 }
 
-#container-capitulos .capitulo>input[id$="-parte-5"]:checked~.conteudo-partes .parte-05 {
-    display: block;
-}
-
 #container-capitulos .capitulo>input[id$="-parte-1"]:checked~.menu-partes label[for$="-parte-1"],
 #container-capitulos .capitulo>input[id$="-parte-2"]:checked~.menu-partes label[for$="-parte-2"],
 #container-capitulos .capitulo>input[id$="-parte-3"]:checked~.menu-partes label[for$="-parte-3"],
-#container-capitulos .capitulo>input[id$="-parte-4"]:checked~.menu-partes label[for$="-parte-4"],
-#container-capitulos .capitulo>input[id$="-parte-5"]:checked~.menu-partes label[for$="-parte-5"] {
+#container-capitulos .capitulo>input[id$="-parte-4"]:checked~.menu-partes label[for$="-parte-4"] {
     color: var(--cor-link-destaque, #00df04);
     transform: translateY(-2px);
 }
@@ -1493,8 +1488,7 @@ main#layout {
 #container-capitulos .capitulo>input[id$="-parte-1"]:checked~.menu-partes label[for$="-parte-1"]::after,
 #container-capitulos .capitulo>input[id$="-parte-2"]:checked~.menu-partes label[for$="-parte-2"]::after,
 #container-capitulos .capitulo>input[id$="-parte-3"]:checked~.menu-partes label[for$="-parte-3"]::after,
-#container-capitulos .capitulo>input[id$="-parte-4"]:checked~.menu-partes label[for$="-parte-4"]::after,
-#container-capitulos .capitulo>input[id$="-parte-5"]:checked~.menu-partes label[for$="-parte-5"]::after {
+#container-capitulos .capitulo>input[id$="-parte-4"]:checked~.menu-partes label[for$="-parte-4"]::after {
     width: 100%;
 }
 
@@ -1742,6 +1736,57 @@ section#lacos {
 
     z-index: 2;
     pointer-events: none;
+}
+
+
+.joel-lacos {
+    background-image: url(../imagens/home-personagens/personagens/joel/principal/joel_perfil.jpg);
+    background-position: center 20%;
+}
+
+.riley-lacos {
+    background-image: url(../imagens/home-personagens/personagens/riley/principal/riley_perfil.jpg);
+    background-position: center;
+}
+
+.tommy-lacos {
+    background-image: url(../imagens/home-personagens/personagens/tommy/principal/tommy_perfil.jpg);
+    background-position: center 40%;
+}
+
+.dina-lacos {
+    background-image: url(../imagens/home-personagens/personagens/dina/principal/dina_perfil.jpg);
+    background-position: center 25%;
+}
+
+.jesse-lacos {
+    background-image: url(../imagens/home-personagens/personagens/jesse/principal/jesse_perfil.jpg);
+    background-position: center 40%;
+}
+
+.marlene-lacos {
+    background-image: url(../imagens/home-personagens/personagens/marlene/principal/marlene_perfil.jpg);
+    background-position: center 20%;
+}
+
+.sarah-lacos{
+    background-image: url(../imagens/home-personagens/personagens/sarah/principal/sarah_perfil.jpg);
+    background-position: center 55%;
+}
+
+.ellie-lacos{
+    background-image: url(../imagens/home-personagens/personagens/ellie/principal/ellie_perfil.jpg);
+    background-position: center 26%;
+}
+
+.tess-lacos{
+    background-image: url(../imagens/home-personagens/personagens/tess/principal/tess_perfil.jpg);
+    background-position: center 50%;
+}
+
+.bill-lacos{
+    background-image: url(../imagens/home-personagens/personagens/bill/principal/bill_perfil.jpg);
+    background-position: center 40%;
 }
 
 /* ==================================================
@@ -2090,48 +2135,6 @@ section#lacos {
         left: 120px;
         opacity: 0;
     }
-}
-
-.joel-lacos {
-    background-image: url(../imagens/home-personagens/personagens/joel/principal/joel_perfil.jpg);
-    background-position: center 20%;
-    background-size: cover;
-    background-repeat: no-repeat;
-}
-
-.riley-lacos {
-    background-image: url(../imagens/home-personagens/personagens/riley/principal/riley_perfil.jpg);
-    background-position: center;
-    background-size: cover;
-    background-repeat: no-repeat;
-}
-
-.tommy-lacos {
-    background-image: url(../imagens/home-personagens/personagens/tommy/principal/tommy_perfil.jpg);
-    background-position: center 40%;
-    background-size: cover;
-    background-repeat: no-repeat;
-}
-
-.dina-lacos {
-    background-image: url(../imagens/home-personagens/personagens/dina/principal/dina_perfil.jpg);
-    background-position: center 25%;
-    background-size: cover;
-    background-repeat: no-repeat;
-}
-
-.jesse-lacos {
-    background-image: url(../imagens/home-personagens/personagens/jesse/principal/jesse_perfil.jpg);
-    background-position: center 40%;
-    background-size: cover;
-    background-repeat: no-repeat;
-}
-
-.marlene-lacos {
-    background-image: url(../imagens/home-personagens/personagens/marlene/principal/marlene_perfil.jpg);
-    background-position: center 20%;
-    background-size: cover;
-    background-repeat: no-repeat;
 }
 
 /* ==========================================
@@ -2662,11 +2665,18 @@ section#galeria {
 
     position: relative;
 
-    background-image: url(../imagens/home-personagens/personagens/ellie/efeito/efeito-ellie.jpg);
     background-size: cover;
     background-position: center;
 
     overflow: hidden;
+}
+
+.ellie #frase{
+    background-image: url(../imagens/home-personagens/personagens/ellie/efeito/efeito-ellie.jpg);
+}
+
+.joel #frase{
+    background-image: url(../imagens/home-personagens/personagens/joel/efeito/efeito-joel.jpg);
 }
 
 /* Deixa a imagem mais sombria/cinematográfica */
