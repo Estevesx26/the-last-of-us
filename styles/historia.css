@@ -1186,47 +1186,11 @@ main#layout {
     margin-bottom: 100px;
 }
 
-.ellie-cap-01 {
-    background-image: url(../imagens/home-personagens/personagens/ellie/capitulos/cap-01.jpg);
-}
-
-.ellie-cap-02 {
-    background-image: url(../imagens/home-personagens/personagens/ellie/capitulos/cap-02.jpg);
-}
-
-.ellie-cap-03 {
-    background-image: url(../imagens/home-personagens/personagens/ellie/capitulos/cap-03.jpg);
-}
-
-.ellie-cap-04 {
-    background-image: url(../imagens/home-personagens/personagens/ellie/capitulos/cap-04.jpg);
-}
-
-.ellie-cap-05 {
-    background-image: url(../imagens/home-personagens/personagens/ellie/capitulos/cap-05.jpg);
-}
-
-.ellie-cap-06 {
-    background-image: url(../imagens/home-personagens/personagens/ellie/capitulos/cap-06.jpg);
-}
-
-.ellie-cap-07 {
-    background-image: url(../imagens/home-personagens/personagens/ellie/capitulos/cap-07.jpg);
-}
-
-.ellie-cap-08 {
-    background-image: url(../imagens/home-personagens/personagens/ellie/capitulos/cap-08.jpg);
-}
-
-.ellie-cap-09 {
-    background-image: url(../imagens/home-personagens/personagens/ellie/capitulos/cap-09.jpg);
-}
-
 .img-cap {
     position: relative;
     overflow: hidden;
 
-    height: 300px;
+    height: 320px;
     margin-bottom: 40px;
 
     background-position: center;
@@ -1284,6 +1248,76 @@ main#layout {
 
     z-index: 1;
     pointer-events: none;
+}
+
+.ellie-cap-01 {
+    background-image: url(../imagens/home-personagens/personagens/ellie/capitulos/cap-01.jpg);
+}
+
+.ellie-cap-02 {
+    background-image: url(../imagens/home-personagens/personagens/ellie/capitulos/cap-02.jpg);
+}
+
+.ellie-cap-03 {
+    background-image: url(../imagens/home-personagens/personagens/ellie/capitulos/cap-03.jpg);
+}
+
+.ellie-cap-04 {
+    background-image: url(../imagens/home-personagens/personagens/ellie/capitulos/cap-04.jpg);
+}
+
+.ellie-cap-05 {
+    background-image: url(../imagens/home-personagens/personagens/ellie/capitulos/cap-05.jpg);
+}
+
+.ellie-cap-06 {
+    background-image: url(../imagens/home-personagens/personagens/ellie/capitulos/cap-06.jpg);
+}
+
+.ellie-cap-07 {
+    background-image: url(../imagens/home-personagens/personagens/ellie/capitulos/cap-07.jpg);
+}
+
+.ellie-cap-08 {
+    background-image: url(../imagens/home-personagens/personagens/ellie/capitulos/cap-08.jpg);
+}
+
+.ellie-cap-09 {
+    background-image: url(../imagens/home-personagens/personagens/ellie/capitulos/cap-09.jpg);
+}
+
+.joel-cap-01 {
+    background-image: url(../imagens/home-personagens/personagens/joel/capitulos/cap-01.jpg);
+    background-position: center 20%;
+}
+
+.joel-cap-02 {
+    background-image: url(../imagens/home-personagens/personagens/joel/capitulos/cap-02.jpg);
+}
+
+.joel-cap-03 {
+    background-image: url(../imagens/home-personagens/personagens/joel/capitulos/cap-03.jpg);
+}
+
+.joel-cap-04 {
+    background-image: url(../imagens/home-personagens/personagens/joel/capitulos/cap-04.jpg);
+}
+
+.joel-cap-05 {
+    background-image: url(../imagens/home-personagens/personagens/joel/capitulos/cap-05.jpg);
+    background-position: center 5%;
+}
+
+.joel-cap-06 {
+    background-image: url(../imagens/home-personagens/personagens/joel/capitulos/cap-06.jpg);
+}
+
+.joel-cap-07 {
+    background-image: url(../imagens/home-personagens/personagens/joel/capitulos/cap-07.jpg);
+}
+
+.joel-cap-08 {
+    background-image: url(../imagens/home-personagens/personagens/joel/capitulos/cap-08.jpg);
 }
 
 .num-cap {
@@ -2498,28 +2532,52 @@ section#curiosidades {
    IMAGENS
 ========================================== */
 
-.trocadilhos::before {
+.ellie .trocadilhos::before {
     background-image: url("../imagens/home-personagens/personagens/ellie/curiosidades/trocadilhos.jpg");
 }
 
-.navalha::before {
+.ellie .navalha::before {
     background-image: url("../imagens/home-personagens/personagens/ellie/curiosidades/navalha.jpg");
 }
 
-.diario::before {
+.ellie .diario::before {
     background-image: url("../imagens/home-personagens/personagens/ellie/curiosidades/diario.jpg");
 }
 
-.astronomia::before {
+.ellie .astronomia::before {
     background-image: url("../imagens/home-personagens/personagens/ellie/curiosidades/astronomia.jpg");
 }
 
-.dinossauros::before {
+.ellie .dinossauros::before {
     background-image: url("../imagens/home-personagens/personagens/ellie/curiosidades/dinossauros.jpg");
 }
 
-.tatuagem::before {
+.ellie .tatuagem::before {
     background-image: url("../imagens/home-personagens/personagens/ellie/curiosidades/tatuagem.jpg");
+}
+
+.joel .violao::before {
+    background-image: url(../imagens/home-personagens/personagens/joel/curiosidades/violao.jpg);
+}
+
+.joel .relogio::before {
+    background-image: url(../imagens/home-personagens/personagens/joel/curiosidades/relogio.jpg);
+}
+
+.joel .morte::before {
+    background-image: url(../imagens/home-personagens/personagens/joel/curiosidades/morte.jpg);
+}
+
+.joel .escuridao::before {
+    background-image: url(../imagens/home-personagens/personagens/joel/curiosidades/escuridao.jpg);
+}
+
+.joel .baby::before {
+    background-image: url(../imagens/home-personagens/personagens/joel/curiosidades/baby.jpg);
+}
+
+.joel .remorso::before {
+    background-image: url(../imagens/home-personagens/personagens/joel/curiosidades/remorso.jpg);
 }
 
 section#galeria {
