@@ -1320,6 +1320,62 @@ main#layout {
     background-image: url(../imagens/home-personagens/personagens/joel/capitulos/cap-08.jpg);
 }
 
+.abby-cap-01{
+    background-image: url(../imagens/home-personagens/personagens/abby/capitulos/cap-01.jpg);
+}
+
+.abby-cap-02{
+    background-image: url(../imagens/home-personagens/personagens/abby/capitulos/cap-02.jpg);
+}
+
+.abby-cap-03{
+    background-image: url(../imagens/home-personagens/personagens/abby/capitulos/cap-03.jpg);
+}
+
+.abby-cap-04{
+    background-image: url(../imagens/home-personagens/personagens/abby/capitulos/cap-04.jpg);
+}
+
+.abby-cap-05{
+    background-image: url(../imagens/home-personagens/personagens/abby/capitulos/cap-05.jpg);
+}
+
+.abby-cap-06{
+    background-image: url(../imagens/home-personagens/personagens/abby/capitulos/cap-06.jpg);
+}
+
+.abby-cap-07{
+    background-image: url(../imagens/home-personagens/personagens/abby/capitulos/cap-07.jpg);
+}
+
+.abby-cap-08{
+    background-image: url(../imagens/home-personagens/personagens/abby/capitulos/cap-08.jpg);
+}
+
+.abby-cap-09{
+    background-image: url(../imagens/home-personagens/personagens/abby/capitulos/cap-09.jpg);
+}
+
+.abby-cap-10{
+    background-image: url(../imagens/home-personagens/personagens/abby/capitulos/cap-10.jpg);
+}
+
+.abby-cap-11{
+    background-image: url(../imagens/home-personagens/personagens/abby/capitulos/cap-11.jpg);
+}
+
+.abby-cap-12{
+    background-image: url(../imagens/home-personagens/personagens/abby/capitulos/cap-12.jpg);
+}
+
+.abby-cap-13{
+    background-image: url(../imagens/home-personagens/personagens/abby/capitulos/cap-13.jpg);
+}
+
+.abby-cap-14{
+    background-image: url(../imagens/home-personagens/personagens/abby/capitulos/cap-14.jpg);
+}
+
 .num-cap {
     position: relative;
     z-index: 2;
@@ -1821,6 +1877,39 @@ section#lacos {
 .bill-lacos{
     background-image: url(../imagens/home-personagens/personagens/bill/principal/bill_perfil.jpg);
     background-position: center 40%;
+}
+
+.jerry-lacos{
+    background-image: url(../imagens/home-personagens/personagens/jerry/principal/jerry_perfil.jpg);
+}
+
+.owen-lacos{
+    background-image: url(../imagens/home-personagens/personagens/owen/principal/owen_perfil.jpg);
+    background-position: center 35%;
+}
+
+.lev-lacos{
+    background-image: url(../imagens/home-personagens/personagens/lev/principal/lev_perfil.jpg);
+    background-position: center 35%;
+}
+
+.yara-lacos{
+    background-image: url(../imagens/home-personagens/personagens/yara/principal/yara_perfil.jpg);
+}
+
+.manny-lacos{
+    background-image: url(../imagens/home-personagens/personagens/manny/principal/manny_perfil.jpg);
+    background-position: center 65%;
+}
+
+.nora-lacos{
+    background-image: url(../imagens/home-personagens/personagens/nora/principal/nora_perfil.jpg);
+    background-position: center 50%;
+}
+
+.mel-lacos{
+    background-image: url(../imagens/home-personagens/personagens/mel/principal/mel_perfil.jpg);
+    background-position: center 70%;
 }
 
 /* ==================================================
@@ -2675,43 +2764,115 @@ section#galeria {
 .photo-1 {
     grid-column: 1/3;
     grid-row: 1/2;
-
-    background-image: url(../imagens/home-personagens/personagens/ellie/galeria/ellie-astronauta.jpg);
 }
 
 .photo-2 {
     grid-column: 1/2;
     grid-row: 2/3;
-
-    background-image: url(../imagens/home-personagens/personagens/ellie/galeria/ellie-violao.jpg);
 }
 
 .photo-3 {
     grid-column: 2/3;
     grid-row: 2/4;
-
-    background-image: url(../imagens/home-personagens/personagens/ellie/galeria/ellie-jj.jpg);
 }
 
 .photo-4 {
     grid-column: 1/2;
     grid-row: 3/5;
-
-    background-image: url(../imagens/home-personagens/personagens/ellie/galeria/ellie.jpg);
 }
 
 .photo-5 {
     grid-column: 2/3;
     grid-row: 4/5;
-
-    background-image: url(../imagens/home-personagens/personagens/ellie/galeria/ellie-riley.jpg);
 }
 
 .photo-6 {
     grid-column: 1/3;
     grid-row: 5/6;
+}
 
+/* ==========================================
+   ELLIE
+========================================== */
+
+.ellie .photo-1{
+    background-image: url(../imagens/home-personagens/personagens/ellie/galeria/ellie-astronauta.jpg);
+}
+
+.ellie .photo-2{
+    background-image: url(../imagens/home-personagens/personagens/ellie/galeria/ellie-violao.jpg);
+}
+
+.ellie .photo-3{
+    background-image: url(../imagens/home-personagens/personagens/ellie/galeria/ellie-jj.jpg);
+}
+
+.ellie .photo-4{
+    background-image: url(../imagens/home-personagens/personagens/ellie/galeria/ellie.jpg);
+}
+
+.ellie .photo-5{
+    background-image: url(../imagens/home-personagens/personagens/ellie/galeria/ellie-riley.jpg);
+}
+
+.ellie .photo-6{
     background-image: url(../imagens/home-personagens/personagens/ellie/galeria/ellie-joel.jpg);
+}
+
+/* ==========================================
+   JOEL
+========================================== */
+
+.joel .photo-1{
+    background-image: url(../imagens/home-personagens/personagens/joel/galeria/joel.jpg);
+}
+
+.joel .photo-2{
+    background-image: url(../imagens/home-personagens/personagens/joel/galeria/joel-sarah.jpg);
+}
+
+.joel .photo-3{
+    background-image: url(../imagens/home-personagens/personagens/joel/galeria/joel-ellie.jpg);
+}
+
+.joel .photo-4{
+    background-image: url(../imagens/home-personagens/personagens/joel/galeria/astronautas.png);
+}
+
+.joel .photo-5{
+    background-image: url(../imagens/home-personagens/personagens/joel/galeria/testemunha.jpg);
+}
+
+.joel .photo-6{
+    background-image: url(../imagens/home-personagens/personagens/joel/galeria/filha.jpg);
+}
+
+/* ==========================================
+   ABBY
+========================================== */
+
+.abby .photo-1{
+    background-image: url(../imagens/home-personagens/personagens/abby/galeria/jerry.jpg);
+}
+
+.abby .photo-2{
+    background-image: url(../imagens/home-personagens/personagens/abby/galeria/lev.jpg);
+}
+
+.abby .photo-3{
+    background-image: url(../imagens/home-personagens/personagens/abby/galeria/alice.jpg);
+}
+
+.abby .photo-4{
+    background-image: url(../imagens/home-personagens/personagens/abby/galeria/abby.jpg);
+}
+
+.abby .photo-5{
+    background-image: url(../imagens/home-personagens/personagens/abby/galeria/abby-forte.jpg);
+}
+
+.abby .photo-6{
+    background-image: url(../imagens/home-personagens/personagens/abby/galeria/owen.jpg);
 }
 
 #frase {
