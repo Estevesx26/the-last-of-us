@@ -2669,6 +2669,10 @@ section#curiosidades {
     background-image: url(../imagens/home-personagens/personagens/joel/curiosidades/remorso.jpg);
 }
 
+.abby .sonho::before{
+    background-image: url(../imagens/home-personagens/personagens/abby/curiosidades/sonho.jpg);
+}
+
 section#galeria {
     margin-bottom: 90px;
     display: grid;
@@ -2896,6 +2900,10 @@ section#galeria {
 
 .joel #frase{
     background-image: url(../imagens/home-personagens/personagens/joel/efeito/efeito-joel.jpg);
+}
+
+.abby #frase{
+    background-image: url(../imagens/home-personagens/personagens/abby/efeito/efeito-abby.jpg);
 }
 
 /* Deixa a imagem mais sombria/cinematográfica */
