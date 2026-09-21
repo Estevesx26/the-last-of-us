@@ -2673,6 +2673,26 @@ section#curiosidades {
     background-image: url(../imagens/home-personagens/personagens/abby/curiosidades/sonho.jpg);
 }
 
+.abby .hospital::before{
+    background-image: url(../imagens/home-personagens/personagens/abby/curiosidades/hospital.jpg);
+}
+
+.abby .moeda::before{
+    background-image: url(../imagens/home-personagens/personagens/abby/curiosidades/moeda.jpg);
+}
+
+.abby .medo::before{
+    background-image: url(../imagens/home-personagens/personagens/abby/curiosidades/medo.jpg);
+}
+
+.abby .redencao::before{
+    background-image: url(../imagens/home-personagens/personagens/abby/curiosidades/abby.jpg);
+}
+
+.abby .apelido::before{
+    background-image: url(../imagens/home-personagens/personagens/abby/curiosidades/nome.jpg);
+}
+
 section#galeria {
     margin-bottom: 90px;
     display: grid;
