@@ -46,16 +46,16 @@ html {
     scroll-behavior: smooth;
 }
 
-header { 
-    height: 60px; 
-    width: 100%; 
+header {
+    height: 60px;
+    width: 100%;
 
     position: fixed;
     top: 0;
     left: 0;
 
-    display: flex; 
-    justify-content: space-between; 
+    display: flex;
+    justify-content: space-between;
     z-index: 1000;
 
     background: transparent;
@@ -120,7 +120,7 @@ div#menu {
 
 .menu-btn {
     position: fixed;
-    
+
     right: 20px;
 
     display: flex;
@@ -665,14 +665,12 @@ body:has(#menu-aberto:target) .menu-open {
     letter-spacing: 2px;
 
     /* DEGRADÊ MAIS VIVO */
-    background: linear-gradient(
-        115deg,
-        #e0d9c8 0%,
-        #d3a96700 24%,
-        #e58a19 50%,
-        #c66a0a 72%,
-        #e1b85b 100%
-    );
+    background: linear-gradient(115deg,
+            #e0d9c8 0%,
+            #d3a96700 24%,
+            #e58a19 50%,
+            #c66a0a 72%,
+            #e1b85b 100%);
 
     background-size: 160% 100%;
 
@@ -687,13 +685,10 @@ body:has(#menu-aberto:target) .menu-open {
 
     /* PROFUNDIDADE + LUZ */
     filter:
-        drop-shadow(0 2px 1px rgba(0, 0, 0, .60))
-        drop-shadow(0 6px 8px rgba(0, 0, 0, .38))
-        drop-shadow(0 0 8px rgba(224, 132, 20, .20))
-        drop-shadow(0 0 18px rgba(224, 132, 20, .08));
+        drop-shadow(0 2px 1px rgba(0, 0, 0, .60)) drop-shadow(0 6px 8px rgba(0, 0, 0, .38)) drop-shadow(0 0 8px rgba(224, 132, 20, .20)) drop-shadow(0 0 18px rgba(224, 132, 20, .08));
 }
 
-.solo{
+.solo {
     padding-bottom: 30px;
     padding-top: 10px;
     font-family: Arial, Helvetica, sans-serif;
@@ -731,79 +726,79 @@ body:has(#menu-aberto:target) .menu-open {
     content: "JOEL";
 }
 
-.abby .nome::before{
+.abby .nome::before {
     content: "ABBY";
 }
 
-.tommy .nome::before{
+.tommy .nome::before {
     content: "TOMMY";
 }
 
-.dina .nome::before{
+.dina .nome::before {
     content: "DINA";
 }
 
-.jesse .nome::before{
+.jesse .nome::before {
     content: "JESSE";
 }
 
-.lev .nome::before{
+.lev .nome::before {
     content: "LEV";
 }
 
-.yara .nome::before{
+.yara .nome::before {
     content: "YARA";
 }
 
-.riley .nome::before{
+.riley .nome::before {
     content: "RILEY";
 }
 
-.tess .nome::before{
+.tess .nome::before {
     content: "TESS";
 }
 
-.marlene .nome::before{
+.marlene .nome::before {
     content: "MARLENE";
 }
 
-.sarah .nome::before{
+.sarah .nome::before {
     content: "SARAH";
 }
 
-.sam .nome::before{
+.sam .nome::before {
     content: "SAM";
 }
 
-.henry .nome::before{
+.henry .nome::before {
     content: "HENRY";
 }
 
-.bill .nome::before{
+.bill .nome::before {
     content: "BILL";
 }
 
-.maria .nome::before{
+.maria .nome::before {
     content: "MARIA";
 }
 
-.owen .nome::before{
+.owen .nome::before {
     content: "OWEN";
 }
 
-.nora .nome::before{
+.nora .nome::before {
     content: "NORA";
 }
 
-.mel .nome::before{
+.mel .nome::before {
     content: "MEL";
 }
 
-.manny .nome::before{
+.manny .nome::before {
     content: "MANNY";
 }
 
-.jerry .nome::before{
+.jerry .nome::before {
     content: "JERRY";
 }
 
@@ -869,55 +864,55 @@ body:has(#menu-aberto:target) .menu-open {
         opacity .7s ease;
 }
 
-.ellie .sobrenome::before{
+.ellie .sobrenome::before {
     content: "WILLIAMS";
 }
 
-.joel .sobrenome::before{
+.joel .sobrenome::before {
     content: "MILLER";
 }
 
-.abby .sobrenome::before{
+.abby .sobrenome::before {
     content: "ANDERSON";
 }
 
-.tommy .sobrenome::before{
+.tommy .sobrenome::before {
     content: "MILLER";
 }
 
-.dina .sobrenome::before{
+.dina .sobrenome::before {
     content: "DINA";
 }
 
-.riley .sobrenome::before{
+.riley .sobrenome::before {
     content: "ABEL";
 }
 
-.tess .sobrenome::before{
+.tess .sobrenome::before {
     content: "SERVOPOULOS";
-}   
+}
 
-.sarah .sobrenome::before{
+.sarah .sobrenome::before {
     content: "MILLER";
 }
 
-.maria .sobrenome::before{
+.maria .sobrenome::before {
     content: "MILLER";
 }
 
-.owen .sobrenome::before{
+.owen .sobrenome::before {
     content: "MOORE";
 }
 
-.nora .sobrenome::before{
+.nora .sobrenome::before {
     content: "HARRIS";
 }
 
-.manny .sobrenome::before{
+.manny .sobrenome::before {
     content: "ALVAREZ";
 }
 
-.jerry .sobrenome::before{
+.jerry .sobrenome::before {
     content: "ANDERSON";
 }
 
@@ -1121,14 +1116,20 @@ main#layout {
     flex-direction: column;
 }
 
-.title-conteudo, .titles-lacos p, .txt-frag, .titles-galeria p{
+.title-conteudo,
+.titles-lacos p,
+.txt-frag,
+.titles-galeria p {
     font-family: var(--fonte-sub);
     font-size: 0.9rem;
     font-weight: 700;
     letter-spacing: 3px;
 }
 
-.title-capitulos h3, .titles-lacos h3, .sub-title-curiosidades, .titles-galeria h3{
+.title-capitulos h3,
+.titles-lacos h3,
+.sub-title-curiosidades,
+.titles-galeria h3 {
     font-family: var(--fonte-sub);
     font-size: 1.8rem;
     font-weight: 700;
@@ -1154,7 +1155,7 @@ main#layout {
     display: flex;
     justify-content: space-between;
 
-    padding: 30px 0px  30px 0px;
+    padding: 30px 0px 30px 0px;
 
     user-select: none;
 }
@@ -1201,9 +1202,7 @@ main#layout {
     align-items: end;
 
     filter:
-        contrast(1.08)
-        saturate(.92)
-        brightness(.96);
+        contrast(1.08) saturate(.92) brightness(.96);
 }
 
 .img-cap::before {
@@ -1213,12 +1212,10 @@ main#layout {
     inset: 0;
 
     background:
-        radial-gradient(
-            ellipse at 50% 45%,
+        radial-gradient(ellipse at 50% 45%,
             transparent 35%,
             rgba(0, 0, 0, .12) 60%,
-            rgba(0, 0, 0, .48) 100%
-        );
+            rgba(0, 0, 0, .48) 100%);
 
     z-index: 1;
     pointer-events: none;
@@ -1236,11 +1233,9 @@ main#layout {
     right: -20%;
 
     background:
-        radial-gradient(
-            ellipse,
+        radial-gradient(ellipse,
             rgba(220, 200, 160, .18),
-            transparent 65%
-        );
+            transparent 65%);
 
     transform: rotate(-15deg);
 
@@ -1249,6 +1244,8 @@ main#layout {
     z-index: 1;
     pointer-events: none;
 }
+
+/* IMG CAP ELLIE */
 
 .ellie-cap-01 {
     background-image: url(../imagens/home-personagens/personagens/ellie/capitulos/cap-01.jpg);
@@ -1330,6 +1327,8 @@ main#layout {
     background-image: url(../imagens/home-personagens/personagens/ellie/capitulos/cap-20.jpg);
 }
 
+/* IMG CAP JOEL */
+
 .joel-cap-01 {
     background-image: url(../imagens/home-personagens/personagens/joel/capitulos/cap-01.jpg);
     background-position: center 20%;
@@ -1364,60 +1363,96 @@ main#layout {
     background-image: url(../imagens/home-personagens/personagens/joel/capitulos/cap-08.jpg);
 }
 
-.abby-cap-01{
+/* IMG CAP ABBY */
+
+.abby-cap-01 {
     background-image: url(../imagens/home-personagens/personagens/abby/capitulos/cap-01.jpg);
 }
 
-.abby-cap-02{
+.abby-cap-02 {
     background-image: url(../imagens/home-personagens/personagens/abby/capitulos/cap-02.jpg);
 }
 
-.abby-cap-03{
+.abby-cap-03 {
     background-image: url(../imagens/home-personagens/personagens/abby/capitulos/cap-03.jpg);
 }
 
-.abby-cap-04{
+.abby-cap-04 {
     background-image: url(../imagens/home-personagens/personagens/abby/capitulos/cap-04.jpg);
 }
 
-.abby-cap-05{
+.abby-cap-05 {
     background-image: url(../imagens/home-personagens/personagens/abby/capitulos/cap-05.jpg);
 }
 
-.abby-cap-06{
+.abby-cap-06 {
     background-image: url(../imagens/home-personagens/personagens/abby/capitulos/cap-06.jpg);
 }
 
-.abby-cap-07{
+.abby-cap-07 {
     background-image: url(../imagens/home-personagens/personagens/abby/capitulos/cap-07.jpg);
 }
 
-.abby-cap-08{
+.abby-cap-08 {
     background-image: url(../imagens/home-personagens/personagens/abby/capitulos/cap-08.jpg);
 }
 
-.abby-cap-09{
+.abby-cap-09 {
     background-image: url(../imagens/home-personagens/personagens/abby/capitulos/cap-09.jpg);
 }
 
-.abby-cap-10{
+.abby-cap-10 {
     background-image: url(../imagens/home-personagens/personagens/abby/capitulos/cap-10.jpg);
 }
 
-.abby-cap-11{
+.abby-cap-11 {
     background-image: url(../imagens/home-personagens/personagens/abby/capitulos/cap-11.jpg);
 }
 
-.abby-cap-12{
+.abby-cap-12 {
     background-image: url(../imagens/home-personagens/personagens/abby/capitulos/cap-12.jpg);
 }
 
-.abby-cap-13{
+.abby-cap-13 {
     background-image: url(../imagens/home-personagens/personagens/abby/capitulos/cap-13.jpg);
 }
 
-.abby-cap-14{
+.abby-cap-14 {
     background-image: url(../imagens/home-personagens/personagens/abby/capitulos/cap-14.jpg);
+}
+
+/* IMG CAP TOMMY */
+
+.tommy-cap-01 {
+    background-image: url(../imagens/home-personagens/personagens/tommy/capitulos/cap-01.jpg);
+}
+
+.tommy-cap-02 {
+    background-image: url(../imagens/home-personagens/personagens/tommy/capitulos/cap-02.jpg);
+}
+
+.tommy-cap-03 {
+    background-image: url(../imagens/home-personagens/personagens/tommy/capitulos/cap-03.jpg);
+}
+
+.tommy-cap-04 {
+    background-image: url(../imagens/home-personagens/personagens/tommy/capitulos/cap-04.jpg);
+}
+
+.tommy-cap-05 {
+    background-image: url(../imagens/home-personagens/personagens/tommy/capitulos/cap-05.jpg);
+}
+
+.tommy-cap-06 {
+    background-image: url(../imagens/home-personagens/personagens/tommy/capitulos/cap-06.jpg);
+}
+
+.tommy-cap-07 {
+    background-image: url(../imagens/home-personagens/personagens/tommy/capitulos/cap-07.jpg);
+}
+
+.tommy-cap-08 {
+    background-image: url(../imagens/home-personagens/personagens/tommy/capitulos/cap-08.jpg);
 }
 
 .num-cap {
@@ -1450,7 +1485,7 @@ main#layout {
     font-weight: 600;
     font-size: 0.95em;
     letter-spacing: 3px;
-    
+
     color: var(--cor-txt-detalhe);
     padding-top: 15px;
     padding-bottom: 15px;
@@ -1470,13 +1505,11 @@ main#layout {
 
     margin-bottom: 25px;
 
-    background: linear-gradient(
-        90deg,
-        var(--cor-line) 0%,
-        rgba(200, 131, 42, 0.55) 35%,
-        rgba(200, 131, 42, 0.15) 70%,
-        transparent 100%
-    );
+    background: linear-gradient(90deg,
+            var(--cor-line) 0%,
+            rgba(200, 131, 42, 0.55) 35%,
+            rgba(200, 131, 42, 0.15) 70%,
+            transparent 100%);
 }
 
 #container-capitulos .capitulo>input[type="radio"] {
@@ -1532,7 +1565,7 @@ main#layout {
     font-size: 1rem;
     pointer-events: none;
     transition: color 0.3s ease;
-    
+
     user-select: none;
 }
 
@@ -1629,6 +1662,7 @@ main#layout {
 #container-capitulos .capitulo>input[type="radio"]:checked~.menu-partes .separador-parte {
     color: rgba(216, 212, 200, 0.38);
 }
+
 #layout,
 #conteudo,
 #container-capitulos,
@@ -1772,9 +1806,7 @@ section#lacos {
     background-repeat: no-repeat;
 
     filter:
-        contrast(1.06)
-        saturate(.92)
-        brightness(.96);
+        contrast(1.06) saturate(.92) brightness(.96);
 
     box-shadow:
         0 20px 45px rgba(0, 0, 0, .32);
@@ -1794,28 +1826,22 @@ section#lacos {
     background:
 
         /* luz quente no personagem */
-        radial-gradient(
-            ellipse at 68% 28%,
+        radial-gradient(ellipse at 68% 28%,
             rgba(220, 185, 130, .22) 0%,
             rgba(220, 185, 130, .08) 24%,
-            transparent 48%
-        ),
+            transparent 48%),
 
         /* sombra lateral */
-        linear-gradient(
-            90deg,
+        linear-gradient(90deg,
             rgba(0, 0, 0, .38) 0%,
             rgba(0, 0, 0, .08) 38%,
-            transparent 65%
-        ),
+            transparent 65%),
 
         /* vinheta elegante */
-        radial-gradient(
-            ellipse at center,
+        radial-gradient(ellipse at center,
             transparent 42%,
             rgba(0, 0, 0, .16) 72%,
-            rgba(0, 0, 0, .50) 115%
-        );
+            rgba(0, 0, 0, .50) 115%);
 
     z-index: 1;
     pointer-events: none;
@@ -1835,38 +1861,24 @@ section#lacos {
     background:
 
         /* moldura interna */
-        linear-gradient(
-            rgba(255,255,255,.055),
-            rgba(255,255,255,.055)
-        )
-        top 12px left 12px / calc(100% - 24px) 1px no-repeat,
+        linear-gradient(rgba(255, 255, 255, .055),
+            rgba(255, 255, 255, .055)) top 12px left 12px / calc(100% - 24px) 1px no-repeat,
 
-        linear-gradient(
-            rgba(255,255,255,.055),
-            rgba(255,255,255,.055)
-        )
-        bottom 12px left 12px / calc(100% - 24px) 1px no-repeat,
+        linear-gradient(rgba(255, 255, 255, .055),
+            rgba(255, 255, 255, .055)) bottom 12px left 12px / calc(100% - 24px) 1px no-repeat,
 
-        linear-gradient(
-            rgba(255,255,255,.055),
-            rgba(255,255,255,.055)
-        )
-        top 12px left 12px / 1px calc(100% - 24px) no-repeat,
+        linear-gradient(rgba(255, 255, 255, .055),
+            rgba(255, 255, 255, .055)) top 12px left 12px / 1px calc(100% - 24px) no-repeat,
 
-        linear-gradient(
-            rgba(255,255,255,.055),
-            rgba(255,255,255,.055)
-        )
-        top 12px right 12px / 1px calc(100% - 24px) no-repeat,
+        linear-gradient(rgba(255, 255, 255, .055),
+            rgba(255, 255, 255, .055)) top 12px right 12px / 1px calc(100% - 24px) no-repeat,
 
         /* sombra pro texto */
-        linear-gradient(
-            to top,
+        linear-gradient(to top,
             rgba(5, 6, 5, .98) 0%,
             rgba(5, 6, 5, .82) 18%,
             rgba(5, 6, 5, .38) 42%,
-            transparent 68%
-        );
+            transparent 68%);
 
     z-index: 2;
     pointer-events: none;
@@ -1903,57 +1915,62 @@ section#lacos {
     background-position: center 20%;
 }
 
-.sarah-lacos{
+.sarah-lacos {
     background-image: url(../imagens/home-personagens/personagens/sarah/principal/sarah_perfil.jpg);
     background-position: center 55%;
 }
 
-.ellie-lacos{
+.ellie-lacos {
     background-image: url(../imagens/home-personagens/personagens/ellie/principal/ellie_perfil.jpg);
     background-position: center 26%;
 }
 
-.tess-lacos{
+.tess-lacos {
     background-image: url(../imagens/home-personagens/personagens/tess/principal/tess_perfil.jpg);
     background-position: center 50%;
 }
 
-.bill-lacos{
+.bill-lacos {
     background-image: url(../imagens/home-personagens/personagens/bill/principal/bill_perfil.jpg);
     background-position: center 40%;
 }
 
-.jerry-lacos{
+.jerry-lacos {
     background-image: url(../imagens/home-personagens/personagens/jerry/principal/jerry_perfil.jpg);
 }
 
-.owen-lacos{
+.owen-lacos {
     background-image: url(../imagens/home-personagens/personagens/owen/principal/owen_perfil.jpg);
     background-position: center 35%;
 }
 
-.lev-lacos{
+.lev-lacos {
     background-image: url(../imagens/home-personagens/personagens/lev/principal/lev_perfil.jpg);
     background-position: center 35%;
 }
 
-.yara-lacos{
+.yara-lacos {
     background-image: url(../imagens/home-personagens/personagens/yara/principal/yara_perfil.jpg);
 }
 
-.manny-lacos{
+.manny-lacos {
     background-image: url(../imagens/home-personagens/personagens/manny/principal/manny_perfil.jpg);
     background-position: center 65%;
 }
 
-.nora-lacos{
+.nora-lacos {
     background-image: url(../imagens/home-personagens/personagens/nora/principal/nora_perfil.jpg);
     background-position: center 50%;
 }
 
-.mel-lacos{
+.mel-lacos {
     background-image: url(../imagens/home-personagens/personagens/mel/principal/mel_perfil.jpg);
     background-position: center 70%;
+}
+
+.maria-lacos {
+    background-image: url(../imagens/home-personagens/personagens/maria/principal/maria_perfil.jpg);
+    background-position: center 25%;
 }
 
 /* ==================================================
@@ -1973,13 +1990,11 @@ section#lacos {
 
     overflow: hidden;
 
-    background: linear-gradient(
-        to top,
-        rgba(3, 4, 3, .98) 0%,
-        rgba(3, 4, 3, .78) 45%,
-        rgba(3, 4, 3, .12) 78%,
-        transparent 100%
-    );
+    background: linear-gradient(to top,
+            rgba(3, 4, 3, .98) 0%,
+            rgba(3, 4, 3, .78) 45%,
+            rgba(3, 4, 3, .12) 78%,
+            transparent 100%);
 }
 
 
@@ -2045,7 +2060,7 @@ section#lacos {
    FIGURA PATERNA
 ================================================== */
 
-.txt-lacos > span {
+.txt-lacos>span {
     position: relative;
 
     margin-bottom: 12px;
@@ -2071,12 +2086,10 @@ section#lacos {
 
     margin-bottom: 14px;
 
-    background: linear-gradient(
-        90deg,
-        var(--cor-line),
-        rgba(200, 131, 42, .28),
-        transparent
-    );
+    background: linear-gradient(90deg,
+            var(--cor-line),
+            rgba(200, 131, 42, .28),
+            transparent);
 
     overflow: hidden;
 }
@@ -2165,17 +2178,14 @@ section#lacos {
     height: 70%;
 
     transform:
-        translateY(-50%)
-        scaleX(.45);
+        translateY(-50%) scaleX(.45);
 
     transform-origin: left center;
 
-    background: radial-gradient(
-        ellipse,
-        rgba(200, 131, 42, .14) 0%,
-        rgba(200, 131, 42, .055) 40%,
-        transparent 72%
-    );
+    background: radial-gradient(ellipse,
+            rgba(200, 131, 42, .14) 0%,
+            rgba(200, 131, 42, .055) 40%,
+            transparent 72%);
 
     opacity: 0;
 
@@ -2215,8 +2225,7 @@ section#lacos {
     opacity: 1;
 
     transform:
-        translateY(-50%)
-        scaleX(1);
+        translateY(-50%) scaleX(1);
 }
 
 
@@ -2226,8 +2235,7 @@ section#lacos {
 
 .txt-lacos h4 a:active {
     transform:
-        translateX(2px)
-        scale(.98);
+        translateX(2px) scale(.98);
 }
 
 /* ==================================================
@@ -2270,11 +2278,9 @@ section#lacos {
     width: 1px;
     height: calc(100% - 10px);
 
-    background: linear-gradient(
-        to bottom,
-        rgba(200, 131, 42, .65),
-        rgba(200, 131, 42, .08)
-    );
+    background: linear-gradient(to bottom,
+            rgba(200, 131, 42, .65),
+            rgba(200, 131, 42, .08));
 }
 
 
@@ -2283,6 +2289,7 @@ section#lacos {
 ================================================== */
 
 @keyframes brilho-lacos {
+
     0%,
     20% {
         left: -40px;
@@ -2380,11 +2387,9 @@ section#curiosidades {
     flex-direction: column;
 
     background:
-        linear-gradient(
-            135deg,
+        linear-gradient(135deg,
             rgba(255, 255, 255, .018),
-            transparent 45%
-        ),
+            transparent 45%),
         rgba(10, 12, 10, .34);
 
     border: 1px solid rgba(122, 139, 93, .20);
@@ -2534,19 +2539,15 @@ section#curiosidades {
 
     opacity: .03;
 
-    -webkit-mask-image: linear-gradient(
-        to left,
-        black 0%,
-        rgba(0, 0, 0, .8) 45%,
-        transparent 100%
-    );
+    -webkit-mask-image: linear-gradient(to left,
+            black 0%,
+            rgba(0, 0, 0, .8) 45%,
+            transparent 100%);
 
-    mask-image: linear-gradient(
-        to left,
-        black 0%,
-        rgba(0, 0, 0, .8) 45%,
-        transparent 100%
-    );
+    mask-image: linear-gradient(to left,
+            black 0%,
+            rgba(0, 0, 0, .8) 45%,
+            transparent 100%);
 
     pointer-events: none;
 
@@ -2573,13 +2574,11 @@ section#curiosidades {
     width: 75%;
     height: 220%;
 
-    background: linear-gradient(
-        115deg,
-        transparent 20%,
-        rgba(200, 131, 42, .05) 48%,
-        rgba(255, 255, 255, .025) 55%,
-        transparent 75%
-    );
+    background: linear-gradient(115deg,
+            transparent 20%,
+            rgba(200, 131, 42, .05) 48%,
+            rgba(255, 255, 255, .025) 55%,
+            transparent 75%);
 
     transform: rotate(10deg);
 
@@ -2603,11 +2602,9 @@ section#curiosidades {
     border-color: rgba(122, 139, 93, .38);
 
     background:
-        linear-gradient(
-            135deg,
+        linear-gradient(135deg,
             rgba(255, 255, 255, .028),
-            transparent 50%
-        ),
+            transparent 50%),
         rgba(10, 12, 10, .48);
 
     box-shadow:
@@ -2620,9 +2617,7 @@ section#curiosidades {
     opacity: 1;
 
     transform:
-        translateY(-50%)
-        translateX(-8px)
-        scale(1.04);
+        translateY(-50%) translateX(-8px) scale(1.04);
 
     -webkit-text-stroke:
         1px rgba(200, 131, 42, .16);
@@ -2713,28 +2708,32 @@ section#curiosidades {
     background-image: url(../imagens/home-personagens/personagens/joel/curiosidades/remorso.jpg);
 }
 
-.abby .sonho::before{
+.abby .sonho::before {
     background-image: url(../imagens/home-personagens/personagens/abby/curiosidades/sonho.jpg);
 }
 
-.abby .hospital::before{
+.abby .hospital::before {
     background-image: url(../imagens/home-personagens/personagens/abby/curiosidades/hospital.jpg);
 }
 
-.abby .moeda::before{
+.abby .moeda::before {
     background-image: url(../imagens/home-personagens/personagens/abby/curiosidades/moeda.jpg);
 }
 
-.abby .medo::before{
+.abby .medo::before {
     background-image: url(../imagens/home-personagens/personagens/abby/curiosidades/medo.jpg);
 }
 
-.abby .redencao::before{
+.abby .redencao::before {
     background-image: url(../imagens/home-personagens/personagens/abby/curiosidades/abby.jpg);
 }
 
-.abby .apelido::before{
+.abby .apelido::before {
     background-image: url(../imagens/home-personagens/personagens/abby/curiosidades/nome.jpg);
+}
+
+.tommy .olho::before{
+    background-image: url(../imagens/home-personagens/personagens/tommy/curiosidades/olho.jpg);
 }
 
 section#galeria {
@@ -2747,7 +2746,7 @@ section#galeria {
 .titles-galeria {
     padding-bottom: 40px;
 
-    padding: 30px 0px  30px 0px;
+    padding: 30px 0px 30px 0px;
 }
 
 .titles-galeria p {
@@ -2863,27 +2862,27 @@ section#galeria {
    ELLIE
 ========================================== */
 
-.ellie .photo-1{
+.ellie .photo-1 {
     background-image: url(../imagens/home-personagens/personagens/ellie/galeria/ellie-astronauta.jpg);
 }
 
-.ellie .photo-2{
+.ellie .photo-2 {
     background-image: url(../imagens/home-personagens/personagens/ellie/galeria/ellie-violao.jpg);
 }
 
-.ellie .photo-3{
+.ellie .photo-3 {
     background-image: url(../imagens/home-personagens/personagens/ellie/galeria/ellie-jj.jpg);
 }
 
-.ellie .photo-4{
+.ellie .photo-4 {
     background-image: url(../imagens/home-personagens/personagens/ellie/galeria/ellie.jpg);
 }
 
-.ellie .photo-5{
+.ellie .photo-5 {
     background-image: url(../imagens/home-personagens/personagens/ellie/galeria/ellie-riley.jpg);
 }
 
-.ellie .photo-6{
+.ellie .photo-6 {
     background-image: url(../imagens/home-personagens/personagens/ellie/galeria/ellie-joel.jpg);
 }
 
@@ -2891,27 +2890,27 @@ section#galeria {
    JOEL
 ========================================== */
 
-.joel .photo-1{
+.joel .photo-1 {
     background-image: url(../imagens/home-personagens/personagens/joel/galeria/joel.jpg);
 }
 
-.joel .photo-2{
+.joel .photo-2 {
     background-image: url(../imagens/home-personagens/personagens/joel/galeria/joel-sarah.jpg);
 }
 
-.joel .photo-3{
+.joel .photo-3 {
     background-image: url(../imagens/home-personagens/personagens/joel/galeria/joel-ellie.jpg);
 }
 
-.joel .photo-4{
+.joel .photo-4 {
     background-image: url(../imagens/home-personagens/personagens/joel/galeria/astronautas.png);
 }
 
-.joel .photo-5{
+.joel .photo-5 {
     background-image: url(../imagens/home-personagens/personagens/joel/galeria/testemunha.jpg);
 }
 
-.joel .photo-6{
+.joel .photo-6 {
     background-image: url(../imagens/home-personagens/personagens/joel/galeria/filha.jpg);
 }
 
@@ -2919,27 +2918,27 @@ section#galeria {
    ABBY
 ========================================== */
 
-.abby .photo-1{
+.abby .photo-1 {
     background-image: url(../imagens/home-personagens/personagens/abby/galeria/jerry.jpg);
 }
 
-.abby .photo-2{
+.abby .photo-2 {
     background-image: url(../imagens/home-personagens/personagens/abby/galeria/lev.jpg);
 }
 
-.abby .photo-3{
+.abby .photo-3 {
     background-image: url(../imagens/home-personagens/personagens/abby/galeria/alice.jpg);
 }
 
-.abby .photo-4{
+.abby .photo-4 {
     background-image: url(../imagens/home-personagens/personagens/abby/galeria/abby.jpg);
 }
 
-.abby .photo-5{
+.abby .photo-5 {
     background-image: url(../imagens/home-personagens/personagens/abby/galeria/abby-forte.jpg);
 }
 
-.abby .photo-6{
+.abby .photo-6 {
     background-image: url(../imagens/home-personagens/personagens/abby/galeria/owen.jpg);
 }
 
@@ -2958,15 +2957,15 @@ section#galeria {
     overflow: hidden;
 }
 
-.ellie #frase{
+.ellie #frase {
     background-image: url(../imagens/home-personagens/personagens/ellie/efeito/efeito-ellie.jpg);
 }
 
-.joel #frase{
+.joel #frase {
     background-image: url(../imagens/home-personagens/personagens/joel/efeito/efeito-joel.jpg);
 }
 
-.abby #frase{
+.abby #frase {
     background-image: url(../imagens/home-personagens/personagens/abby/efeito/efeito-abby.jpg);
 }
 
@@ -3079,7 +3078,7 @@ section#galeria {
     letter-spacing: 6px;
 }
 
-.footer-topo h2{
+.footer-topo h2 {
     margin: 10px 0 15px;
 
     font-size: 2.1rem;
@@ -3089,8 +3088,8 @@ section#galeria {
 }
 
 footer h2 a {
-        text-decoration: none;
-        color: var(--cor-texto-secundario);
+    text-decoration: none;
+    color: var(--cor-texto-secundario);
 }
 
 .footer-topo p {
