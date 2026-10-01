@@ -2732,8 +2732,20 @@ section#curiosidades {
     background-image: url(../imagens/home-personagens/personagens/abby/curiosidades/nome.jpg);
 }
 
+.tommy .grupos::before{
+    background-image: url(../imagens/home-personagens/personagens/tommy/curiosidades/grupos.jpg);
+}
+
 .tommy .olho::before{
     background-image: url(../imagens/home-personagens/personagens/tommy/curiosidades/olho.jpg);
+}
+
+.tommy .paz::before{
+    background-image: url(../imagens/home-personagens/personagens/tommy/curiosidades/cavalo.jpg);
+}
+
+.tommy .vinganca::before{
+    background-image: url(../imagens/home-personagens/personagens/tommy/curiosidades/vinganca.jpg);
 }
 
 section#galeria {
@@ -2942,6 +2954,34 @@ section#galeria {
     background-image: url(../imagens/home-personagens/personagens/abby/galeria/owen.jpg);
 }
 
+/* ==========================================
+   TOMMY
+========================================== */
+
+.tommy .photo-1 {
+    background-image: url(../imagens/home-personagens/personagens/tommy/galeria/tommy-1.jpg);
+}
+
+.tommy .photo-2 {
+    background-image: url(../imagens/home-personagens/personagens/tommy/galeria/tommy.jpg);
+}
+
+.tommy .photo-3 {
+    background-image: url(../imagens/home-personagens/personagens/tommy/galeria/sniper.jpg);
+}
+
+.tommy .photo-4 {
+    background-image: url(../imagens/home-personagens/personagens/tommy/galeria/luto.jpg);
+}
+
+.tommy .photo-5 {
+    background-image: url(../imagens/home-personagens/personagens/tommy/galeria/tommy-joel.jpg);
+}
+
+.tommy .photo-6 {
+    background-image: url(../imagens/home-personagens/personagens/tommy/galeria/tommy-2.jpg);
+}
+
 #frase {
     min-height: 750px;
 
@@ -2967,6 +3007,10 @@ section#galeria {
 
 .abby #frase {
     background-image: url(../imagens/home-personagens/personagens/abby/efeito/efeito-abby.jpg);
+}
+
+.tommy #frase {
+    background-image: url(../imagens/home-personagens/personagens/tommy/efeito/efeito-tommy.jpg);
 }
 
 /* Deixa a imagem mais sombria/cinematográfica */
