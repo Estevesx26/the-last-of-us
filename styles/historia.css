@@ -1455,6 +1455,74 @@ main#layout {
     background-image: url(../imagens/home-personagens/personagens/tommy/capitulos/cap-08.jpg);
 }
 
+/* IMG CAP DINA */
+
+.dina-cap-01 {
+    background-image: url(../imagens/home-personagens/personagens/dina/capitulos/cap-01.jpg);
+}
+
+.dina-cap-02 {
+    background-image: url(../imagens/home-personagens/personagens/dina/capitulos/cap-02.jpg);
+}
+
+.dina-cap-03 {
+    background-image: url(../imagens/home-personagens/personagens/dina/capitulos/cap-03.jpg);
+}
+
+.dina-cap-04 {
+    background-image: url(../imagens/home-personagens/personagens/dina/capitulos/cap-04.jpg);
+}
+
+.dina-cap-05 {
+    background-image: url(../imagens/home-personagens/personagens/dina/capitulos/cap-05.jpg);
+}
+
+.dina-cap-06 {
+    background-image: url(../imagens/home-personagens/personagens/dina/capitulos/cap-06.jpg);
+}
+
+.dina-cap-07 {
+    background-image: url(../imagens/home-personagens/personagens/dina/capitulos/cap-07.jpg);
+}
+
+.dina-cap-08 {
+    background-image: url(../imagens/home-personagens/personagens/dina/capitulos/cap-08.jpg);
+}
+
+.dina-cap-09 {
+    background-image: url(../imagens/home-personagens/personagens/dina/capitulos/cap-09.jpg);
+}
+
+.dina-cap-10 {
+    background-image: url(../imagens/home-personagens/personagens/dina/capitulos/cap-10.jpg);
+}
+
+/* JESSE */
+
+.jesse-cap-01 {
+    background-image: url(../imagens/home-personagens/personagens/jesse/capitulos/cap-01.jpg);
+}
+
+.jesse-cap-02 {
+    background-image: url(../imagens/home-personagens/personagens/jesse/capitulos/cap-02.jpg);
+}
+
+.jesse-cap-03 {
+    background-image: url(../imagens/home-personagens/personagens/jesse/capitulos/cap-03.jpg);
+}
+
+.jesse-cap-04 {
+    background-image: url(../imagens/home-personagens/personagens/jesse/capitulos/cap-04.jpg);
+}
+
+.jesse-cap-05 {
+    background-image: url(../imagens/home-personagens/personagens/jesse/capitulos/cap-05.jpg);
+}
+
+.jesse-cap-06 {
+    background-image: url(../imagens/home-personagens/personagens/jesse/capitulos/cap-06.jpg);
+}
+
 .num-cap {
     position: relative;
     z-index: 2;
@@ -2748,6 +2816,26 @@ section#curiosidades {
     background-image: url(../imagens/home-personagens/personagens/tommy/curiosidades/vinganca.jpg);
 }
 
+.dina .judia::before{
+    background-image: url(../imagens/home-personagens/personagens/dina/curiosidades/judia.jpg);
+}
+
+.dina .musica::before{
+    background-image: url(../imagens/home-personagens/personagens/dina/curiosidades/musica.jpg);
+}
+
+.dina .simbolo::before{
+    background-image: url(../imagens/home-personagens/personagens/dina/curiosidades/simbolo.jpg);
+}
+
+.jesse .filho::before{
+    background-image: url(../imagens/home-personagens/personagens/jesse/curiosidades/filho-jj.jpg);
+}
+
+.jesse .ato::before{
+    background-image: url(../imagens/home-personagens/personagens/jesse/curiosidades/jesse.jpg);
+}
+
 section#galeria {
     margin-bottom: 90px;
     display: grid;
@@ -2982,6 +3070,34 @@ section#galeria {
     background-image: url(../imagens/home-personagens/personagens/tommy/galeria/tommy-2.jpg);
 }
 
+/* ==========================================
+   DINA
+========================================== */
+
+.dina .photo-1{
+    background-image: url(../imagens/home-personagens/personagens/dina/galeria/dina-solo.jpg);
+}
+
+.dina .photo-2{
+    background-image: url(../imagens/home-personagens/personagens/dina/galeria/dina-ellie-jj.jpg);
+}
+
+.dina .photo-3{
+    background-image: url(../imagens/home-personagens/personagens/dina/galeria/dina.jpg);
+}
+
+.dina .photo-4{
+    background-image: url(../imagens/home-personagens/personagens/dina/galeria/dina-mascara.jpg);
+}
+
+.dina .photo-5{
+    background-image: url(../imagens/home-personagens/personagens/dina/galeria/dina-ellie.jpg);
+}
+
+.dina .photo-6{
+    background-image: url(../imagens/home-personagens/personagens/dina/galeria/dina-mal.jpg);
+}
+
 #frase {
     min-height: 750px;
 
@@ -3011,6 +3127,10 @@ section#galeria {
 
 .tommy #frase {
     background-image: url(../imagens/home-personagens/personagens/tommy/efeito/efeito-tommy.jpg);
+}
+
+.dina #frase {
+    background-image: url(../imagens/home-personagens/personagens/dina/efeito/dina-efeito.jpg);
 }
 
 /* Deixa a imagem mais sombria/cinematográfica */
