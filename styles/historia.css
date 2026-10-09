@@ -1523,6 +1523,12 @@ main#layout {
     background-image: url(../imagens/home-personagens/personagens/jesse/capitulos/cap-06.jpg);
 }
 
+/* LEV */
+
+.lev-cap-01{
+    background-image: url(../imagens/home-personagens/personagens/lev/capitulos/cap-01.jpg);
+}
+
 .num-cap {
     position: relative;
     z-index: 2;
@@ -3098,6 +3104,34 @@ section#galeria {
     background-image: url(../imagens/home-personagens/personagens/dina/galeria/dina-mal.jpg);
 }
 
+/* ==========================================
+   DINA
+========================================== */
+
+.jesse .photo-1{
+    background-image: url(../imagens/home-personagens/personagens/jesse/galeria/jesse-ellie.jpg);
+}
+
+.jesse .photo-2{
+    background-image: url(../imagens/home-personagens/personagens/jesse/galeria/jesse-02.jpg);
+}
+
+.jesse .photo-3{
+    background-image: url(../imagens/home-personagens/personagens/jesse/galeria/jesse.jpg);
+}
+
+.jesse .photo-4{
+    background-image: url(../imagens/home-personagens/personagens/jesse/galeria/jesse-arma.jpg);
+}
+
+.jesse .photo-5{
+    background-image: url(../imagens/home-personagens/personagens/jesse/galeria/jesse-tommy.jpg);
+}
+
+.jesse .photo-6{
+    background-image: url(../imagens/home-personagens/personagens/jesse/galeria/jesse-dina.jpg);
+}
+
 #frase {
     min-height: 750px;
 
@@ -3131,6 +3165,10 @@ section#galeria {
 
 .dina #frase {
     background-image: url(../imagens/home-personagens/personagens/dina/efeito/dina-efeito.jpg);
+}
+
+.jesse #frase {
+    background-image: url(../imagens/home-personagens/personagens/jesse/efeito/jesse-efeito.jpg);
 }
 
 /* Deixa a imagem mais sombria/cinematográfica */
