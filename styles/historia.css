@@ -1529,6 +1529,34 @@ main#layout {
     background-image: url(../imagens/home-personagens/personagens/lev/capitulos/cap-01.jpg);
 }
 
+.lev-cap-02{
+    background-image: url(../imagens/home-personagens/personagens/lev/capitulos/cap-02.jpg);
+}
+
+.lev-cap-03{
+    background-image: url(../imagens/home-personagens/personagens/lev/capitulos/cap-03.jpg);
+}
+
+.lev-cap-04{
+    background-image: url(../imagens/home-personagens/personagens/lev/capitulos/cap-04.jpg);
+}
+
+.lev-cap-05{
+    background-image: url(../imagens/home-personagens/personagens/lev/capitulos/cap-05.jpg);
+}
+
+.lev-cap-06{
+    background-image: url(../imagens/home-personagens/personagens/lev/capitulos/cap-06.jpg);
+}
+
+.lev-cap-07{
+    background-image: url(../imagens/home-personagens/personagens/lev/capitulos/cap-07.jpg);
+}
+
+.lev-cap-08{
+    background-image: url(../imagens/home-personagens/personagens/lev/capitulos/cap-08.jpg);
+}
+
 .num-cap {
     position: relative;
     z-index: 2;
@@ -2840,6 +2868,18 @@ section#curiosidades {
 
 .jesse .ato::before{
     background-image: url(../imagens/home-personagens/personagens/jesse/curiosidades/jesse.jpg);
+}
+
+.lev .cabelo::before{
+    background-image: url(../imagens/home-personagens/personagens/lev/curiosidades/cabelo.jpg);
+}
+
+.lev .cicatriz::before{
+    background-image: url(../imagens/home-personagens/personagens/lev/curiosidades/cicatriz.jpg);
+}
+
+.lev .medo::before{
+    background-image: url(../imagens/home-personagens/personagens/lev/curiosidades/medo.jpg);
 }
 
 section#galeria {
