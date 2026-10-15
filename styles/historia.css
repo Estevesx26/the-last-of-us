@@ -1557,6 +1557,16 @@ main#layout {
     background-image: url(../imagens/home-personagens/personagens/lev/capitulos/cap-08.jpg);
 }
 
+/* YARA */
+
+.yara-cap-01{
+    background-image: url(../imagens/home-personagens/personagens/yara/capitulos/cap-01.jpg);
+}
+
+.yara-cap-02{
+    background-image: url(../imagens/home-personagens/personagens/yara/capitulos/cap-02.jpg);
+}
+
 .num-cap {
     position: relative;
     z-index: 2;
@@ -2073,6 +2083,11 @@ section#lacos {
 .maria-lacos {
     background-image: url(../imagens/home-personagens/personagens/maria/principal/maria_perfil.jpg);
     background-position: center 25%;
+}
+
+.abby-lacos {
+    background-image: url(../imagens/home-personagens/personagens/abby/principal/abby_perfil.jpg);
+    background-position: center 19%;
 }
 
 /* ==================================================
@@ -3172,6 +3187,34 @@ section#galeria {
     background-image: url(../imagens/home-personagens/personagens/jesse/galeria/jesse-dina.jpg);
 }
 
+/* ==========================================
+   LEV
+========================================== */
+
+.lev .photo-1{
+    background-image: url(../imagens/home-personagens/personagens/lev/galeria/lev-yara.jpg);
+}
+
+.lev .photo-2{
+    background-image: url(../imagens/home-personagens/personagens/lev/galeria/le-abby-02.jpg);
+}
+
+.lev .photo-3{
+    background-image: url(../imagens/home-personagens/personagens/lev/galeria/lev-abby.jpg);
+}
+
+.lev .photo-4{
+    background-image: url(../imagens/home-personagens/personagens/lev/galeria/lev-02.jpg);
+}
+
+.lev .photo-5{
+    background-image: url(../imagens/home-personagens/personagens/lev/galeria/prisioneiro.jpg);
+}
+
+.lev .photo-6{
+    background-image: url(../imagens/home-personagens/personagens/lev/galeria/arqueiro.jpg);
+}
+
 #frase {
     min-height: 750px;
 
@@ -3209,6 +3252,10 @@ section#galeria {
 
 .jesse #frase {
     background-image: url(../imagens/home-personagens/personagens/jesse/efeito/jesse-efeito.jpg);
+}
+
+.lev #frase {
+    background-image: url(../imagens/home-personagens/personagens/lev/efeito/lev-efeito.jpg);
 }
 
 /* Deixa a imagem mais sombria/cinematográfica */
