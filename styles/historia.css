@@ -1525,46 +1525,54 @@ main#layout {
 
 /* LEV */
 
-.lev-cap-01{
+.lev-cap-01 {
     background-image: url(../imagens/home-personagens/personagens/lev/capitulos/cap-01.jpg);
 }
 
-.lev-cap-02{
+.lev-cap-02 {
     background-image: url(../imagens/home-personagens/personagens/lev/capitulos/cap-02.jpg);
 }
 
-.lev-cap-03{
+.lev-cap-03 {
     background-image: url(../imagens/home-personagens/personagens/lev/capitulos/cap-03.jpg);
 }
 
-.lev-cap-04{
+.lev-cap-04 {
     background-image: url(../imagens/home-personagens/personagens/lev/capitulos/cap-04.jpg);
 }
 
-.lev-cap-05{
+.lev-cap-05 {
     background-image: url(../imagens/home-personagens/personagens/lev/capitulos/cap-05.jpg);
 }
 
-.lev-cap-06{
+.lev-cap-06 {
     background-image: url(../imagens/home-personagens/personagens/lev/capitulos/cap-06.jpg);
 }
 
-.lev-cap-07{
+.lev-cap-07 {
     background-image: url(../imagens/home-personagens/personagens/lev/capitulos/cap-07.jpg);
 }
 
-.lev-cap-08{
+.lev-cap-08 {
     background-image: url(../imagens/home-personagens/personagens/lev/capitulos/cap-08.jpg);
 }
 
 /* YARA */
 
-.yara-cap-01{
+.yara-cap-01 {
     background-image: url(../imagens/home-personagens/personagens/yara/capitulos/cap-01.jpg);
 }
 
-.yara-cap-02{
+.yara-cap-02 {
     background-image: url(../imagens/home-personagens/personagens/yara/capitulos/cap-02.jpg);
+}
+
+.yara-cap-03 {
+    background-image: url(../imagens/home-personagens/personagens/yara/capitulos/cap-03.jpg);
+}
+
+.yara-cap-04 {
+    background-image: url(../imagens/home-personagens/personagens/yara/capitulos/cap-04.jpg);
 }
 
 .num-cap {
@@ -2849,52 +2857,64 @@ section#curiosidades {
     background-image: url(../imagens/home-personagens/personagens/abby/curiosidades/nome.jpg);
 }
 
-.tommy .grupos::before{
+.tommy .grupos::before {
     background-image: url(../imagens/home-personagens/personagens/tommy/curiosidades/grupos.jpg);
 }
 
-.tommy .olho::before{
+.tommy .olho::before {
     background-image: url(../imagens/home-personagens/personagens/tommy/curiosidades/olho.jpg);
 }
 
-.tommy .paz::before{
+.tommy .paz::before {
     background-image: url(../imagens/home-personagens/personagens/tommy/curiosidades/cavalo.jpg);
 }
 
-.tommy .vinganca::before{
+.tommy .vinganca::before {
     background-image: url(../imagens/home-personagens/personagens/tommy/curiosidades/vinganca.jpg);
 }
 
-.dina .judia::before{
+.dina .judia::before {
     background-image: url(../imagens/home-personagens/personagens/dina/curiosidades/judia.jpg);
 }
 
-.dina .musica::before{
+.dina .musica::before {
     background-image: url(../imagens/home-personagens/personagens/dina/curiosidades/musica.jpg);
 }
 
-.dina .simbolo::before{
+.dina .simbolo::before {
     background-image: url(../imagens/home-personagens/personagens/dina/curiosidades/simbolo.jpg);
 }
 
-.jesse .filho::before{
+.jesse .filho::before {
     background-image: url(../imagens/home-personagens/personagens/jesse/curiosidades/filho-jj.jpg);
 }
 
-.jesse .ato::before{
+.jesse .ato::before {
     background-image: url(../imagens/home-personagens/personagens/jesse/curiosidades/jesse.jpg);
 }
 
-.lev .cabelo::before{
+.lev .cabelo::before {
     background-image: url(../imagens/home-personagens/personagens/lev/curiosidades/cabelo.jpg);
 }
 
-.lev .cicatriz::before{
+.lev .cicatriz::before {
     background-image: url(../imagens/home-personagens/personagens/lev/curiosidades/cicatriz.jpg);
 }
 
-.lev .medo::before{
+.lev .medo::before {
     background-image: url(../imagens/home-personagens/personagens/lev/curiosidades/medo.jpg);
+}
+
+.yara .irmao::before {
+    background-image: url(../imagens/home-personagens/personagens/yara/curiosidades/irmao.jpg);
+}
+
+.yara .sacrificio::before {
+    background-image: url(../imagens/home-personagens/personagens/yara/curiosidades/sacrificio.jpg);
+}
+
+.yara .isolada::before {
+    background-image: url(../imagens/home-personagens/personagens/yara/curiosidades/isolada.jpg);
 }
 
 section#galeria {
@@ -3135,27 +3155,27 @@ section#galeria {
    DINA
 ========================================== */
 
-.dina .photo-1{
+.dina .photo-1 {
     background-image: url(../imagens/home-personagens/personagens/dina/galeria/dina-solo.jpg);
 }
 
-.dina .photo-2{
+.dina .photo-2 {
     background-image: url(../imagens/home-personagens/personagens/dina/galeria/dina-ellie-jj.jpg);
 }
 
-.dina .photo-3{
+.dina .photo-3 {
     background-image: url(../imagens/home-personagens/personagens/dina/galeria/dina.jpg);
 }
 
-.dina .photo-4{
+.dina .photo-4 {
     background-image: url(../imagens/home-personagens/personagens/dina/galeria/dina-mascara.jpg);
 }
 
-.dina .photo-5{
+.dina .photo-5 {
     background-image: url(../imagens/home-personagens/personagens/dina/galeria/dina-ellie.jpg);
 }
 
-.dina .photo-6{
+.dina .photo-6 {
     background-image: url(../imagens/home-personagens/personagens/dina/galeria/dina-mal.jpg);
 }
 
@@ -3163,27 +3183,27 @@ section#galeria {
    DINA
 ========================================== */
 
-.jesse .photo-1{
+.jesse .photo-1 {
     background-image: url(../imagens/home-personagens/personagens/jesse/galeria/jesse-ellie.jpg);
 }
 
-.jesse .photo-2{
+.jesse .photo-2 {
     background-image: url(../imagens/home-personagens/personagens/jesse/galeria/jesse-02.jpg);
 }
 
-.jesse .photo-3{
+.jesse .photo-3 {
     background-image: url(../imagens/home-personagens/personagens/jesse/galeria/jesse.jpg);
 }
 
-.jesse .photo-4{
+.jesse .photo-4 {
     background-image: url(../imagens/home-personagens/personagens/jesse/galeria/jesse-arma.jpg);
 }
 
-.jesse .photo-5{
+.jesse .photo-5 {
     background-image: url(../imagens/home-personagens/personagens/jesse/galeria/jesse-tommy.jpg);
 }
 
-.jesse .photo-6{
+.jesse .photo-6 {
     background-image: url(../imagens/home-personagens/personagens/jesse/galeria/jesse-dina.jpg);
 }
 
@@ -3191,28 +3211,56 @@ section#galeria {
    LEV
 ========================================== */
 
-.lev .photo-1{
+.lev .photo-1 {
     background-image: url(../imagens/home-personagens/personagens/lev/galeria/lev-yara.jpg);
 }
 
-.lev .photo-2{
+.lev .photo-2 {
     background-image: url(../imagens/home-personagens/personagens/lev/galeria/le-abby-02.jpg);
 }
 
-.lev .photo-3{
+.lev .photo-3 {
     background-image: url(../imagens/home-personagens/personagens/lev/galeria/lev-abby.jpg);
 }
 
-.lev .photo-4{
+.lev .photo-4 {
     background-image: url(../imagens/home-personagens/personagens/lev/galeria/lev-02.jpg);
 }
 
-.lev .photo-5{
+.lev .photo-5 {
     background-image: url(../imagens/home-personagens/personagens/lev/galeria/prisioneiro.jpg);
 }
 
-.lev .photo-6{
+.lev .photo-6 {
     background-image: url(../imagens/home-personagens/personagens/lev/galeria/arqueiro.jpg);
+}
+
+/* ==========================================
+   YARA
+========================================== */
+
+.yara .photo-1 {
+    background-image: url(../imagens/home-personagens/personagens/yara/galeria/braco.jpg);
+}
+
+.yara .photo-2 {
+    background-image: url(../imagens/home-personagens/personagens/yara/galeria/yara-alice.jpg);
+}
+
+.yara .photo-3 {
+    background-image: url(../imagens/home-personagens/personagens/yara/galeria/yara.jpg);
+}
+
+.yara .photo-4 {
+    background-image: url(../imagens/home-personagens/personagens/yara/galeria/serafita.jpg);
+}
+
+.yara .photo-5 {
+    background-image: url(../imagens/home-personagens/personagens/yara/galeria/yara-arco.jpg);
+}
+
+.yara .photo-6 {
+    background-image: url(../imagens/home-personagens/personagens/yara/galeria/yara-lev.jpg);
 }
 
 #frase {
@@ -3256,6 +3304,10 @@ section#galeria {
 
 .lev #frase {
     background-image: url(../imagens/home-personagens/personagens/lev/efeito/lev-efeito.jpg);
+}
+
+.yara #frase {
+    background-image: url(../imagens/home-personagens/personagens/yara/efeito/yara-efeito.jpg);
 }
 
 /* Deixa a imagem mais sombria/cinematográfica */
