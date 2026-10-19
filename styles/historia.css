@@ -1245,7 +1245,9 @@ main#layout {
     pointer-events: none;
 }
 
-/* IMG CAP ELLIE */
+/* ==========================================
+   ELLIE
+========================================== */
 
 .ellie-cap-01 {
     background-image: url(../imagens/home-personagens/personagens/ellie/capitulos/cap-01.jpg);
@@ -1327,7 +1329,9 @@ main#layout {
     background-image: url(../imagens/home-personagens/personagens/ellie/capitulos/cap-20.jpg);
 }
 
-/* IMG CAP JOEL */
+/* ==========================================
+   JOEL
+========================================== */
 
 .joel-cap-01 {
     background-image: url(../imagens/home-personagens/personagens/joel/capitulos/cap-01.jpg);
@@ -1363,7 +1367,9 @@ main#layout {
     background-image: url(../imagens/home-personagens/personagens/joel/capitulos/cap-08.jpg);
 }
 
-/* IMG CAP ABBY */
+/* ==========================================
+   ABBY
+========================================== */
 
 .abby-cap-01 {
     background-image: url(../imagens/home-personagens/personagens/abby/capitulos/cap-01.jpg);
@@ -1421,7 +1427,9 @@ main#layout {
     background-image: url(../imagens/home-personagens/personagens/abby/capitulos/cap-14.jpg);
 }
 
-/* IMG CAP TOMMY */
+/* ==========================================
+   TOMMY
+========================================== */
 
 .tommy-cap-01 {
     background-image: url(../imagens/home-personagens/personagens/tommy/capitulos/cap-01.jpg);
@@ -1455,7 +1463,9 @@ main#layout {
     background-image: url(../imagens/home-personagens/personagens/tommy/capitulos/cap-08.jpg);
 }
 
-/* IMG CAP DINA */
+/* ==========================================
+   DINA
+========================================== */
 
 .dina-cap-01 {
     background-image: url(../imagens/home-personagens/personagens/dina/capitulos/cap-01.jpg);
@@ -1497,7 +1507,9 @@ main#layout {
     background-image: url(../imagens/home-personagens/personagens/dina/capitulos/cap-10.jpg);
 }
 
-/* JESSE */
+/* ==========================================
+   JESSE
+========================================== */
 
 .jesse-cap-01 {
     background-image: url(../imagens/home-personagens/personagens/jesse/capitulos/cap-01.jpg);
@@ -1523,7 +1535,9 @@ main#layout {
     background-image: url(../imagens/home-personagens/personagens/jesse/capitulos/cap-06.jpg);
 }
 
-/* LEV */
+/* ==========================================
+   LEV
+========================================== */
 
 .lev-cap-01 {
     background-image: url(../imagens/home-personagens/personagens/lev/capitulos/cap-01.jpg);
@@ -1557,7 +1571,9 @@ main#layout {
     background-image: url(../imagens/home-personagens/personagens/lev/capitulos/cap-08.jpg);
 }
 
-/* YARA */
+/* ==========================================
+   YARA
+========================================== */
 
 .yara-cap-01 {
     background-image: url(../imagens/home-personagens/personagens/yara/capitulos/cap-01.jpg);
@@ -1573,6 +1589,22 @@ main#layout {
 
 .yara-cap-04 {
     background-image: url(../imagens/home-personagens/personagens/yara/capitulos/cap-04.jpg);
+}
+
+/* ==========================================
+   RILEY
+========================================== */
+
+.riley-cap-01 {
+    background-image: url(../imagens/home-personagens/personagens/riley/capitulos/cap-01.jpg);
+}
+
+.riley-cap-02 {
+    background-image: url(../imagens/home-personagens/personagens/riley/capitulos/cap-02.jpg);
+}
+
+.riley-cap-03 {
+    background-image: url(../imagens/home-personagens/personagens/riley/capitulos/cap-03.jpg);
 }
 
 .num-cap {
@@ -2917,6 +2949,18 @@ section#curiosidades {
     background-image: url(../imagens/home-personagens/personagens/yara/curiosidades/isolada.jpg);
 }
 
+.riley .halloween::before{
+    background-image: url(../imagens/home-personagens/personagens/riley/curiosidades/halloween.jpg);
+}
+
+.riley .mordida::before{
+    background-image: url(../imagens/home-personagens/personagens/riley/curiosidades/mordida.jpg);
+}
+
+.riley .pistola::before{
+    background-image: url(../imagens/home-personagens/personagens/riley/curiosidades/pistola.jpg);
+}
+
 section#galeria {
     margin-bottom: 90px;
     display: grid;
@@ -3261,6 +3305,22 @@ section#galeria {
 
 .yara .photo-6 {
     background-image: url(../imagens/home-personagens/personagens/yara/galeria/yara-lev.jpg);
+}
+
+/* ==========================================
+   RILEY
+========================================== */
+
+.riley .photo-1 {
+    background-image: url(../imagens/home-personagens/personagens/riley/galeria/riley-ellie.jpg);
+}
+
+.riley .photo-3 {
+    background-image: url(../imagens/home-personagens/personagens/riley/galeria/riley.jpg);
+}
+
+.riley .photo-5 {
+    background-image: url(../imagens/home-personagens/personagens/riley/galeria/𝘦𝘭𝘭𝘪𝘦\ \ 𐙚\ \ 𝘳𝘪𝘭𝘦𝘺.jpg);
 }
 
 #frase {
