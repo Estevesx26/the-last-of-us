@@ -3315,12 +3315,24 @@ section#galeria {
     background-image: url(../imagens/home-personagens/personagens/riley/galeria/riley-ellie.jpg);
 }
 
+.riley .photo-2 {
+    background-image: url(../imagens/home-personagens/personagens/riley/galeria/riley-ellie-03.jpg);
+}
+
 .riley .photo-3 {
     background-image: url(../imagens/home-personagens/personagens/riley/galeria/riley.jpg);
 }
 
+.riley .photo-4 {
+    background-image: url(../imagens/home-personagens/personagens/riley/galeria/riley-bebida.jpg);
+}
+
 .riley .photo-5 {
-    background-image: url(../imagens/home-personagens/personagens/riley/galeria/𝘦𝘭𝘭𝘪𝘦\ \ 𐙚\ \ 𝘳𝘪𝘭𝘦𝘺.jpg);
+    background-image: url(../imagens/home-personagens/personagens/riley/galeria/riley-ellie-02.jpg);
+}
+
+.riley .photo-6 {
+    background-image: url(../imagens/home-personagens/personagens/riley/galeria/beijo.jpg);
 }
 
 #frase {
@@ -3368,6 +3380,10 @@ section#galeria {
 
 .yara #frase {
     background-image: url(../imagens/home-personagens/personagens/yara/efeito/yara-efeito.jpg);
+}
+
+.riley #frase {
+    background-image: url(../imagens/home-personagens/personagens/riley/efeito/riley-efeito.jpg);
 }
 
 /* Deixa a imagem mais sombria/cinematográfica */
