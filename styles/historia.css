@@ -1607,6 +1607,38 @@ main#layout {
     background-image: url(../imagens/home-personagens/personagens/riley/capitulos/cap-03.jpg);
 }
 
+/* ==========================================
+   TESS
+========================================== */
+
+.tess-cap-01 {
+    background-image: url(../imagens/home-personagens/personagens/tess/capitulos/cap-01.jpg);
+}
+
+.tess-cap-02 {
+    background-image: url(../imagens/home-personagens/personagens/tess/capitulos/cap-02.jpg);
+}
+
+.tess-cap-03 {
+    background-image: url(../imagens/home-personagens/personagens/tess/capitulos/cap-03.jpg);
+}
+
+/* ==========================================
+   MARLENE
+========================================== */
+
+.marlene-cap-01 {
+    background-image: url(../imagens/home-personagens/personagens/marlene/capitulos/cap-01.jpg);
+}
+
+.marlene-cap-02 {
+    background-image: url(../imagens/home-personagens/personagens/marlene/capitulos/cap-02.jpg);
+}
+
+.marlene-cap-03 {
+    background-image: url(../imagens/home-personagens/personagens/marlene/capitulos/cap-03.jpg);
+}
+
 .num-cap {
     position: relative;
     z-index: 2;
@@ -2961,6 +2993,30 @@ section#curiosidades {
     background-image: url(../imagens/home-personagens/personagens/riley/curiosidades/pistola.jpg);
 }
 
+.tess .perigosa::before{
+    background-image: url(../imagens/home-personagens/personagens/tess/curiosidades/perigosa.jpg);
+}
+
+.tess .resultado::before{
+    background-image: url(../imagens/home-personagens/personagens/tess/curiosidades/resultado.jpg);
+}
+
+.tess .contrabandista::before{
+    background-image: url(../imagens/home-personagens/personagens/tess/curiosidades/contrabandista.jpg);
+}
+
+.marlene .conhecidas::before{
+    background-image: url(../imagens/home-personagens/personagens/marlene/curiosidades/conhecidas.jpg);
+}
+
+.marlene .distancia::before{
+    background-image: url(../imagens/home-personagens/personagens/marlene/curiosidades/distancia.jpg);
+}
+
+.marlene .registro::before{
+    background-image: url(../imagens/home-personagens/personagens/marlene/curiosidades/registro.jpg);
+}
+
 section#galeria {
     margin-bottom: 90px;
     display: grid;
@@ -3335,6 +3391,62 @@ section#galeria {
     background-image: url(../imagens/home-personagens/personagens/riley/galeria/beijo.jpg);
 }
 
+/* ==========================================
+   TESS
+========================================== */
+
+.tess .photo-1 {
+    background-image: url(../imagens/home-personagens/personagens/tess/galeria/tess-01.jpg);
+}
+
+.tess .photo-2 {
+    background-image: url(../imagens/home-personagens/personagens/tess/galeria/tess-ellie.jpg);
+}
+
+.tess .photo-3 {
+    background-image: url(../imagens/home-personagens/personagens/tess/galeria/tess.jpg);
+}
+
+.tess .photo-4 {
+    background-image: url(../imagens/home-personagens/personagens/tess/galeria/tess-arma.jpg);
+}
+
+.tess .photo-5 {
+    background-image: url(../imagens/home-personagens/personagens/tess/galeria/tess-mascara.jpg);
+}
+
+.tess .photo-6 {
+    background-image: url(../imagens/home-personagens/personagens/tess/galeria/tess-joel.jpg);
+}
+
+/* ==========================================
+   MARLENE
+========================================== */
+
+.marlene .photo-1 {
+    background-image: url(../imagens/home-personagens/personagens/marlene/galeria/marlene-rendicao.jpg);
+}
+
+.marlene .photo-2 {
+    background-image: url(../imagens/home-personagens/personagens/marlene/galeria/marlene.jpg);
+}
+
+.marlene .photo-3 {
+    background-image: url(../imagens/home-personagens/personagens/marlene/galeria/marlene-arma.jpg);
+}
+
+.marlene .photo-4 {
+    background-image: url(../imagens/home-personagens/personagens/marlene/galeria/marlene-01.jpg);
+}
+
+.marlene .photo-5 {
+    background-image: url(../imagens/home-personagens/personagens/marlene/galeria/marlene-machucada.jpg);
+}
+
+.marlene .photo-6 {
+    background-image: url(../imagens/home-personagens/personagens/marlene/galeria/marlene-03.jpg);
+}
+
 #frase {
     min-height: 750px;
 
@@ -3384,6 +3496,10 @@ section#galeria {
 
 .riley #frase {
     background-image: url(../imagens/home-personagens/personagens/riley/efeito/riley-efeito.jpg);
+}
+
+.tess #frase {
+    background-image: url(../imagens/home-personagens/personagens/tess/efeito/tess-efeito.jpg);
 }
 
 /* Deixa a imagem mais sombria/cinematográfica */
