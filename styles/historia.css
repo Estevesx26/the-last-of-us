@@ -1639,6 +1639,26 @@ main#layout {
     background-image: url(../imagens/home-personagens/personagens/marlene/capitulos/cap-03.jpg);
 }
 
+/* ==========================================
+   SARAH
+========================================== */
+
+.sarah-cap-01 {
+    background-image: url(../imagens/home-personagens/personagens/sarah/capitulos/cap-01.jpg);
+}
+
+.sarah-cap-02 {
+    background-image: url(../imagens/home-personagens/personagens/sarah/capitulos/cap-02.jpg);
+}
+
+.sarah-cap-03 {
+    background-image: url(../imagens/home-personagens/personagens/sarah/capitulos/cap-03.jpg);
+}
+
+.sarah-cap-04 {
+    background-image: url(../imagens/home-personagens/personagens/sarah/capitulos/epilogo.jpg);
+}
+
 .num-cap {
     position: relative;
     z-index: 2;
@@ -3017,6 +3037,18 @@ section#curiosidades {
     background-image: url(../imagens/home-personagens/personagens/marlene/curiosidades/registro.jpg);
 }
 
+.sarah .relogio::before{
+    background-image: url(../imagens/home-personagens/personagens/sarah/curiosidades/relogio.jpg);
+}
+
+.sarah .girafa::before{
+    background-image: url(../imagens/home-personagens/personagens/sarah/curiosidades/girafa.jpg);
+}
+
+.sarah .pistas::before{
+    background-image: url(../imagens/home-personagens/personagens/sarah/curiosidades/pista.jpg);
+}
+
 section#galeria {
     margin-bottom: 90px;
     display: grid;
@@ -3500,6 +3532,10 @@ section#galeria {
 
 .tess #frase {
     background-image: url(../imagens/home-personagens/personagens/tess/efeito/tess-efeito.jpg);
+}
+
+.marlene #frase {
+    background-image: url(../imagens/home-personagens/personagens/marlene/efeito/marlene-efeito.jpg);
 }
 
 /* Deixa a imagem mais sombria/cinematográfica */
